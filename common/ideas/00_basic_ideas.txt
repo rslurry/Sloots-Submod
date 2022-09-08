@@ -456,6 +456,7 @@ defensive_ideas = {
 
 	bonus = {
 		hostile_attrition = 1
+		max_attrition = 1
 	}
 
 	battlefield_commisions = {
