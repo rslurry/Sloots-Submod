@@ -9847,11 +9847,14 @@ on_leader_recruited = {
 # country
 on_general_recruited = {
 	if = {
-		limit = { has_country_modifier = pol_trigger_for_army_professionalism_modifier }
-		add_army_professionalism = 0.0125
-	}
-	else = {
-		add_army_professionalism = 0.01
+	        limit = { NOT = { is_year = 1550 } }
+	        if = {
+		            limit = { has_country_modifier = pol_trigger_for_army_professionalism_modifier }
+		            add_army_professionalism = 0.0125
+	        }
+	        else = {
+		              add_army_professionalism = 0.01
+	        }
 	}
 	if = {
 		limit = { has_government_attribute = recruiting_generals_increases_nobles_loyalty }
