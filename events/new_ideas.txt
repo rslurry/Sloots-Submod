@@ -1,0 +1,27 @@
+province_event = {
+	id = fort_logistics_event
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_idea = fort_logistics #idea id
+		is_capital_of = ROOT
+		NOT = {
+			has_province_modifier = fort_logistics_headquarters
+		}
+	}
+	immediate = {
+		add_province_modifier = {
+			name = fort_logistics_headquarters
+			duration = -1
+			hidden = yes
+		}
+	}
+	title = "fort_logistics_event_title"
+	desc = "fort_logistics_event_desc"
+	option = { 
+		name = "fort_logistics_event_a"
+		ai_chance = { factor = 1 }
+	}
+}

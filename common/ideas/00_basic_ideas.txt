@@ -1420,7 +1420,7 @@ infrastructure_ideas = {
 		build_cost = -0.1
 	}
 	efficient_construction_plans = {
-		#expand_infrastructure_cost = -0.25 #TODO
+		#expand_infrastructure_cost = -0.25 #TODO - handle via 	event trigger
 		build_time = -0.25
 	}
 	expanded_infrastructure_network = {
@@ -1432,7 +1432,7 @@ infrastructure_ideas = {
 	}
 	fort_logistics = {
 		fort_maintenance_modifier = -0.25
-		#capital_fort_level = 1 #TODO
+		#capital_fort_level = 1 #TODO - handle via event trigger
 	}
 	regulation_bureau = {
 		global_allowed_num_of_buildings = 1
