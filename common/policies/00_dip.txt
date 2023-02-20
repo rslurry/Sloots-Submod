@@ -1558,7 +1558,7 @@ smooth_integration_act = {
 	}
 	
 	diplomatic_reputation = 1
-	years_to_integrate_personal_union = -15
+	years_to_integrate_personal_union = -40
 	
 	ai_will_do = {
 		factor = 0.2
