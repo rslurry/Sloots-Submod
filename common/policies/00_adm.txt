@@ -1960,7 +1960,7 @@ financial_miracle_act = {
 	}
 	
 	production_efficiency = 0.1
-	same_culture_advisor_cost = -0.15
+	same_culture_advisor_cost = -0.2
 	
 	ai_will_do = {
 		factor = 0.2

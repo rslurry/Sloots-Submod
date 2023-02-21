@@ -1247,8 +1247,8 @@ humanist_ideas = {
 	}
 
 	tolerance_idea = {
-		tolerance_heretic = 1
-		tolerance_heathen = 1
+		tolerance_of_heretics_capacity = 1
+		tolerance_of_heathens_capacity = 1
 	}
 	local_traditions = {
 		global_unrest = -2
@@ -1420,8 +1420,8 @@ infrastructure_ideas = {
 		build_cost = -0.1
 	}
 	efficient_construction_plans = {
-		#expand_infrastructure_cost = -0.25 #TODO - handle via 	event trigger - can't do this in 1.34
-		expand_administration_cost = -0.25
+		#expand_infrastructure_cost = -0.25 #TODO - can't do this in 1.34, even via event
+		adm_tech_cost_modifier = -0.10 # replacement modifier that saves admin cost
 		build_time = -0.25
 	}
 	expanded_infrastructure_network = {
@@ -1433,7 +1433,7 @@ infrastructure_ideas = {
 	}
 	fort_logistics = {
 		fort_maintenance_modifier = -0.25
-		#capital_fort_level = 1 #TODO - handle via event trigger
+		#capital_fort_level = 1 #TODO - handled via event trigger
 	}
 	regulation_bureau = {
 		global_allowed_num_of_buildings = 1
