@@ -1703,7 +1703,7 @@ loyal_conduct_act = {
 	}
 	
 	global_spy_defence = 0.33
-	fort_defense = 0.15
+	defensiveness = 0.15
 	
 	ai_will_do = {
 		factor = 0.2
