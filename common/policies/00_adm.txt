@@ -2044,7 +2044,7 @@ military_innovation_act = {
 	}
 	
 	mil_advisor_cost = -0.25
-	mil_cost_modifier = -0.1
+	mil_tech_cost_modifier = -0.1
 	
 	ai_will_do = {
 		factor = 0.2
