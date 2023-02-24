@@ -207,6 +207,7 @@ picked_right_incident_option = {
 # Strategy
 ##################################
 
+#Anbennar
 want_your_provinces = {
 	opinion = -15
 	min = -200
