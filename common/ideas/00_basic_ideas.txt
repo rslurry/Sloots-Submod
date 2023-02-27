@@ -1463,7 +1463,7 @@ court_ideas = {
 		primitives = no
 		NOT = { has_adventurer_reform = yes
 		        has_country_modifier = monstrous_nation
-		}
+			  }
 	}
 	
 	bonus = {
@@ -1496,7 +1496,8 @@ court_ideas = {
 		improve_relation_modifier = 0.2
 	}
 	court_embassies = {
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
+		advisor_pool = 1
 	}
 	
 	ai_will_do = {
