@@ -780,6 +780,7 @@ tluukt_2 = {
 				AND = {
 					region = bulwar_proper_region
 					owned_by = U05
+					NOT = { province_id = 6761 }
 				}
 			}	
 		}
