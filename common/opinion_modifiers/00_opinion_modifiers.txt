@@ -210,14 +210,17 @@ picked_right_incident_option = {
 # Strategy
 ##################################
 
+#Anbennar
 #Prevent the nasty overflow bug
 want_your_provinces = {
 	opinion = -1
 	min = -200
 }
-
-#Prevent the nasty overflow bug
 want_subject_provinces = {
+	opinion = -1
+	min = -200
+}
+want_your_and_subject_provinces = {
 	opinion = -1
 	min = -200
 }
@@ -3718,6 +3721,34 @@ is_tributary = {
 	opinion = 15
 }
 
+is_sphere_of_influence_overlord = {
+	opinion = 15
+}
+
+is_sphere_of_influence_subject = {
+	opinion = 15
+}
+
+left_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+left_their_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+was_removed_from_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+removed_from_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
 is_trade_protectorate = {
 	opinion = 20
 }
@@ -4897,7 +4928,7 @@ zan_has_embassy = {
 }
 
 zan_declined_embassy = {
-	opinion = -50
+	opinion = -200
 	yearly_decay = 1
 }
 
@@ -5239,4 +5270,37 @@ failed_province_purchase = {
 revoked_our_right_to_war = {
 	opinion = -50
 	yearly_decay = 2
+}
+
+per_traveling_artist = {
+	opinion = 50
+	yearly_decay = 5
+}
+
+promote_good_reputation_opinion = {
+	max = 100
+	opinion = 25
+	years = 10
+}
+
+promote_good_reputation_upgraded_opinion = {
+	max = 200
+	opinion = 50
+	years = 10
+}
+
+royal_ambassador_visit = {
+	max = 50
+	opinion = 50
+	years = 5
+}
+
+converted_to_zoroastrian = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+engaged_in_grain_trade_modifier = {
+	opinion = 25
+	yearly_decay = 2.5
 }
