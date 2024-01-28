@@ -1,7 +1,7 @@
-name="A Sloots Submod 1.7.0"
+name="A Sloots Submod 1.7.1"
 tags={
 	"Sloots"
 }
 picture="sloots.jpg"
 supported_version="1.36.*"
-path="mod/Sloots-Submod-1.7.0"
+path="mod/Sloots-Submod-1.7.1"
