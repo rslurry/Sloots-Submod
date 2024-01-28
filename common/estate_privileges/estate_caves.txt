@@ -5,9 +5,8 @@ estate_cave_adaptation = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		any_owned_province = {
-			has_terrain = cavern
-		}
+		any_owned_province = { has_terrain = cavern }
+		capital_scope = { continent = serpentspine }
 		OR = {
 			AND = {
 				has_country_modifier = goblin_administration
