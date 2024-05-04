@@ -1059,7 +1059,7 @@ giberd_adm_merc = {
 		trigger = {
 			stability = 3
 			NOT = { average_home_autonomy = 5 }
-			hidden_trigger = { has_country_modifier = giberd_order_restored_mod }
+			has_country_modifier = giberd_order_restored_mod
 		}
 		
 		effect = {
