@@ -1402,10 +1402,6 @@ giberd_homeland = {
 		}
 		position = 13
 		
-		trigger = {
-			always = yes
-		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -1446,10 +1442,6 @@ giberd_homeland_state = {
 			giberd_hypercube
 		}
 		position = 13
-		
-		trigger = {
-			always = yes
-		}
 		
 		effect = {
 			if = {
@@ -1492,10 +1484,6 @@ giberd_homeland_adm = {
 		}
 		position = 13
 		
-		trigger = {
-			always = yes
-		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -1537,10 +1525,6 @@ giberd_homeland_dip = {
 		}
 		position = 13
 		
-		trigger = {
-			always = yes
-		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -1581,10 +1565,6 @@ giberd_homeland_mil = {
 			giberd_hypercube
 		}
 		position = 13
-		
-		trigger = {
-			always = yes
-		}
 		
 		effect = {
 			if = {
