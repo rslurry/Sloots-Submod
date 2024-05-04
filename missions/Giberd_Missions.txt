@@ -339,7 +339,7 @@ giberd_dameshead = {
 		position = 11
 		
 		provinces_to_highlight = {
-			province_id = 273
+			province_id = 271
 			NOT = { development = 70 }
 		}
 		
