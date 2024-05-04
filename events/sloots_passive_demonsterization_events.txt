@@ -1,0 +1,4956 @@
+########################
+### Dwarven minority ###
+########################
+
+namespace = passive_monstrous
+
+province_event = {
+	# Dwarven minority - Smiths encountered
+	id = passive_monstrous.10
+	title = passive_monstrous.10.t
+	desc = passive_monstrous.10.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Dismantle it and seize their tools!
+	option = {
+		name = passive_monstrous.10.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Try to learn from them
+	option = {
+		name = passive_monstrous.10.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.11
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.11
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.11
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.12
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.12
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.12
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.13
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.13
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.13
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Dwarven minority - Smiths encountered - Success
+	id = passive_monstrous.11
+	title = passive_monstrous.11.t
+	desc = passive_monstrous.11.d
+	picture = INVENTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.11.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Dwarven minority - Smiths encountered - Neutral
+	id = passive_monstrous.12
+	title = passive_monstrous.12.t
+	desc = passive_monstrous.12.d
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.12.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Dwarven minority - Smiths encountered - Failure
+	id = passive_monstrous.13
+	title = passive_monstrous.13.t
+	desc = passive_monstrous.13.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.13.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+######################
+### Elven minority ###
+######################
+
+province_event = {
+	# Elven minority - An Elven Entourage
+	id = passive_monstrous.20
+	title = passive_monstrous.20.t
+	desc = passive_monstrous.20.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Go get the guards
+	option = {
+		name = passive_monstrous.20.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# See what they are up to
+	option = {
+		name = passive_monstrous.20.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.21
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.21
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.21
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.22
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.22
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.22
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.23
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.23
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.23
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Elven minority - An Elven Entourage - Success
+	id = passive_monstrous.21
+	title = passive_monstrous.21.t
+	desc = passive_monstrous.21.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.21.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Elven minority - An Elven Entourage - Neutral
+	id = passive_monstrous.22
+	title = passive_monstrous.22.t
+	desc = passive_monstrous.22.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.22.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Elven minority - An Elven Entourage - Failure
+	id = passive_monstrous.23
+	title = passive_monstrous.23.t
+	desc = passive_monstrous.23.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.23.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+########################
+### Gnomish minority ###
+########################
+
+province_event = {
+	# Gnomish minority - Gnomish ingenuity
+	id = passive_monstrous.30
+	title = passive_monstrous.30.t
+	desc = passive_monstrous.30.d
+	picture = INVENTION_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Lack of skills befits the lack of labor well
+	option = {
+		name = passive_monstrous.30.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Local experts are preferred over foreign agents
+	option = {
+		name = passive_monstrous.30.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.31
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.31
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.31
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.32
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.32
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.32
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.33
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.33
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.33
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Success
+	id = passive_monstrous.31
+	title = passive_monstrous.31.t
+	desc = passive_monstrous.31.d
+	picture = INVENTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.31.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Neutral
+	id = passive_monstrous.32
+	title = passive_monstrous.32.t
+	desc = passive_monstrous.32.d
+	picture = STREET_SPEECH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.32.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Failure
+	id = passive_monstrous.33
+	title = passive_monstrous.33.t
+	desc = passive_monstrous.33.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.33.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+###########################
+### Half Elven minority ###
+###########################
+
+province_event = {
+	# Half Elven minority - TODO
+	id = passive_monstrous.40
+	title = passive_monstrous.40.t
+	desc = passive_monstrous.40.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# TODO
+	option = {
+		name = passive_monstrous.40.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# TODO
+	option = {
+		name = passive_monstrous.40.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.41
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.41
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.41
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.42
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.42
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.42
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.43
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.43
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.43
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Half Elven minority - TODO - Success
+	id = passive_monstrous.41
+	title = passive_monstrous.41.t
+	desc = passive_monstrous.41.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.41.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Half Elven minority - TODO - Neutral
+	id = passive_monstrous.42
+	title = passive_monstrous.42.t
+	desc = passive_monstrous.42.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.42.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Half Elven minority - TODO - Failure
+	id = passive_monstrous.43
+	title = passive_monstrous.43.t
+	desc = passive_monstrous.43.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.43.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+#########################
+### Halfling minority ###
+#########################
+
+province_event = {
+	# Halfling minority - Baked goods
+	id = passive_monstrous.50
+	title = passive_monstrous.50.t
+	desc = passive_monstrous.50.d
+	picture = muslimgfx_ELECTION_REPUBLICAN_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# RAID!
+	option = {
+		name = passive_monstrous.50.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# The line isn't THAT long...
+	option = {
+		name = passive_monstrous.50.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.51
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.51
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.51
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.52
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.52
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.52
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.53
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.53
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.53
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Halfling minority - Baked goods - Success
+	id = passive_monstrous.51
+	title = passive_monstrous.51.t
+	desc = passive_monstrous.51.d
+	picture = muslimgfx_FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.51.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Halfling minority - Baked goods - Neutral
+	id = passive_monstrous.52
+	title = passive_monstrous.52.t
+	desc = passive_monstrous.52.d
+	picture = northamericagfx_CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.52.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Halfling minority - Baked goods - Failure
+	id = passive_monstrous.53
+	title = passive_monstrous.53.t
+	desc = passive_monstrous.53.d
+	picture = muslimgfx_BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.53.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+province_event = {
+	# Halfling minority - A Halfling Hotbox
+	id = passive_monstrous.54
+	title = passive_monstrous.54.t
+	desc = passive_monstrous.54.d
+	picture = muslimgfx_ELECTION_REPUBLICAN_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Kick in the door and their teeth!
+	option = {
+		name = passive_monstrous.54.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Investigate with caution
+	option = {
+		name = passive_monstrous.54.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.55
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.55
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.55
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.56
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.56
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.56
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.57
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.57
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.57
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Halfling minority - A Halfling Hotbox - Success
+	id = passive_monstrous.55
+	title = passive_monstrous.55.t
+	desc = passive_monstrous.55.d
+	picture = muslimgfx_FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.55.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Halfling minority - A Halfling Hotbox - Neutral
+	id = passive_monstrous.56
+	title = passive_monstrous.56.t
+	desc = passive_monstrous.56.d
+	picture = northamericagfx_CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.56.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Halfling minority - A Halfling Hotbox - Failure
+	id = passive_monstrous.57
+	title = passive_monstrous.57.t
+	desc = passive_monstrous.57.d
+	picture = muslimgfx_BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.57.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+#########################
+### Harimari minority ###
+#########################
+
+province_event = {
+	# Harimari minority - TODO
+	id = passive_monstrous.60
+	title = passive_monstrous.60.t
+	desc = passive_monstrous.60.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# TODO
+	option = {
+		name = passive_monstrous.60.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# TODO
+	option = {
+		name = passive_monstrous.60.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.61
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.61
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.61
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.62
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.62
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.62
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.63
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.63
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.63
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Harimari minority - TODO - Success
+	id = passive_monstrous.61
+	title = passive_monstrous.61.t
+	desc = passive_monstrous.61.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.61.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Harimari minority - TODO - Neutral
+	id = passive_monstrous.62
+	title = passive_monstrous.62.t
+	desc = passive_monstrous.62.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.62.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Harimari minority - TODO - Failure
+	id = passive_monstrous.63
+	title = passive_monstrous.63.t
+	desc = passive_monstrous.63.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.63.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+######################
+### Human minority ###
+######################
+
+province_event = {
+	# Human minority - Religious worshipers
+	id = passive_monstrous.70
+	title = passive_monstrous.70.t
+	desc = passive_monstrous.70.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Burn it down
+	option = {
+		name = passive_monstrous.70.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Who are those statues of?
+	option = {
+		name = passive_monstrous.70.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.71
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.71
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.71
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.72
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.72
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.72
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.73
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.73
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.73
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Human minority - Religious worshipers - Success
+	id = passive_monstrous.71
+	title = passive_monstrous.71.t
+	desc = passive_monstrous.71.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.71.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Human minority - Religious worshipers - Neutral
+	id = passive_monstrous.72
+	title = passive_monstrous.72.t
+	desc = passive_monstrous.72.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.72.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Human minority - Religious worshipers - Failure
+	id = passive_monstrous.73
+	title = passive_monstrous.73.t
+	desc = passive_monstrous.73.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.73.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+########################
+### Dwarven majority ###
+########################
+
+province_event = {
+	# Dwarven majority - Interesting Dwarven architecture
+	id = passive_monstrous.80
+	title = passive_monstrous.80.t
+	desc = passive_monstrous.80.d
+	picture = southamericagfx_FORT_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Tear down these new houses!
+	option = {
+		name = passive_monstrous.80.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Try to learn from them
+	option = {
+		name = passive_monstrous.80.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.81
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.81
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.81
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.82
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.82
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.82
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.83
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.83
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_dwarven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.83
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Dwarven majority - Interesting Dwarven architecture - Success
+	id = passive_monstrous.81
+	title = passive_monstrous.81.t
+	desc = passive_monstrous.81.d
+	picture = FORT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.81.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Dwarven majority - Interesting Dwarven architecture - Neutral
+	id = passive_monstrous.82
+	title = passive_monstrous.82.t
+	desc = passive_monstrous.82.d
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.82.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Dwarven majority - Interesting Dwarven architecture - Failure
+	id = passive_monstrous.83
+	title = passive_monstrous.83.t
+	desc = passive_monstrous.83.d
+	picture = VILLAGE_BURNING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.83.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+######################
+### Elven majority ###
+######################
+
+province_event = {
+	# Elven majority - The Great Elven Tea Party
+	id = passive_monstrous.90
+	title = passive_monstrous.90.t
+	desc = passive_monstrous.90.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Tea is just leaf flavored water anyway!
+	option = {
+		name = passive_monstrous.90.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Yes, you stick your pinky out, like this...
+	option = {
+		name = passive_monstrous.90.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.91
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.91
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.91
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.92
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.92
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.92
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.93
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.93
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.93
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Elven majority - The Great Elven Tea Party - Success
+	id = passive_monstrous.91
+	title = passive_monstrous.91.t
+	desc = passive_monstrous.91.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.91.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Elven majority - The Great Elven Tea Party - Neutral
+	id = passive_monstrous.92
+	title = passive_monstrous.92.t
+	desc = passive_monstrous.92.d
+	picture = easterngfx_COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.92.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Elven majority - The Great Elven Tea Party - Failure
+	id = passive_monstrous.93
+	title = passive_monstrous.93.t
+	desc = passive_monstrous.93.d
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.93.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+########################
+### Gnomish majority ###
+########################
+
+province_event = {
+	# Gnomish majority - The Industry of the Future
+	id = passive_monstrous.100
+	title = passive_monstrous.100.t
+	desc = passive_monstrous.100.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Why learn when we can just take it?
+	option = {
+		name = passive_monstrous.100.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Let's ask them about these advancements
+	option = {
+		name = passive_monstrous.100.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.101
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.101
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.101
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.102
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.102
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.102
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.103
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.103
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.103
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Gnomish majority - TODO - Success
+	id = passive_monstrous.101
+	title = passive_monstrous.101.t
+	desc = passive_monstrous.101.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.101.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Gnomish majority - TODO - Neutral
+	id = passive_monstrous.102
+	title = passive_monstrous.102.t
+	desc = passive_monstrous.102.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.102.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Gnomish majority - TODO - Failure
+	id = passive_monstrous.103
+	title = passive_monstrous.103.t
+	desc = passive_monstrous.103.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.103.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+###########################
+### Half Elven majority ###
+###########################
+
+province_event = {
+	# Half Elven majority - Invitation extended
+	id = passive_monstrous.110
+	title = passive_monstrous.110.t
+	desc = passive_monstrous.110.d
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Ignore their ridiculous customs
+	option = {
+		name = passive_monstrous.110.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# I suppose it couldn't hurt
+	option = {
+		name = passive_monstrous.110.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.111
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.111
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.111
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.112
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.112
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.112
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.113
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.113
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_half_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.113
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Half Elven majority - Invitation extended - Success
+	id = passive_monstrous.111
+	title = passive_monstrous.111.t
+	desc = passive_monstrous.111.d
+	picture = PIETY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.111.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Half Elven majority - Invitation extended - Neutral
+	id = passive_monstrous.112
+	title = passive_monstrous.112.t
+	desc = passive_monstrous.112.d
+	picture = indiangfx_OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.112.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Half Elven majority - Invitation extended - Failure
+	id = passive_monstrous.113
+	title = passive_monstrous.113.t
+	desc = passive_monstrous.113.d
+	picture = indiangfx_BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.113.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+#########################
+### Halfling majority ###
+#########################
+
+province_event = {
+	# Halfling majority - A Countryside Feast
+	id = passive_monstrous.120
+	title = passive_monstrous.120.t
+	desc = passive_monstrous.120.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# We take what we want, when we want it!  Raid the kitchen and take whatever they have!
+	option = {
+		name = passive_monstrous.120.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Accept but emphasize how hungry your men are
+	option = {
+		name = passive_monstrous.120.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.121
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.121
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.121
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.122
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.122
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.122
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.123
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.123
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.123
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Halfling majority - A Countryside Feast - Success
+	id = passive_monstrous.121
+	title = passive_monstrous.121.t
+	desc = passive_monstrous.121.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.121.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Halfling majority - A Countryside Feast - Neutral
+	id = passive_monstrous.122
+	title = passive_monstrous.122.t
+	desc = passive_monstrous.122.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.122.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Halfling majority - A Countryside Feast - Failure
+	id = passive_monstrous.123
+	title = passive_monstrous.123.t
+	desc = passive_monstrous.123.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.123.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+#########################
+### Harimari majority ###
+#########################
+
+province_event = {
+	# Harimari majority - TODO
+	id = passive_monstrous.130
+	title = passive_monstrous.130.t
+	desc = passive_monstrous.130.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# TODO
+	option = {
+		name = passive_monstrous.130.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# TODO
+	option = {
+		name = passive_monstrous.130.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.131
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.131
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.131
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.132
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.132
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.132
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.133
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.133
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_harimari_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.133
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Harimari majority - TODO - Success
+	id = passive_monstrous.131
+	title = passive_monstrous.131.t
+	desc = passive_monstrous.131.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.131.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Harimari majority - TODO - Neutral
+	id = passive_monstrous.132
+	title = passive_monstrous.132.t
+	desc = passive_monstrous.132.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.132.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Harimari majority - TODO - Failure
+	id = passive_monstrous.133
+	title = passive_monstrous.133.t
+	desc = passive_monstrous.133.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.133.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+######################
+### Human majority ###
+######################
+
+province_event = {
+	# Human majority - Court Proceedings
+	id = passive_monstrous.140
+	title = passive_monstrous.140.t
+	desc = passive_monstrous.140.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# The only court belongs to our ruler!  Burn down the imposters!
+	option = {
+		name = passive_monstrous.140.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Send an envoy to observe how they resolve this petty dispute
+	option = {
+		name = passive_monstrous.140.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.141
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.141
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.141
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.142
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.142
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.142
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.143
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.143
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.143
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Human majority - Court Proceedings - Success
+	id = passive_monstrous.141
+	title = passive_monstrous.141.t
+	desc = passive_monstrous.141.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.141.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Human majority - Court Proceedings - Neutral
+	id = passive_monstrous.142
+	title = passive_monstrous.142.t
+	desc = passive_monstrous.142.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.142.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Human majority - Court Proceedings - Failure
+	id = passive_monstrous.143
+	title = passive_monstrous.143.t
+	desc = passive_monstrous.143.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.143.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+####################
+### Main shebang ###
+####################
+
+country_event = {
+	id = passive_monstrous.1
+	title = passive_monstrous.1.t
+	desc = passive_monstrous.1.d
+	picture = ECONOMY_eventPicture
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = passively_removing_monstrous
+		has_country_modifier = monstrous_nation
+		OR = {
+			NOT = { has_country_flag = passive_monstrous_event_happened }
+			had_country_flag = {
+				flag = passive_monstrous_event_happened
+				days = 330
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = passive_monstrous_event_happened
+	}
+
+	option = {
+		name = passive_monstrous.1.a
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_dwarven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_dwarven_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_dwarven_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.10
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.b
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_elven_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_elven_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.20
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.c
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_gnomish_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_gnomish_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_gnomish_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.30
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.dd
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_half_elven_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_half_elven_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_half_elven_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.40
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.e
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_halfling_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_halfling_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_halfling_minority_trigger = yes
+			}
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.50
+						days = 1
+					}
+				}
+				
+				1 = {
+					province_event = { 
+						id = passive_monstrous.54
+						days = 1
+					}
+				}
+			}
+			
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.f
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_harimari_minority_trigger = yes
+				}
+			}Definitely 
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_harimari_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_harimari_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_harimari_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.60
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.g
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_human_minority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+				has_human_minority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_human_minority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.70
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.h
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_dwarven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_dwarven_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_dwarven_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.80
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.i
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_elven_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_elven_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.90
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.j
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_gnomish_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_gnomish_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_gnomish_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.100
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.k
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_half_elven_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_half_elven_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_half_elven_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.110
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.l
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_halfling_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_halfling_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_halfling_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.120
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.m
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_harimari_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_harimari_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_harimari_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.130
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = passive_monstrous.1.n
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 30 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 26
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 26 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 22
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 22 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 18
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 18 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 14
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 14 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 8 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 6 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 4 }
+		}
+		else_if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					has_human_majority_trigger = yes
+				}
+			}
+			ai_chance = { factor = 2 }
+		}
+		else = {
+			ai_chance = { factor = 1 }
+		}
+		trigger = {
+			any_owned_province = {
+					has_human_majority_trigger = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_human_majority_trigger = yes
+			}
+			province_event = { 
+				id = passive_monstrous.140
+				days = 1
+			}
+		}
+	}
+
+}
