@@ -140,9 +140,12 @@
  flavor_giberd_ext.7.a:0 "Well, I guess it's a good thing we hired the Giberdi Military Police..."
  
  unlock_merc_giberd_military_police_tt:0 "Unlock the mercenary company §YGiberdi Military Police§! to recruit"
+ merc_giberd_military_police:0 "Giberdi Military Police"
  has_unlocked_merc_giberd_military_police:0 "Has unlocked the §YGiberdi Military Police§! mercenary company."
  unlock_merc_giberd_marines_tt:0 "Unlock the mercenary company §YGiberdi Marine Corp§! to recruit"
+ merc_giberd_marines:0 "Giberdi Marine Corp"
  has_unlocked_merc_giberd_marines:0 "Has unlocked the §YGiberdi Marine Corp§! mercenary company."
  unlock_merc_giberd_order_of_solutions_tt:0 "Unlock the mercenary company §YOrder of Solutions§! to recruit"
+ merc_giberd_order_of_solutions:0 "Order of Solutions"
  has_unlocked_merc_giberd_order_of_solutions:0 "Has unlocked the §YOrder of Solutions§! mercenary company."
 
