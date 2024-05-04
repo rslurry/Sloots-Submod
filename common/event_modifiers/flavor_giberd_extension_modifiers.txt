@@ -65,11 +65,10 @@ giberd_order_restored_mod = {
 }
 
 giberd_monitored_protests_mod = {
-	land_maintenance_modifier = 0.2
-	merc_maintenance_modifier = 0.2
+	land_maintenance_modifier = 0.1
+	merc_maintenance_modifier = 0.1
 	global_unrest = -2
-	harsh_treatment_cost = -0.2
-	global_rebel_suppression_efficiency = 0.2
+	spy_offence = 0.25
 }
 
 giberd_marine_corp_mod = {
