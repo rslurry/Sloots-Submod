@@ -2023,7 +2023,7 @@ giberd_religion_thought = {
 		}
 	}
 	
-	giberd_reaping_the_fruits_of_our_labor = {
+	giberd_the_fruits_of_our_labor = {
 		icon = mission_rb_inland_india
 		required_missions = {
 			giberd_maintain_the_momentum
@@ -2138,7 +2138,7 @@ giberd_religion_finish_thought = {
 	giberd_pax_giberdi = {
 		icon = a_real_roman_empire
 		required_missions = {
-			giberd_reaping_the_fruits_of_our_labor
+			giberd_the_fruits_of_our_labor
 		}
 		position = 12
 		
@@ -2369,6 +2369,8 @@ giberd_ravelian = {
 		
 		trigger = {
 			religion = ravelian
+			NOT = { mission_completed = giberd_double_down }
+			NOT = { mission_completed = giberd_return_to_our_roots }
 		}
 		
 		effect = {
