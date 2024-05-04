@@ -1788,6 +1788,226 @@ country_event = {
 	}
 }
 
+province_event = {
+	# Human minority - Human cult discovered
+	id = passive_monstrous.74
+	title = passive_monstrous.74.t
+	desc = passive_monstrous.74.d
+	picture = UNIVERSITY_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Purify the land!
+	option = {
+		name = passive_monstrous.74.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Put down the torches!
+	option = {
+		name = passive_monstrous.74.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.75
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.75
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.75
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.76
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.76
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.76
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.77
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.77
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_human_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.77
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Human minority - Human cult discovered - Success
+	id = passive_monstrous.75
+	title = passive_monstrous.75.t
+	desc = passive_monstrous.75.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.75.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Human minority - Human cult discovered - Neutral
+	id = passive_monstrous.76
+	title = passive_monstrous.76.t
+	desc = passive_monstrous.76.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.76.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Human minority - Human cult discovered - Failure
+	id = passive_monstrous.77
+	title = passive_monstrous.77.t
+	desc = passive_monstrous.77.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.77.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
 ########################
 ### Dwarven majority ###
 ########################
@@ -4169,9 +4389,24 @@ country_event = {
 			limit = {
 				has_human_minority_trigger = yes
 			}
-			province_event = { 
-				id = passive_monstrous.70
-				days = 1
+			
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.70
+						days = 1
+					}
+				}
+				
+				1 = {
+					trigger = {
+						has_owner_religion = yes
+					}
+					province_event = { 
+						id = passive_monstrous.74
+						days = 1
+					}
+				}
 			}
 		}
 	}
