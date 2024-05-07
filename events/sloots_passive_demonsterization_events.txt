@@ -467,7 +467,7 @@ province_event = {
 		always = yes
 	}
 	
-	# Lack of skills befits the lack of labor well
+	# Take everything and try to make sense of it later!
 	option = {
 		name = passive_monstrous.30.a
 		ai_chance = { factor = 1 }
@@ -475,7 +475,7 @@ province_event = {
 			increase_monstrous_1 = yes
 		}
 	}
-	# Local experts are preferred over foreign agents
+	# Let's try to learn from them
 	option = {
 		name = passive_monstrous.30.b
 		ai_chance = { 
@@ -667,6 +667,226 @@ country_event = {
 	
 	option = {
 		name = passive_monstrous.33.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+province_event = {
+	# Gnomish minority - Gnomish ingenuity
+	id = passive_monstrous.34
+	title = passive_monstrous.34.t
+	desc = passive_monstrous.34.d
+	picture = INVENTION_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Lack of skills befits the lack of labor well
+	option = {
+		name = passive_monstrous.34.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Local experts are preferred over foreign agents
+	option = {
+		name = passive_monstrous.34.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.35
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.35
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.35
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.36
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.36
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.36
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.37
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.37
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.37
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Success
+	id = passive_monstrous.35
+	title = passive_monstrous.35.t
+	desc = passive_monstrous.35.d
+	picture = INVENTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.35.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Neutral
+	id = passive_monstrous.36
+	title = passive_monstrous.36.t
+	desc = passive_monstrous.36.d
+	picture = STREET_SPEECH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.36.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Gnomish minority - Gnomish ingenuity - Failure
+	id = passive_monstrous.37
+	title = passive_monstrous.37.t
+	desc = passive_monstrous.37.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.37.a
 		ai_chance = { factor = 100 }
 		increase_monstrous_1 = yes
 	}
@@ -2457,6 +2677,226 @@ country_event = {
 	}
 }
 
+province_event = {
+	# Elven majority - Elven Festival Held
+	id = passive_monstrous.94
+	title = passive_monstrous.94.t
+	desc = passive_monstrous.94.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# It's time to plunder!
+	option = {
+		name = passive_monstrous.94.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Let us go to this festival and see what it's all about
+	option = {
+		name = passive_monstrous.94.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.95
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.95
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.95
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.96
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.96
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.96
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.97
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.97
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_elven_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.97
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Elven majority - Elven Festival Held - Success
+	id = passive_monstrous.95
+	title = passive_monstrous.95.t
+	desc = passive_monstrous.95.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.95.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Elven majority - Elven Festival Held - Neutral
+	id = passive_monstrous.96
+	title = passive_monstrous.96.t
+	desc = passive_monstrous.96.d
+	picture = easterngfx_COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.96.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Elven majority - Elven Festival Held - Failure
+	id = passive_monstrous.97
+	title = passive_monstrous.97.t
+	desc = passive_monstrous.97.d
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.97.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
 ########################
 ### Gnomish majority ###
 ########################
@@ -2676,6 +3116,226 @@ country_event = {
 	
 	option = {
 		name = passive_monstrous.103.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+province_event = {
+	# Gnomish majority - Gnomish Expo
+	id = passive_monstrous.104
+	title = passive_monstrous.104.t
+	desc = passive_monstrous.104.d
+	picture = NOBLE_ESTATE_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Take their fancy weapons for our own army!
+	option = {
+		name = passive_monstrous.104.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# Maybe we could attend?
+	option = {
+		name = passive_monstrous.104.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.105
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.105
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.105
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.106
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.106
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.106
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.107
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.107
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_gnomish_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.107
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Gnomish majority - Gnomish Expo - Success
+	id = passive_monstrous.105
+	title = passive_monstrous.105.t
+	desc = passive_monstrous.105.d
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.105.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Gnomish majority - Gnomish Expo - Neutral
+	id = passive_monstrous.106
+	title = passive_monstrous.106.t
+	desc = passive_monstrous.106.d
+	picture = BYZ_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.106.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Gnomish majority - Gnomish Expo - Failure
+	id = passive_monstrous.107
+	title = passive_monstrous.107.t
+	desc = passive_monstrous.107.d
+	picture = indiangfx_BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.107.a
 		ai_chance = { factor = 100 }
 		increase_monstrous_1 = yes
 	}
@@ -3124,6 +3784,226 @@ country_event = {
 	
 	option = {
 		name = passive_monstrous.123.a
+		ai_chance = { factor = 100 }
+		increase_monstrous_1 = yes
+	}
+}
+
+province_event = {
+	# Halfling majority - Halfling Bake Sale
+	id = passive_monstrous.124
+	title = passive_monstrous.124.t
+	desc = passive_monstrous.124.d
+	picture = 9_Vaisya_Estate_eventPicture
+	goto = ROOT
+	provinces_to_highlight = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Attend? You mean raid, right?
+	option = {
+		name = passive_monstrous.124.a
+		ai_chance = { factor = 1 }
+		owner = {
+			increase_monstrous_1 = yes
+		}
+	}
+	# What could be the harm in that?
+	option = {
+		name = passive_monstrous.124.b
+		ai_chance = { 
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				owner = {
+					want_to_decrease_monstrous = no
+				}
+			}
+		}
+		random_list = {
+			# Success
+			80 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.125
+						days = 1
+					}
+				}
+			}
+			60 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.125
+						days = 1
+					}
+				}
+			}
+			10 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.125
+						days = 1
+					}
+				}
+			}
+			# Neutral
+			15 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.126
+						days = 1
+					}
+				}
+			}
+			25 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.126
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.126
+						days = 1
+					}
+				}
+			}
+			# Failure
+			5 = {
+				trigger = {
+					owner = {
+						high_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.127
+						days = 1
+					}
+				}
+			}
+			15 = {
+				trigger = {
+					owner = {
+						medium_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.127
+						days = 1
+					}
+				}
+			}
+			75 = {
+				trigger = {
+					owner = {
+						low_tolerance_halfling_race_trigger = yes
+					}
+				}
+				owner = {
+					country_event = { 
+						id = passive_monstrous.127
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Halfling majority - Halfling Bake Sale - Success
+	id = passive_monstrous.125
+	title = passive_monstrous.125.t
+	desc = passive_monstrous.125.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.125.a
+		ai_chance = { factor = 100 }
+		decrease_monstrous_1 = yes
+	}
+}
+
+country_event = {
+	# Halfling majority - Halfling Bake Sale - Neutral
+	id = passive_monstrous.126
+	title = passive_monstrous.126.t
+	desc = passive_monstrous.126.d
+	picture = east_slavic_LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.126.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	# Halfling majority - Halfling Bake Sale - Failure
+	id = passive_monstrous.127
+	title = passive_monstrous.127.t
+	desc = passive_monstrous.127.d
+	picture = ROYAL_STRESS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = passive_monstrous.127.a
 		ai_chance = { factor = 100 }
 		increase_monstrous_1 = yes
 	}
@@ -3934,9 +4814,20 @@ country_event = {
 			limit = {
 				has_gnomish_minority_trigger = yes
 			}
-			province_event = { 
-				id = passive_monstrous.30
-				days = 1
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.30
+						days = 1
+					}
+				}
+				
+				1 = {
+					province_event = { 
+						id = passive_monstrous.34
+						days = 1
+					}
+				}
 			}
 		}
 	}
@@ -4627,9 +5518,20 @@ country_event = {
 			limit = {
 				has_elven_majority_trigger = yes
 			}
-			province_event = { 
-				id = passive_monstrous.90
-				days = 1
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.90
+						days = 1
+					}
+				}
+				
+				1 = {
+					province_event = { 
+						id = passive_monstrous.94
+						days = 1
+					}
+				}
 			}
 		}
 	}
@@ -4738,9 +5640,20 @@ country_event = {
 			limit = {
 				has_gnomish_majority_trigger = yes
 			}
-			province_event = { 
-				id = passive_monstrous.100
-				days = 1
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.100
+						days = 1
+					}
+				}
+				
+				1 = {
+					province_event = { 
+						id = passive_monstrous.104
+						days = 1
+					}
+				}
 			}
 		}
 	}
@@ -4960,9 +5873,20 @@ country_event = {
 			limit = {
 				has_halfling_majority_trigger = yes
 			}
-			province_event = { 
-				id = passive_monstrous.120
-				days = 1
+			random_list = {
+				1 = {
+					province_event = { 
+						id = passive_monstrous.120
+						days = 1
+					}
+				}
+				
+				1 = {
+					province_event = { 
+						id = passive_monstrous.124
+						days = 1
+					}
+				}
 			}
 		}
 	}
