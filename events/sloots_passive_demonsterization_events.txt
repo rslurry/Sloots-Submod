@@ -24,7 +24,10 @@ province_event = {
 		name = passive_monstrous.10.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Try to learn from them
@@ -181,7 +184,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.11.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -220,7 +226,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.13.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -248,7 +257,10 @@ province_event = {
 		name = passive_monstrous.20.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# See what they are up to
@@ -405,7 +417,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.21.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -444,7 +459,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.23.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -472,7 +490,10 @@ province_event = {
 		name = passive_monstrous.30.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Let's try to learn from them
@@ -629,7 +650,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.31.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -668,7 +692,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.33.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -692,7 +719,10 @@ province_event = {
 		name = passive_monstrous.34.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Local experts are preferred over foreign agents
@@ -849,7 +879,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.35.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -888,7 +921,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.37.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -916,7 +952,10 @@ province_event = {
 		name = passive_monstrous.40.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# TODO
@@ -1073,7 +1112,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.41.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1112,7 +1154,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.43.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1140,7 +1185,10 @@ province_event = {
 		name = passive_monstrous.50.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# The line isn't THAT long...
@@ -1297,7 +1345,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.51.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1336,7 +1387,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.53.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1360,7 +1414,10 @@ province_event = {
 		name = passive_monstrous.54.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Investigate with caution
@@ -1517,7 +1574,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.55.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1556,7 +1616,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.57.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1584,7 +1647,10 @@ province_event = {
 		name = passive_monstrous.60.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# TODO
@@ -1741,7 +1807,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.61.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1780,7 +1849,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.63.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -1808,7 +1880,10 @@ province_event = {
 		name = passive_monstrous.70.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Who are those statues of?
@@ -1965,7 +2040,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.71.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2004,7 +2082,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.73.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2028,7 +2109,10 @@ province_event = {
 		name = passive_monstrous.74.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Put down the torches!
@@ -2185,7 +2269,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.75.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 		add_treasury = 2
 	}
 }
@@ -2225,7 +2312,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.77.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2253,7 +2343,10 @@ province_event = {
 		name = passive_monstrous.80.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Try to learn from them
@@ -2410,7 +2503,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.81.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2449,7 +2545,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.83.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2477,7 +2576,10 @@ province_event = {
 		name = passive_monstrous.90.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Yes, you stick your pinky out, like this...
@@ -2634,7 +2736,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.91.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2673,7 +2778,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.93.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2697,7 +2805,10 @@ province_event = {
 		name = passive_monstrous.94.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Let us go to this festival and see what it's all about
@@ -2854,7 +2965,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.95.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2893,7 +3007,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.97.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -2921,7 +3038,10 @@ province_event = {
 		name = passive_monstrous.100.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Let's ask them about these advancements
@@ -3078,7 +3198,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.101.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3117,7 +3240,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.103.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3141,7 +3267,10 @@ province_event = {
 		name = passive_monstrous.104.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Maybe we could attend?
@@ -3298,7 +3427,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.105.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3337,7 +3469,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.107.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3365,7 +3500,10 @@ province_event = {
 		name = passive_monstrous.110.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# I suppose it couldn't hurt
@@ -3522,7 +3660,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.111.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3561,7 +3702,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.113.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3589,7 +3733,10 @@ province_event = {
 		name = passive_monstrous.120.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Accept but emphasize how hungry your men are
@@ -3746,7 +3893,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.121.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3785,7 +3935,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.123.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -3809,7 +3962,10 @@ province_event = {
 		name = passive_monstrous.124.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# What could be the harm in that?
@@ -3966,7 +4122,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.125.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -4005,7 +4164,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.127.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -4033,7 +4195,10 @@ province_event = {
 		name = passive_monstrous.130.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# TODO
@@ -4190,7 +4355,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.131.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -4229,7 +4397,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.133.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
@@ -4257,7 +4428,10 @@ province_event = {
 		name = passive_monstrous.140.a
 		ai_chance = { factor = 1 }
 		owner = {
-			increase_monstrous_1 = yes
+			if = {
+				limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+				increase_monstrous_1 = yes
+			}
 		}
 	}
 	# Send an envoy to observe how they resolve this petty dispute
@@ -4414,7 +4588,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.141.a
 		ai_chance = { factor = 100 }
-		decrease_monstrous_1 = yes
+		if = {
+			limit = { check_variable = { monstrousPoints = 1 } }
+			decrease_monstrous_1 = yes
+		}
 	}
 }
 
@@ -4453,7 +4630,10 @@ country_event = {
 	option = {
 		name = passive_monstrous.143.a
 		ai_chance = { factor = 100 }
-		increase_monstrous_1 = yes
+		if = {
+			limit = { NOT = { check_variable = { monstrousPoints = 100 } } }
+			increase_monstrous_1 = yes
+		}
 	}
 }
 
