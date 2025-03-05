@@ -46,6 +46,7 @@ vampire_spread_action = {
 			}
 			if = {
 				limit = { ai = yes }
+				# Submod: remove human culture requirement
 				NOT = { has_country_flag = has_vampires_estate }
 			}
 			else = {

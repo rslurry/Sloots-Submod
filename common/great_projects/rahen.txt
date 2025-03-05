@@ -1,0 +1,947 @@
+#High Temple of Mindanan
+temple_mindanan = {
+	start = 4384
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 2
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			OR = {
+				religion = high_philosophy
+				religion = suhans_praxis
+			}
+			has_owner_religion = yes
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}		
+	can_upgrade_trigger = {
+		AND = {
+			OR = {
+				religion = high_philosophy
+				religion = suhans_praxis
+			}
+			has_owner_religion = yes
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+			local_tax_modifier = 0.4
+			local_unrest = -1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.4
+		}
+		area_modifier = {
+			local_tax_modifier = 0.66
+			local_unrest = -3
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.6
+		}
+		area_modifier = {
+			local_tax_modifier = 1
+			local_unrest = -5
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Dye Markets of Sharaajaghal
+dye_market = {
+	start = 4485
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}		
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			trade_value_modifier = 0.15
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+			trade_value_modifier = 0.3
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.2
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.3
+			trade_value_modifier = 0.45
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.3
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Royal Library of Sarnihanpur
+sarnihanpur_library = {
+	start = 4460
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 2
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_institution_spread = 0.33
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			idea_cost = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_institution_spread = 0.33
+		}
+		country_modifiers = {
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_institution_spread = 0.33
+		}
+		country_modifiers = {
+			idea_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Training Camps of the Khamayodi
+khamayodi_camp = {
+	start = 4397
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.25
+		}
+		region_modifier = {
+			local_unrest = 1
+		}
+		country_modifiers = {
+			drill_gain_modifier = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.5
+		}
+		region_modifier = {
+			local_unrest = 3
+		}
+		country_modifiers = {
+			drill_gain_modifier = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.3
+		}
+		area_modifier = {
+			local_manpower_modifier = 1
+		}
+		region_modifier = {
+			local_unrest = 5
+		}
+		country_modifiers = {
+			drill_gain_modifier = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Ghankedhen Family Foundry
+sheramvi_foundry = {
+	start = 4442
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.02
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.1
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.04
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.3
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.15
+		}
+		country_modifiers = {
+			global_regiment_cost = -0.06
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Sardhasi Silk Fields
+sardhasi_fields = {
+	start = 4391
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_raheni
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			trade_value_modifier = 0.2
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.1
+			local_manpower_modifier = 0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.2
+			trade_value_modifier = 0.4
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.2
+			local_manpower_modifier = 0.2
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.3
+			trade_value_modifier = 0.6
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.30
+			local_manpower_modifier = 0.3
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+}
+#Brass Palace of Sramaya
+brass_palace = {
+	start = 4420
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_brass_palace
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_brass_palace
+					OR = {
+						culture_group = harimari
+						culture_group = south_raheni
+						culture_group = middle_raheni
+						culture_group = upper_raheni
+						culture_group = south_raheni
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture_group = harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.1
+			local_garrison_size = 0.15
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			prestige = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.2
+		 	local_hostile_attrition = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			prestige = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.33
+		 	local_hostile_attrition = 1
+			local_own_coast_naval_combat_bonus = 1
+			local_defender_dice_roll_bonus = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			prestige = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+}

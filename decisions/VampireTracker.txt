@@ -1,0 +1,27 @@
+
+country_decisions = {
+	
+	Vampire_tracker = {
+		major = yes
+		potential = {
+			ai = no
+			has_estate = estate_vampires
+			OR = {
+ 				has_estate_privilege = estate_vampires_law_state_collusion_masquerade
+ 				has_estate_privilege = estate_vampires_neratic_inquisition
+ 			}
+
+			NOT = { has_estate_privilege = estate_vampires_organization_vampiric_emigres }
+		}
+		provinces_to_highlight = {
+			continent = europe
+			owner = { has_country_flag = has_vampires_estate }
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+}

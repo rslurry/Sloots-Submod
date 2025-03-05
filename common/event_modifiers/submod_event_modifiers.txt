@@ -1,3 +1,61 @@
 estate_cave_adaptation_cavern = {
 	local_development_cost = -0.4
 }
+
+sloots_condo_disc = {
+	possible_condottieri = 0.25
+}
+
+sloots_condo_ref = {
+	possible_condottieri = 0.5
+}
+
+sloots_condo_abs = {
+	possible_condottieri = 1
+}
+
+sloots_condo_rev = {
+	possible_condottieri = 1.5
+}
+
+sloots_over_naval_fl_1 = {
+	sailors_recovery_speed = -0.1
+}
+
+sloots_over_naval_fl_2 = {
+	sailors_recovery_speed = -0.2
+}
+
+sloots_over_naval_fl_3 = {
+	sailors_recovery_speed = -0.3
+}
+
+sloots_over_naval_fl_4 = {
+	sailors_recovery_speed = -0.4
+}
+
+sloots_over_naval_fl_5 = {
+	sailors_recovery_speed = -0.5
+}
+
+sloots_over_naval_fl_6 = {
+	sailors_recovery_speed = -0.6
+}
+
+sloots_over_naval_fl_7 = {
+	sailors_recovery_speed = -0.7
+}
+
+sloots_over_naval_fl_8 = {
+	sailors_recovery_speed = -0.8
+}
+
+sloots_over_naval_fl_9 = {
+	sailors_recovery_speed = -0.9
+}
+
+sloots_over_naval_fl_10 = {
+	sailors_recovery_speed = -1.0
+}
+
+

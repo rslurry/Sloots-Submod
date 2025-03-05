@@ -211,11 +211,13 @@ picked_right_incident_option = {
 ##################################
 
 #Anbennar
-#Prevent the nasty overflow bug
+#Submod: prevent the nasty overflow bug
 want_your_provinces = {
 	opinion = -1
 	min = -200
 }
+
+#Anbennar
 want_subject_provinces = {
 	opinion = -1
 	min = -200
