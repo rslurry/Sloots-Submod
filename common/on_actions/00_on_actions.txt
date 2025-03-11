@@ -16336,7 +16336,13 @@ on_institution_embracement = {
 	}
 	if = { #Artificery start general
 		limit = {
-			has_institution = manufactories
+			OR = {
+				has_institution = global_trade #Submod changed from manufactories to 50 years sooner
+				AND = {
+					is_year = 1550
+					artificer_ideas = 7
+				}
+			}
 			NOT = {
 				has_country_flag = artificery_unlocked
 			}

@@ -11,7 +11,7 @@ telgeir_vanbury_steel_foundry = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -144,7 +144,7 @@ temple_of_ryala = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -284,12 +284,6 @@ temple_of_ryala = {
 			diplomatic_upkeep = 2
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = RC_emulant_ryala_1
-					duration = 7300
-				}
-			}
 		}
 	}
 }
@@ -303,7 +297,7 @@ konwell_the_imperial_archives = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

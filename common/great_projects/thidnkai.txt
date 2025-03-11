@@ -8,7 +8,7 @@ azkare_citadel_of_the_dawn = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -138,7 +138,7 @@ kudet_kai_danon_dungcam_mercenary_guild = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -264,7 +264,7 @@ chien_binhrung_nha_nuhoanha_temple = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

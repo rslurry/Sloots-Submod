@@ -141,7 +141,7 @@ ovdal_tungr_port_hold = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {
 	}
@@ -201,14 +201,14 @@ ovdal_tungr_port_hold = {
 			factor = 1000
 		}
 		province_modifiers = {
-		local_defensiveness = 0.1
-		local_sailors_modifier = 0.25
+			local_defensiveness = 0.1
+			local_sailors_modifier = 0.25
 		}
 		area_modifier = {		
 		}
 		country_modifiers = {
-		navy_tradition_decay = -0.001
-		allowed_marine_fraction = 0.025
+			navy_tradition_decay = -0.001
+			allowed_marine_fraction = 0.025
 		}
 		on_upgraded = {
 		}
@@ -221,14 +221,14 @@ ovdal_tungr_port_hold = {
 			factor = 2500
 		}
 		province_modifiers = {
-		local_defensiveness = 0.2
-		local_sailors_modifier = 0.5
+			local_defensiveness = 0.2
+			local_sailors_modifier = 0.5
 		}
 		area_modifier = {	
 		}
 		country_modifiers = {
-		navy_tradition_decay = -0.003
-		allowed_marine_fraction = 0.05
+			navy_tradition_decay = -0.003
+			allowed_marine_fraction = 0.05
 		}
 		on_upgraded = {
 		}
@@ -241,15 +241,15 @@ ovdal_tungr_port_hold = {
 			factor = 5000
 		}
 		province_modifiers = {
-		local_defensiveness = 0.33
-		local_defender_dice_roll_bonus = 1
-		local_sailors_modifier = 1
+			local_defensiveness = 0.33
+			local_defender_dice_roll_bonus = 1
+			local_sailors_modifier = 1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-		navy_tradition_decay = -0.005
-		allowed_marine_fraction = 0.1
+			navy_tradition_decay = -0.005
+			allowed_marine_fraction = 0.1
 		}
 		on_upgraded = {
 		}
@@ -265,7 +265,7 @@ marrhold_gate_to_the_serpentspine = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

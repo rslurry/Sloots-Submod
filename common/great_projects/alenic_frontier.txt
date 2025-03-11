@@ -11,7 +11,7 @@ freecestir_mustering_grounds = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -133,12 +133,6 @@ freecestir_mustering_grounds = {
 			land_forcelimit = 15
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = recruits_flock
-					duration = 1825
-				}
-			}
 		}
 	}
 }
@@ -152,7 +146,7 @@ gawed_castle_gaweton = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

@@ -8,7 +8,7 @@ azjakuma_shinukhorchi_the_highest_fire = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -141,7 +141,7 @@ azjakuma_ajgriijarul_the_bright_claw = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -275,7 +275,7 @@ azjakuma_chumijemoya_the_silent_mist = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -410,7 +410,7 @@ azkajuma_kabiurgarko_the_golden_gates = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -549,7 +549,7 @@ hubao_the_tiger_fortress = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -651,6 +651,7 @@ hubao_the_tiger_fortress = {
 		country_modifiers = {
 		}
 		on_upgraded = {
+		}
 	}
 	tier_3 = {
 		upgrade_time = {

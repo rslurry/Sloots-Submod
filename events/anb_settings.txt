@@ -222,7 +222,8 @@ country_event = {
 				onrek_area = { destroy_province_permanently = yes }
 				shik_dozein_area = { destroy_province_permanently = yes }
 				# Zurkanrek - delete this if someone needs Lake Fed for MT:
-				shik_dazar_area = { destroy_province_permanently = yes }
+				#shik_dazar_area = { destroy_province_permanently = yes }
+				5224 = { destroy_province_permanently = yes }
 				katala_raz_region = { destroy_province_permanently = yes }
 				yezel_mora_region = { destroy_province_permanently = yes }
 				grixzakr_area = { destroy_province_permanently = yes }
@@ -281,18 +282,18 @@ country_event = {
 				muukombi_area = { destroy_province_permanently = yes }
 				rindukubunza_area = { destroy_province_permanently = yes }
 				gakeigiti_area = { destroy_province_permanently = yes }
-				umsozandin_area = { destroy_province_permanently = yes }
-				kahuwabonde_area = { destroy_province_permanently = yes }
-				kukihombe_area = { destroy_province_permanently = yes }
-				juumsozi_area = { destroy_province_permanently = yes }
-				yakrae_area = { destroy_province_permanently = yes }
-				sedarachit_area = { destroy_province_permanently = yes }
-				tilcakan_area = { destroy_province_permanently = yes }
-				berfan_area = { destroy_province_permanently = yes }
-				melakfan_area = { destroy_province_permanently = yes }
-				fetengaben_area = { destroy_province_permanently = yes }
-				werikafan_area = { destroy_province_permanently = yes }
-				sedarfan_area = { destroy_province_permanently = yes }
+				#umsozandin_area = { destroy_province_permanently = yes }
+				#kahuwabonde_area = { destroy_province_permanently = yes }
+				#kukihombe_area = { destroy_province_permanently = yes }
+				#juumsozi_area = { destroy_province_permanently = yes }
+				#yakrae_area = { destroy_province_permanently = yes }
+				#sedarachit_area = { destroy_province_permanently = yes }
+				#tilcakan_area = { destroy_province_permanently = yes }
+				#berfan_area = { destroy_province_permanently = yes }
+				#melakfan_area = { destroy_province_permanently = yes }
+				#fetengaben_area = { destroy_province_permanently = yes }
+				#werikafan_area = { destroy_province_permanently = yes }
+				#sedarfan_area = { destroy_province_permanently = yes }
 				denibari_region = { destroy_province_permanently = yes }
 				vresywaz_area = { destroy_province_permanently = yes }
 				yaikehaad_area = { destroy_province_permanently = yes }

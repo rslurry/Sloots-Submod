@@ -8,7 +8,7 @@ temple_of_surael = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -140,7 +140,7 @@ hanging_gardens = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -270,7 +270,7 @@ fortress_azka_szel = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -403,7 +403,7 @@ fortress_azka_sur = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -536,7 +536,7 @@ sun_dial = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -661,139 +661,6 @@ sun_dial = {
 		}
 	}
 }
-#Grand Bazaar of Brasan
-bazaar_brasan = {
-	start = 565
-	date = 01.01.01
-	time = {
-		months = 0
-	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 1
-	starting_tier = 1
-	type = monument
-	build_trigger = {	
-	}
-	on_built = {		
-	}
-	on_destroyed = {	
-	}
-	can_use_modifiers_trigger = {
-		AND = {
-			custom_trigger_tooltip = {
-				tooltip = halessi_monuments_can_use_tooltip_bulwar
-					OR = {
-						culture_group = elven
-						culture_group = bulwari
-						culture_group = gnollish
-						culture_group = harpy
-						culture = exodus_goblin
-						culture = karashari_orc
-						culture = castanorian
-					}
-			}
-			province_is_or_accepts_culture = yes
-		}
-	}	
-	can_upgrade_trigger = {
-		AND = {
-			custom_trigger_tooltip = {
-				tooltip = halessi_monuments_can_use_tooltip_bulwar
-					OR = {
-						culture_group = elven
-						culture_group = bulwari
-						culture_group = gnollish
-						culture_group = harpy
-						culture = exodus_goblin
-						culture = karashari_orc
-						culture = castanorian
-					}
-			}
-			province_is_or_accepts_culture = yes
-		}
-	}	
-	keep_trigger = {
-	}
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {	
-		}
-		on_upgraded = {
-		}
-	}
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-			local_development_cost = -0.05
-		}
-		area_modifier = {
-			trade_goods_size_modifier = 0.1
-		}
-		country_modifiers = {
-			trade_efficiency = 0.025
-			global_trade_power = 0.05
-		}
-		on_upgraded = {
-		}
-	}
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-			local_development_cost = -0.1
-			province_trade_power_value = 5
-		}
-		area_modifier = {
-			trade_goods_size_modifier = 0.2
-		}
-		country_modifiers = {
-			trade_efficiency = 0.05
-			global_trade_power = 0.1
-		}
-		on_upgraded = {
-		}
-	}
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-			local_development_cost = -0.15
-			province_trade_power_value = 10
-		}
-		area_modifier = {
-			trade_goods_size_modifier = 0.33
-		}
-		country_modifiers = {
-			trade_efficiency = 0.1
-			global_trade_power = 0.15
-		}
-		on_upgraded = {
-		}
-	}
-}
 #Port of Emperors
 port_emperor = {
 	start = 565
@@ -804,7 +671,7 @@ port_emperor = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -916,7 +783,6 @@ port_emperor = {
 			local_sailors_modifier = 1
 		}
 		country_modifiers = {
-			naval_maintenance_modifier = -0.15
 			naval_forcelimit = 10
 			max_flagships = 1
 		}
@@ -934,7 +800,7 @@ temple_sun = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -1068,7 +934,7 @@ mountain_of_clear_sight = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -1278,7 +1144,6 @@ moon_mountains = {
 			religious_unity = 0.1
 		}
 		on_upgraded = {
-			}
 		}
 	}
 	tier_3 = {
@@ -1316,9 +1181,9 @@ eranils_oddities = {
 	type = monument
 	build_trigger = {	
 	}
-	on_built = {		
+	on_built = {
 	}
-	on_destroyed = {	
+	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
 		AND = {
@@ -1407,7 +1272,6 @@ eranils_oddities = {
 		area_modifier = {
 		}
 		region_modifier = {
-			local_development_cost = -0.05
 		}
 		country_modifiers = {
 			mages_influence_modifier = 0.025

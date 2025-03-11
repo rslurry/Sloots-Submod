@@ -57,6 +57,12 @@ spriteType = {
         texturefile = "gfx//interface//great_projects//great_project_eborthil_toref_citadel.dds"
     }
 
+# Submod: Port Jaher
+spriteType = {
+        name = "GFX_great_project_port_jaher_monument"	
+        texturefile = "gfx//interface//great_projects//great_project_port_jaher_monument.dds"
+    }
+
 ####################
 #Dalr
 ####################
@@ -187,6 +193,11 @@ spriteType = {
 spriteType = {
         name = "GFX_great_project_ibevar_temple_of_munas"	
         texturefile = "gfx//interface//great_projects//great_project_ibevar_temple_of_munas.dds"
+    }
+
+spriteType = {
+        name = "GFX_great_project_rotating_castle"	
+        texturefile = "gfx//interface//great_projects//great_project_rotating_castle.dds"
     }
 
 ####################

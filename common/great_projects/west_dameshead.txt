@@ -11,7 +11,7 @@ neckcliffe_the_imperial_dockyard = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -105,7 +105,6 @@ neckcliffe_the_imperial_dockyard = {
 		province_modifiers = {
 			local_ship_repair = 0.25
 			ship_recruit_speed = -0.2
-			province_trade_power_value = 3
 		}
 		area_modifier = {
 			local_sailors_modifier = 0.2
@@ -128,7 +127,6 @@ neckcliffe_the_imperial_dockyard = {
 		province_modifiers = {
 			local_ship_repair = 0.5
 			ship_recruit_speed = -0.33
-			province_trade_power_value = 5
 		}
 		area_modifier = {
 			local_sailors_modifier = 0.30

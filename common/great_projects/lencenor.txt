@@ -81,17 +81,6 @@ lorentaine_mage_academy = {
 			mages_loyalty_modifier = 0.025
 		}
 		on_upgraded = {
-			add_building_construction = {
-				building = mage_tower
-				speed = 0.1
-				cost = 0
-			}
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_mages
-					loyalty = 5
-				}
-			}
 		}
 	}
 	tier_2 = {
@@ -276,7 +265,7 @@ deranne_westport_gateway_to_aelantir = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -402,7 +391,7 @@ minara_temple = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

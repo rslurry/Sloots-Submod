@@ -350,7 +350,11 @@ estate_adventurers = {
 		estate_adventurers_track_vampire_nobility
 		estate_adventurers_stalbor_vampire_hunters
 		
-		estate_cave_adaptation # Submod
+		# Submod
+		estate_cave_adaptation
+		#estate_fey_development1
+		#estate_fey_development2
+		#estate_fey_development3
 	}
 
 	agendas = {

@@ -8,7 +8,7 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -67,7 +67,7 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 			local_defensiveness = 0.1
 		}
 		area_modifier = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.15
 			local_hostile_attrition = 0.25
 		}
 		country_modifiers = {
@@ -412,7 +412,7 @@ guhe_the_cheng_of_guhe = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -545,7 +545,7 @@ bianfang_vermillion_gate = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

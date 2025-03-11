@@ -55,9 +55,10 @@ atlantis = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.05
-			overlord_naval_forcelimit_modifier = 0.25
+			overlord_naval_forcelimit_modifier = 0.05
 		}
 		on_upgraded = {
+			change_trade_goods = gold
 		}
 	}
 	tier_2 = {
@@ -74,7 +75,7 @@ atlantis = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.1
-			overlord_naval_forcelimit_modifier = 0.5
+			overlord_naval_forcelimit_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -93,10 +94,9 @@ atlantis = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.15
-			overlord_naval_forcelimit_modifier = 1
+			overlord_naval_forcelimit_modifier = 0.15
 		}
 		on_upgraded = {
-			change_trade_goods = gold
 		}
 	}
 }

@@ -2,6 +2,22 @@ estate_cave_adaptation_cavern = {
 	local_development_cost = -0.4
 }
 
+estate_fey_reluctant_gladeway = {
+	local_development_cost = -0.25
+}
+
+estate_fey_coexistence_gladeway = {
+	local_development_cost = -0.50
+}
+
+estate_fey_acceptance_gladeway = {
+	local_development_cost = -0.75
+}
+
+estate_fey_acceptance_forest = {
+	local_development_cost = -0.05
+}
+
 sloots_condo_disc = {
 	possible_condottieri = 0.25
 }

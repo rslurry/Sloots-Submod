@@ -2130,11 +2130,11 @@ artificer_ideas = {
 	category = DIP 
 
 	bonus = {
-		artificers_capacity = 5
-		#Anbennar
-		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
-		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
-		# Unlock artificers in 1550
+		
+	}
+	
+	trigger = {
+		NOT = { has_idea_group = magocracy_ideas }
 	}
 
 	artificer_ingenuity = {
@@ -2157,10 +2157,14 @@ artificer_ideas = {
 		artificers_influence_modifier = 0.1
 	}
 	invention_grants = { 
-		artificers_capacity = 5
+		artificers_capacity = 10
 		#Anbennar
 		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
 		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
+		# Unlock artificers in 1550: code is elsewhere, use custom loc
+		effect = {
+			custom_tooltip = submod_artificers_early_tooltip
+		}
 	}
 
 	ai_will_do = {
@@ -2173,6 +2177,10 @@ magocracy_ideas = {
 
 	bonus = {
 		mages_loyalty_modifier = 0.1
+	}
+	
+	trigger = {
+		NOT = { has_idea_group = artificer_ideas }
 	}
 
 	mage_contracts = {

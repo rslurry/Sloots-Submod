@@ -8,7 +8,7 @@ tianlou_jewel_of_yanshen = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -134,7 +134,7 @@ tianlou_xuezhefang_eunuch_academy = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -387,7 +387,7 @@ yinquan_the_conquerors_hotspring = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

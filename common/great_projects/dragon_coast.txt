@@ -11,7 +11,7 @@ nimscodd_academy = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -78,7 +78,7 @@ nimscodd_academy = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 800
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -91,12 +91,6 @@ nimscodd_academy = {
 			artificers_loyalty_modifier = 0.025
 		}
 		on_upgraded = {
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_artificers
-					loyalty = 5
-				}
-			}
 		}
 	}
 	tier_2 = {
@@ -104,7 +98,7 @@ nimscodd_academy = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.25
@@ -123,7 +117,7 @@ nimscodd_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.35
@@ -132,13 +126,12 @@ nimscodd_academy = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			innovativeness_gain = 0.33
+			innovativeness_gain = 0.30
 			artificers_loyalty_modifier = 0.1
 			artificers_influence_modifier = 0.05
 		}
 		on_upgraded = {
 			center_of_trade = 1
-			}
 		}
 	}
 }
@@ -152,7 +145,7 @@ portnamm_portroy_merchants_guild = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -213,7 +206,7 @@ portnamm_portroy_merchants_guild = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 600
+			factor = 1000
 		}
 		province_modifiers = {
 			province_trade_power_value = 10
@@ -234,7 +227,7 @@ portnamm_portroy_merchants_guild = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1800
+			factor = 2500
 		}
 		province_modifiers = {
 			province_trade_power_value = 20
@@ -256,7 +249,7 @@ portnamm_portroy_merchants_guild = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 4000
+			factor = 5000
 		}
 		province_modifiers = {
 			province_trade_power_value = 30

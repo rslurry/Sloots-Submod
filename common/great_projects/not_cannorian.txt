@@ -11,7 +11,7 @@ pyramids_of_khet = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -402,6 +402,7 @@ zornartakel_naval_harbor = {
 		country_modifiers = {
 			naval_forcelimit = 15		
 			allowed_marine_fraction = 0.1
+			global_sailors_modifier = -0.1
 		}
 		on_upgraded = {
 		}
@@ -417,7 +418,7 @@ deshak_temple_of_the_elements = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -556,7 +557,7 @@ ekha_harbor = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -687,7 +688,7 @@ aquatbar_great_library = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -819,7 +820,7 @@ dasmati_halls_of_reverence = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

@@ -62,7 +62,7 @@ earthseed = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 400
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.3
@@ -81,7 +81,7 @@ earthseed = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1800
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.6
@@ -100,7 +100,7 @@ earthseed = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 3600
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.9
@@ -206,7 +206,6 @@ ovdal_kanzad_cannon_foundry = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			allowed_num_of_buildings = 1
 		}
 		country_modifiers = {
 			artillery_cost = 0.10

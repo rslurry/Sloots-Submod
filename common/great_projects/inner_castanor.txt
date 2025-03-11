@@ -229,7 +229,7 @@ hammerhome_artificers_guild = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 800
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -249,7 +249,7 @@ hammerhome_artificers_guild = {
 			months = 180
 		}
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.25
@@ -269,7 +269,7 @@ hammerhome_artificers_guild = {
 			months = 300
 		}
 		cost_to_upgrade = {
-			factor = 4000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.5

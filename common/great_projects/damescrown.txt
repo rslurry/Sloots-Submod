@@ -11,7 +11,7 @@ damescrown_grand_exchange = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -111,8 +111,6 @@ damescrown_grand_exchange = {
 		country_modifiers = {
 		}
 		on_upgraded = {
-			define_advisor = {
-			}
 		}
 	}
 	tier_3 = {
@@ -145,7 +143,7 @@ beepeck_the_largest_small_city = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -280,7 +278,7 @@ ara_temple = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -413,6 +411,7 @@ ara_temple = {
 		}
 		region_modifier = {
 			local_religious_conversion_resistance = 1
+			local_tax_modifier = 0.5
 		}
 		country_modifiers = {
 			tolerance_own = 1

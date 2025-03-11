@@ -88,7 +88,6 @@ bal_dostan = {
 			vampires_influence_modifier = 0.025
 		}
 		on_upgraded = {
-			}
 		}
 	}
 	tier_3 = {
@@ -116,7 +115,6 @@ bal_dostan = {
 			vampires_influence_modifier = 0.05
 		}
 		on_upgraded = {
-			add_base_manpower = 3
 			owner = {
 				country_event = { 
 					id = cannorian_monuments_bal_dostan.1
@@ -248,7 +246,7 @@ bal_vertesk = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -425,7 +423,8 @@ bal_ouord = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_defensiveness = 0.2
+			local_defensiveness = 0.33
+			local_hostile_attrition = 0.5
 		}
 		area_modifier = {
 			local_sailors_modifier = 0.25
@@ -446,7 +445,9 @@ bal_ouord = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_defensiveness = 0.33
+			local_defensiveness = 0.5
+			local_hostile_attrition = 1
+			local_defender_dice_roll_bonus = 1
 			fort_level = 1
 		}
 		area_modifier = {
@@ -485,7 +486,10 @@ bal_hyl = {
 			OR = {
 				tag = A30
 				AND = {
-					accepted_culture = wexonard
+					OR = {
+						accepted_culture = wexonard
+						accepted_culture = silver_dwarf
+						}
 					owns_all_provinces = { area = wexhills_area }
 				}
 			}
@@ -497,7 +501,10 @@ bal_hyl = {
 			OR = {
 				tag = A30
 				AND = {
-					accepted_culture = wexonard
+					OR = {
+						accepted_culture = wexonard
+						accepted_culture = silver_dwarf
+						}
 					owns_all_provinces = { area = wexhills_area }
 				}
 			}
@@ -613,7 +620,6 @@ bal_mire = {
 	}	
 	can_upgrade_trigger = {
 		NOT = { has_province_modifier = ruined_castanorian_citadel }
-		}
 	}	
 	keep_trigger = {
 	}
@@ -665,7 +671,7 @@ bal_mire = {
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
-			local_hostile_attrition = .5
+			local_hostile_attrition = 0.5
 		}
 		area_modifier = {
 		}
@@ -700,7 +706,6 @@ bal_mire = {
 			prestige = 0.5
 		}
 		on_upgraded = {
-			}
 		}
 	}
 }
@@ -892,7 +897,7 @@ aelcandar = {
 			local_tax_modifier = 0.4
 		}
 		region_modifier = {
-			local_unrest = -2
+			local_unrest = -4
 		}
 		country_modifiers = {
 		    prestige = 0.25
@@ -917,7 +922,7 @@ aelcandar = {
 			local_tax_modifier = 0.6
 		}
 		region_modifier = {
-			local_unrest = -2
+			local_unrest = -6
 		}
 		country_modifiers = {
 		    prestige = 0.5
@@ -1088,7 +1093,7 @@ calascandar = {
 		area_modifier = {
 		}
 		region_modifier = {
-			province_trade_power_value = 3
+			province_trade_power_value = 1
 		}
 		country_modifiers = {
 		    prestige = 0.1
@@ -1110,7 +1115,7 @@ calascandar = {
 		area_modifier = {
 		}
 		region_modifier = {
-			province_trade_power_value = 5
+			province_trade_power_value = 2
 		}
 		country_modifiers = {
 		    prestige = 0.25
@@ -1134,7 +1139,7 @@ calascandar = {
 		area_modifier = {
 		}
 		region_modifier = {
-			province_trade_power_value = 8
+			province_trade_power_value = 3
 		}
 		country_modifiers = {
 		    prestige = 0.5
@@ -1208,7 +1213,6 @@ the_necropolis = {
 		country_modifiers = {
 			global_missionary_strength = 0.01
 			stability_cost_modifier = -0.05
-			global_autonomy = -0.01
 		}
 		on_upgraded = {
 		}
@@ -1422,7 +1426,7 @@ ciranmyna_the_shimmering_city = {
 
 	can_be_moved = no
 
-	starting_tier = 1
+	starting_tier = 0
 
 	#project type
 	type = monument
@@ -1579,7 +1583,7 @@ mines_of_yfelorr = {
 
 	can_be_moved = no
 
-	starting_tier = 1
+	starting_tier = 0
 
 	#project type
 	type = monument
@@ -1768,6 +1772,312 @@ mines_of_yfelorr = {
 			gold_depletion_chance_modifier = -0.2
 			monthly_gold_inflation_modifier = -0.2
 			artillery_cost = -0.2
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+#Submod: Deepwoods monument to reduce dev cost of gladeways and ancient forest
+garden_of_thorns = {
+	start = 3013		#Freyhmyfel
+
+	date = 1.1.1
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 0
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	#project type
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			OR = {
+				primary_culture = wood_elf
+				primary_culture = forest_goblin
+				primary_culture = green_orc
+				primary_culture = emerald_orc
+				primary_culture = karakhanbari_orc
+			}
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = {
+				primary_culture = wood_elf
+				primary_culture = forest_goblin
+				primary_culture = green_orc
+				primary_culture = emerald_orc
+				primary_culture = karakhanbari_orc
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+rotating_castle = {
+	start = 423		#Arca Aldresia
+
+	date = 1.1.1
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 0
+
+	can_be_moved = yes
+
+	starting_tier = 0
+
+	#project type
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	keep_trigger = {
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			OR = {
+				primary_culture = arannese
+				primary_culture = moon_elf
+				primary_culture = aldresian
+				primary_culture = corvurian
+				primary_culture = silver_dwarf
+				primary_culture = imperial_gnome
+				primary_culture = esmari
+			}	
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = {
+				primary_culture = arannese
+				primary_culture = moon_elf
+				primary_culture = aldresian
+				primary_culture = corvurian
+				primary_culture = silver_dwarf
+				primary_culture = imperial_gnome
+				primary_culture = esmari
+			}	
+		}
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.1
+		}
+
+		area_modifier = {
+			local_culture_conversion_time = -0.1
+		}
+
+		country_modifiers = {
+			global_spy_defence = 0.1
+		}
+
+		on_upgraded = {		
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+
+		area_modifier = {
+			local_culture_conversion_time = -0.2
+		}
+
+		country_modifiers = {
+			global_spy_defence = 0.2
+		}
+
+		on_upgraded = {			
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+
+		area_modifier = {
+			local_culture_conversion_time = -0.3
+		}
+
+		country_modifiers = {
+			global_spy_defence = 0.3
 		}
 
 		on_upgraded = {

@@ -60,7 +60,7 @@ ancardia_escanni_academy_of_war = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 800
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -79,7 +79,7 @@ ancardia_escanni_academy_of_war = {
 			months = 180
 		}
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.25
@@ -98,7 +98,7 @@ ancardia_escanni_academy_of_war = {
 			months = 300
 		}
 		cost_to_upgrade = {
-			factor = 4000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.5
@@ -108,6 +108,7 @@ ancardia_escanni_academy_of_war = {
 		}
 		country_modifiers = {
 			drill_gain_modifier = 0.3
+			free_land_leader_pool = 1
 		}
 		on_upgraded = {
 		}
@@ -172,7 +173,7 @@ adenica_longlance_knights_academy = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 800
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -191,7 +192,7 @@ adenica_longlance_knights_academy = {
 			months = 180
 		}
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.25
@@ -210,7 +211,7 @@ adenica_longlance_knights_academy = {
 			months = 300
 		}
 		cost_to_upgrade = {
-			factor = 4000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.5

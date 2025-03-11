@@ -8,7 +8,7 @@ xiadao_liusibao = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -140,7 +140,7 @@ jilin_szienlou = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -253,11 +253,10 @@ jilin_szienlou = {
 			local_defensiveness = 0.33
 		}
 		area_modifier = {
-			local_unrest = -5
 		}
 		region_modifier = {
 			local_autonomy = -0.05
-			local_unrest = -3
+			local_unrest = -5
 		}
 		country_modifiers = {
 		}
@@ -275,7 +274,7 @@ gundhaghidur_library_of_insight = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -411,7 +410,7 @@ aoshan_hanging_temple = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

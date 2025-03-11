@@ -11,7 +11,7 @@ anbenncost_imperial_palace = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -156,7 +156,7 @@ moonhaven_port_munas = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -291,7 +291,7 @@ silvelar_silver_spires = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -387,7 +387,6 @@ silvelar_silver_spires = {
 		province_modifiers = {
 			local_gold_depletion_chance_modifier = -0.3
 			local_development_cost = -0.2
-			trade_goods_size = 1
 		}
 		area_modifier = {
 			local_tax_modifier = 0.33
@@ -433,7 +432,7 @@ menibor_hall_of_the_gallant = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -571,7 +570,7 @@ damish_temple_moonmount_library = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -702,7 +701,7 @@ damish_temple_temple_of_the_highest_moon = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}

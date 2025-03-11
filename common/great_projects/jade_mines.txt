@@ -236,6 +236,7 @@ verkal_dromak_mage_academy = {
 		}
 		country_modifiers = {
 			mages_loyalty_modifier = 0.1
+			mages_influence_modifier = 0.05
 			monarch_lifespan = 0.25
 		}
 		on_upgraded = {
@@ -310,10 +311,11 @@ emerald_spire = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 400
+			factor = 1000
 		}
 		province_modifiers = {
 			local_development_cost = -0.3
+			trade_goods_size = 0.5
 		}
 		area_modifier = {
 		}
@@ -328,10 +330,11 @@ emerald_spire = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1800
+			factor = 2500
 		}
 		province_modifiers = {
 			local_development_cost = -0.6
+			trade_goods_size = 1
 		}
 		area_modifier = {
 		}
@@ -346,10 +349,11 @@ emerald_spire = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 3600
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.9
+			trade_goods_size = 1.5
 		}
 		area_modifier = {
 		}
