@@ -1,0 +1,1099 @@
+namespace = anb_settings
+
+#Settings main menu
+country_event = {
+	id = anb_settings.1
+	title = anb_settings.1.t
+	desc = anb_settings.1.d
+	picture = SETTINGS_MAIN_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		NOT = { has_global_flag = settings_done }
+		NOT = { has_global_flag = settings_opened }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = settings_opened
+			if = { limit = { any_country = { ai = no } }
+				set_country_flag = settings_multiplayer
+				set_global_flag = achievements_disabled
+			}
+		}
+	}
+	
+	#Delete Region
+	option = {
+		name = anb_settings.1.a
+		custom_tooltip = settings_regions_tt
+		hidden_effect = { country_event = { id = anb_settings.3 } }
+	}
+	#Great Conqueror
+	option = {
+		name = anb_settings.1.b
+		trigger = { has_dlc = "Rights of Man" }
+		custom_tooltip = settings_conquerors_tt
+		hidden_effect = { country_event = { id = anb_settings.2 } }
+	}
+	option = {
+		name = anb_settings.1.bx
+		trigger = { NOT = { has_dlc = "Rights of Man" } }
+		custom_tooltip = settings_needs_rom_dlc_tt
+		hidden_effect = { country_event = { id = anb_settings.98 } }
+	}
+	
+	#Achievements
+	option = {	#enable
+		name = anb_settings.1.c
+		trigger = { has_global_flag = achievements_disabled }
+		if = { limit = { has_country_flag = settings_multiplayer }
+			custom_tooltip = settings_achievement_disabled_tt
+		}
+		else = {
+			custom_tooltip = settings_achievement_tt
+			clr_global_flag = achievements_disabled
+		}
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.98 } }
+	}
+	option = {	#disable
+		name = anb_settings.1.cx
+		trigger = { NOT = { has_global_flag = achievements_disabled } }
+		custom_tooltip = settings_achievement_tt
+		set_global_flag = achievements_disabled
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.98 } }
+	}
+	
+	#empty option for spacing
+	option = {
+		name = anb_settings.1.empty
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.98 } }
+	}
+	
+	#empty option for spacing
+	option = {
+		name = anb_settings.1.empty
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.98 } }
+	}
+	
+	#Leave settings
+	option = {
+		name = anb_settings.1.s
+		custom_tooltip = settings_wont_be_available_tt
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = delete_south_sarhal_region
+					has_global_flag = delete_east_sarhal_region
+					has_global_flag = delete_north_aelantir_region
+					has_global_flag = delete_north_aelantir_region
+					has_global_flag = delete_bulwar_region
+					has_global_flag = delete_north_sarhal_region
+					has_global_flag = delete_south_aelantir_region
+					has_global_flag = delete_cannor_region
+					has_global_flag = delete_deepwoods_region
+					has_global_flag = delete_rahen_region
+					has_global_flag = delete_haless_region
+					has_global_flag = delete_gozenguun_region
+					has_global_flag = delete_forbidden_plains_region
+					has_global_flag = delete_east_serpentspine_region
+					has_global_flag = delete_west_serpentspine_region
+					# has_global_flag = delete_insyaa_region
+					has_global_flag = delete_regions_submod
+				}
+			}
+			custom_tooltip = settings_regions_are_gonna_get_removed_tt
+		}
+		hidden_effect = {
+			if = { limit = { has_global_flag = delete_bulwar_region }
+				bulwar_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_north_sarhal_region }
+				gol_region = { destroy_province_permanently = yes }
+				khetapera_region = { destroy_province_permanently = yes }
+				north_salahad_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_south_sarhal_region }
+				fangaula_superregion = { destroy_province_permanently = yes }
+				horashesh_region = { destroy_province_permanently = yes }
+				fahvanosy_region = { destroy_province_permanently = yes }
+				katala_raz_region = { destroy_province_permanently = yes }
+				throden_gokad_region = { destroy_province_permanently = yes }
+				odu_kherass_region = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_east_sarhal_region }
+				east_sarhal_superregion = { destroy_province_permanently = yes }
+				jasiir_jadid_region = { destroy_province_permanently = yes }
+				ardimya_region = { destroy_province_permanently = yes }
+				gazraak_region = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_north_aelantir_region }
+				north_america = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_south_aelantir_region }
+				south_america = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_cannor_region }
+				western_cannor_superregion = { destroy_province_permanently = yes }
+				escann_superregion = { destroy_province_permanently = yes }
+				gerudia_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_deepwoods_region }
+				deepwoods_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_rahen_region }
+				rahen_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_forbidden_plains_region }
+				forbidden_lands_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_haless_region }
+				yanshen_superregion = { destroy_province_permanently = yes }
+				vimdatrong_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_east_serpentspine_region }
+				east_serpentspine_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_west_serpentspine_region }
+				west_serpentspine_superregion = { destroy_province_permanently = yes }
+			}
+			if = { limit = { has_global_flag = delete_gozenguun_region } 
+				gozengun_superregion = { destroy_province_permanently = yes }
+			}
+			# if = { limit = { has_global_flag = delete_insyaa_region }
+				# oceania = { destroy_province_permanently = yes }
+			# }
+			# Submod:
+			if = { limit = { has_global_flag = delete_regions_submod } 
+				moitsa_siiv_area = { destroy_province_permanently = yes }
+				central_moitsa_area = { destroy_province_permanently = yes }
+				#ogre_valley_region = { destroy_province_permanently = yes }
+				kvakeinolba_area = { destroy_province_permanently = yes }
+				krotavatsvi_area = { destroy_province_permanently = yes }
+				dzimokli_area = { destroy_province_permanently = yes }
+				ghavatalur_area = { destroy_province_permanently = yes }
+				#caubheameas_area = { destroy_province_permanently = yes }
+				ugheabar_area = { destroy_province_permanently = yes }
+				naglaibar_area = { destroy_province_permanently = yes }
+				foirakhian_area = { destroy_province_permanently = yes }
+				taegansegh_area = { destroy_province_permanently = yes }
+				cahuteaghud_area = { destroy_province_permanently = yes }
+				codormalul_area = { destroy_province_permanently = yes }
+				5054 = { destroy_province_permanently = yes }
+				5055 = { destroy_province_permanently = yes }
+				3272 = { destroy_province_permanently = yes }
+				3274 = { destroy_province_permanently = yes }
+				danorbar_area = { destroy_province_permanently = yes }
+				inaer_taizamh_area = { destroy_province_permanently = yes }
+				5080 = { destroy_province_permanently = yes }
+				5130 = { destroy_province_permanently = yes }
+				5025 = { destroy_province_permanently = yes }
+				5024 = { destroy_province_permanently = yes }
+				godairzumh_area = { destroy_province_permanently = yes }
+				akan_dzor_area = { destroy_province_permanently = yes }
+				akandhil_area = { destroy_province_permanently = yes }
+				enkayiin_area = { destroy_province_permanently = yes }
+				tarbokh_area = { destroy_province_permanently = yes }
+				zurenkhiin_area = { destroy_province_permanently = yes }
+				area_1_area = { destroy_province_permanently = yes }
+				baizoi_area = { destroy_province_permanently = yes }
+				zoital_area = { destroy_province_permanently = yes }
+				nomsyulhan_region = { destroy_province_permanently = yes }
+				khaashalg_region = { destroy_province_permanently = yes }
+				area_7_area = { destroy_province_permanently = yes }
+				mogomorin_area = { destroy_province_permanently = yes }
+				south_yarikhoi_region = { destroy_province_permanently = yes }
+				qushyil_area = { destroy_province_permanently = yes }
+				tomoryon_area = { destroy_province_permanently = yes }
+				tolgalsui_area = { destroy_province_permanently = yes }
+				qarshtuluu_area = { destroy_province_permanently = yes }
+				kesh_golkhin_area = { destroy_province_permanently = yes }
+				doykilraj_area = { destroy_province_permanently = yes }
+				sarts_neisar_area = { destroy_province_permanently = yes }
+				zoi_khorkhiin_area = { destroy_province_permanently = yes }
+				shikenkhiin_area = { destroy_province_permanently = yes }
+				keshkoi_area = { destroy_province_permanently = yes }
+				onrek_area = { destroy_province_permanently = yes }
+				shik_dozein_area = { destroy_province_permanently = yes }
+				# Zurkanrek - delete this if someone needs Lake Fed for MT:
+				#shik_dazar_area = { destroy_province_permanently = yes }
+				5224 = { destroy_province_permanently = yes }
+				katala_raz_region = { destroy_province_permanently = yes }
+				yezel_mora_region = { destroy_province_permanently = yes }
+				grixzakr_area = { destroy_province_permanently = yes }
+				garpix_rakkaz_area = { destroy_province_permanently = yes }
+				argazeen_area = { destroy_province_permanently = yes }
+				siniwix_area = { destroy_province_permanently = yes }
+				krahilyn_area = { destroy_province_permanently = yes }
+				zeewix_area = { destroy_province_permanently = yes }
+				saqraxat_area = { destroy_province_permanently = yes }
+				samishesha_area = { destroy_province_permanently = yes }
+				kudhah_area = { destroy_province_permanently = yes }
+				misinson_area = { destroy_province_permanently = yes }
+				janfanciso_area = { destroy_province_permanently = yes }
+				warabani_area = { destroy_province_permanently = yes }
+				kaino_binni_area = { destroy_province_permanently = yes }
+				masirijiri_area = { destroy_province_permanently = yes }
+				ninki_nanka_bada_area = { destroy_province_permanently = yes }
+				azziza_tu_area = { destroy_province_permanently = yes }
+				negetu_area = { destroy_province_permanently = yes }
+				falenfenw_area = { destroy_province_permanently = yes }
+				mojobaa_kulan_area = { destroy_province_permanently = yes }
+				arojana_area = { destroy_province_permanently = yes }
+				cikela_jigin_area = { destroy_province_permanently = yes }
+				jirad_area = { destroy_province_permanently = yes }
+				farirarge_area = { destroy_province_permanently = yes }
+				baghan_area = { destroy_province_permanently = yes }
+				5783 = { destroy_province_permanently = yes }
+				5810 = { destroy_province_permanently = yes }
+				samspar_area = { destroy_province_permanently = yes }
+				tabbanor_area = { destroy_province_permanently = yes }
+				ahw_ssap_area = { destroy_province_permanently = yes }
+				khawit_area = { destroy_province_permanently = yes }
+				lubinga_area = { destroy_province_permanently = yes }
+				iqhekabi_area = { destroy_province_permanently = yes }
+				imivama_area = { destroy_province_permanently = yes }
+				unior_area = { destroy_province_permanently = yes }
+				zuvaziva_area = { destroy_province_permanently = yes }
+				#chibuswa_area = { destroy_province_permanently = yes }
+				5873 = { destroy_province_permanently = yes }
+				6126 = { destroy_province_permanently = yes }
+				gomuvuri_area = { destroy_province_permanently = yes }
+				imdrashid_area = { destroy_province_permanently = yes }
+				lath_kungaff_area = { destroy_province_permanently = yes }
+				zesipas_tara_area = { destroy_province_permanently = yes }
+				zulbur_area = { destroy_province_permanently = yes }
+				kannepa_area = { destroy_province_permanently = yes }
+				yospath_area = { destroy_province_permanently = yes }
+				tiki_shalazar_area = { destroy_province_permanently = yes }
+				tiki_ra_shaga_area = { destroy_province_permanently = yes }
+				yok_ra_shaga_area = { destroy_province_permanently = yes }
+				sut_ra_thon_area = { destroy_province_permanently = yes }
+				ashamad_mabeed_area = { destroy_province_permanently = yes }
+				dhal_baeidag_area = { destroy_province_permanently = yes }
+				datakh_area = { destroy_province_permanently = yes }
+				yaci_kugero_area = { destroy_province_permanently = yes }
+				muukombi_area = { destroy_province_permanently = yes }
+				rindukubunza_area = { destroy_province_permanently = yes }
+				gakeigiti_area = { destroy_province_permanently = yes }
+				#umsozandin_area = { destroy_province_permanently = yes }
+				#kahuwabonde_area = { destroy_province_permanently = yes }
+				#kukihombe_area = { destroy_province_permanently = yes }
+				#juumsozi_area = { destroy_province_permanently = yes }
+				#yakrae_area = { destroy_province_permanently = yes }
+				#sedarachit_area = { destroy_province_permanently = yes }
+				#tilcakan_area = { destroy_province_permanently = yes }
+				#berfan_area = { destroy_province_permanently = yes }
+				#melakfan_area = { destroy_province_permanently = yes }
+				#fetengaben_area = { destroy_province_permanently = yes }
+				#werikafan_area = { destroy_province_permanently = yes }
+				#sedarfan_area = { destroy_province_permanently = yes }
+				denibari_region = { destroy_province_permanently = yes }
+				vresywaz_area = { destroy_province_permanently = yes }
+				yaikehaad_area = { destroy_province_permanently = yes }
+				dmettid_area = { destroy_province_permanently = yes }
+				gizan_area = { destroy_province_permanently = yes }
+				gazraak_region = { destroy_province_permanently = yes }
+				khetapera_region = { destroy_province_permanently = yes }
+				kheionai_superregion = { destroy_province_permanently = yes }
+				amadia_region = { destroy_province_permanently = yes }
+				mushroom_forest_region = { destroy_province_permanently = yes }
+				mistwood_area = { destroy_province_permanently = yes }
+				rockfall_jungle_area = { destroy_province_permanently = yes }
+				#taychend_superregion = { destroy_province_permanently = yes }
+				gauraddhi_region = { destroy_province_permanently = yes }
+				larankarha_highlands_region = { destroy_province_permanently = yes }
+			}
+		}
+		set_global_flag = settings_done
+		clr_global_flag = settings_opened 
+	}
+}
+
+#Great Conqueror
+country_event = {
+	id = anb_settings.2
+	title = anb_settings.2.t
+	desc = anb_settings.2.d
+	picture = SETTINGS_CONQUERORS_eventPicture
+	
+	is_triggered_only = yes
+	
+	#No GC
+	option = {
+		name = anb_settings.2.a
+		trigger = { OR = { has_global_flag = great_conqueror has_global_flag = mythical_conqueror } }
+		clr_global_flag = great_conqueror
+		clr_global_flag = mythical_conqueror
+		custom_tooltip = no_conquerors_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	option = {
+		name = anb_settings.2.ax
+		trigger = { NOT = { has_global_flag = great_conqueror } NOT = { has_global_flag = mythical_conqueror } }
+		custom_tooltip = no_conquerors_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+
+	
+	#Great Conquerors
+	option = {
+		name = anb_settings.2.b
+		trigger = { NOT = { has_global_flag = great_conqueror } }
+		set_global_flag = great_conqueror
+		clr_global_flag = mythical_conqueror
+		custom_tooltip = great_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	option = {
+		name = anb_settings.2.bx
+		trigger = { has_global_flag = great_conqueror }
+		custom_tooltip = great_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	
+	#Mythical Conquerors
+	option = {
+		name = anb_settings.2.c
+		trigger = { NOT = { has_global_flag = mythical_conqueror } }
+		clr_global_flag = great_conqueror
+		set_global_flag = mythical_conqueror
+		custom_tooltip = mythical_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	option = {
+		name = anb_settings.2.cx
+		trigger = { has_global_flag = mythical_conqueror }
+		custom_tooltip = mythical_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	
+	#Great Conqueror Variance
+	option = {
+		name = anb_settings.2.dd
+		trigger = { NOT = { has_global_flag = variant_conqueror } }
+		set_global_flag = variant_conqueror
+		custom_tooltip = random_conqueror_targets_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	option = {
+		name = anb_settings.2.ddx
+		trigger = { has_global_flag = variant_conqueror }
+		clr_global_flag = variant_conqueror
+		custom_tooltip = random_conqueror_targets_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	
+	#Delayed Conquerors
+	option = {
+		name = anb_settings.2.e
+		trigger = { NOT = { has_global_flag = delayed_conquerors } }
+		set_global_flag = delayed_conquerors
+		custom_tooltip = delayed_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	option = {
+		name = anb_settings.2.ex
+		trigger = { has_global_flag = delayed_conquerors }
+		clr_global_flag = delayed_conquerors
+		custom_tooltip = delayed_conqueror_tooltip
+		hidden_effect = { country_event = { id = anb_settings.99 } }
+	}
+	
+	#Go back
+	option = {
+		name = anb_settings.2.x
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.1 } }
+	}
+}
+
+#delete regions
+country_event = {
+	id = anb_settings.3
+	title = anb_settings.3.t
+	desc = anb_settings.3.d
+	picture = SETTINGS_REGIONS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_global_flag = delete_insyaa_region }	#delete this line when Insyaa is ready
+	}
+	
+	#Go back
+	option = {
+		name = anb_settings.3.x
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.1 } }
+	}
+
+	#Disable all
+	option = {
+		name = anb_settings.3.a
+		trigger = { 
+			NOT = { 
+				OR = {
+					has_global_flag = delete_south_sarhal_region
+					has_global_flag = delete_east_sarhal_region
+					has_global_flag = delete_north_aelantir_region
+					has_global_flag = delete_bulwar_region
+					has_global_flag = delete_north_sarhal_region
+					has_global_flag = delete_south_aelantir_region
+					has_global_flag = delete_cannor_region
+					has_global_flag = delete_deepwoods_region
+					has_global_flag = delete_rahen_region
+					has_global_flag = delete_haless_region
+					has_global_flag = delete_gozenguun_region
+					has_global_flag = delete_forbidden_plains_region
+					has_global_flag = delete_east_serpentspine_region
+					has_global_flag = delete_west_serpentspine_region
+					# has_global_flag = delete_insyaa_region
+				} 
+			}
+		}
+
+		custom_tooltip = disable_all_region_tt
+		set_global_flag = delete_south_sarhal_region
+		set_global_flag = delete_east_sarhal_region
+		set_global_flag = delete_north_aelantir_region
+		set_global_flag = delete_bulwar_region
+		set_global_flag = delete_north_sarhal_region
+		set_global_flag = delete_south_aelantir_region
+		set_global_flag = delete_cannor_region
+		set_global_flag = delete_deepwoods_region
+		set_global_flag = delete_rahen_region
+		set_global_flag = delete_haless_region
+		set_global_flag = delete_gozenguun_region
+		set_global_flag = delete_forbidden_plains_region
+		set_global_flag = delete_east_serpentspine_region
+		set_global_flag = delete_west_serpentspine_region
+		# set_global_flag = delete_insyaa_region
+
+		custom_tooltip = tag_in_this_region_tt
+		custom_tooltip = tag_need_this_region_tt
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.ax
+		trigger = { 
+			OR = {
+				has_global_flag = delete_south_sarhal_region
+				has_global_flag = delete_east_sarhal_region
+				has_global_flag = delete_north_aelantir_region
+				has_global_flag = delete_bulwar_region
+				has_global_flag = delete_north_sarhal_region
+				has_global_flag = delete_south_aelantir_region
+				has_global_flag = delete_cannor_region
+				has_global_flag = delete_deepwoods_region
+				has_global_flag = delete_rahen_region
+				has_global_flag = delete_haless_region
+				has_global_flag = delete_gozenguun_region
+				has_global_flag = delete_forbidden_plains_region
+				has_global_flag = delete_east_serpentspine_region
+				has_global_flag = delete_west_serpentspine_region
+				# has_global_flag = delete_insyaa_region
+				has_global_flag = delete_regions_submod
+			}
+		}
+
+		clr_global_flag = delete_south_sarhal_region
+		clr_global_flag = delete_east_sarhal_region
+		clr_global_flag = delete_north_aelantir_region
+		clr_global_flag = delete_bulwar_region
+		clr_global_flag = delete_north_sarhal_region
+		clr_global_flag = delete_south_aelantir_region
+		clr_global_flag = delete_cannor_region
+		clr_global_flag = delete_deepwoods_region
+		clr_global_flag = delete_rahen_region
+		clr_global_flag = delete_haless_region
+		clr_global_flag = delete_gozenguun_region
+		clr_global_flag = delete_forbidden_plains_region
+		clr_global_flag = delete_east_serpentspine_region
+		clr_global_flag = delete_west_serpentspine_region
+		# clr_global_flag = delete_insyaa_region
+		clr_global_flag = delete_regions_submod
+
+		custom_tooltip = tag_in_this_region_tt
+		custom_tooltip = tag_need_this_region_tt
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	# Submod selected regions
+	option = {
+		name = anb_settings.3.s
+		trigger = { NOT = { has_global_flag = delete_regions_submod } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_regions_submod
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.sx
+		trigger = { has_global_flag = delete_regions_submod }
+		clr_global_flag = delete_regions_submod
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#North Aelantir
+	option = {
+		name = anb_settings.3.b
+		trigger = { NOT = { has_global_flag = delete_north_aelantir_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_north_aelantir_region
+		if = { limit = { capital_scope = { continent = north_america } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_north_aelantir = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.bx
+		trigger = { has_global_flag = delete_north_aelantir_region }
+		clr_global_flag = delete_north_aelantir_region
+		if = { limit = { capital_scope = { continent = north_america } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_north_aelantir = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#South Aelantir
+	option = {
+		name = anb_settings.3.c
+		trigger = { NOT = { has_global_flag = delete_south_aelantir_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_south_aelantir_region
+		if = { limit = { capital_scope = { continent = south_america } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_south_aelantir = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.cx
+		trigger = { has_global_flag = delete_south_aelantir_region }
+		clr_global_flag = delete_south_aelantir_region
+		if = { limit = { capital_scope = { continent = south_america } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_south_aelantir = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Cannor
+	option = {
+		name = anb_settings.3.dd
+		trigger = { NOT = { has_global_flag = delete_cannor_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_cannor_region
+		#custom_tooltip = institutions_warning_tt		#No longer the case
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = western_cannor_superregion
+						superregion = escann_superregion
+						superregion = gerudia_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_cannor = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.ddx
+		trigger = { has_global_flag = delete_cannor_region }
+		clr_global_flag = delete_cannor_region
+		#custom_tooltip = institutions_warning_tt		#No longer the case
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = western_cannor_superregion
+						superregion = escann_superregion
+						superregion = gerudia_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_cannor = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Deepwoods
+	option = {
+		name = anb_settings.3.e
+		trigger = { NOT = { has_global_flag = delete_deepwoods_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_deepwoods_region
+		if = { limit = { capital_scope = { superregion = deepwoods_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_deepwoods = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.ex
+		trigger = { has_global_flag = delete_deepwoods_region }
+		clr_global_flag = delete_deepwoods_region
+		if = { limit = { capital_scope = { superregion = deepwoods_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_deepwoods = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Bulwar
+	option = {
+		name = anb_settings.3.f
+		trigger = { NOT = { has_global_flag = delete_bulwar_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_bulwar_region
+		if = { limit = { capital_scope = { superregion = bulwar_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_bulwar = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.fx
+		trigger = { has_global_flag = delete_bulwar_region }
+		clr_global_flag = delete_bulwar_region
+		if = { limit = { capital_scope = { superregion = bulwar_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_bulwar = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#North Sarhal
+	option = {
+		name = anb_settings.3.g
+		trigger = { NOT = { has_global_flag = delete_north_sarhal_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_north_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						region = gol_region
+						region = khetapera_region
+						superregion = north_salahad_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_north_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.gx
+		trigger = { has_global_flag = delete_north_sarhal_region }
+		clr_global_flag = delete_north_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						region = gol_region
+						region = khetapera_region
+						superregion = north_salahad_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_north_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#South Sarhal
+	option = {
+		name = anb_settings.3.h
+		trigger = { NOT = { has_global_flag = delete_south_sarhal_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_south_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = fangaula_superregion
+						region = horashesh_region
+						region = fahvanosy_region
+						superregion = taneyas_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_south_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.hx
+		trigger = { has_global_flag = delete_south_sarhal_region }
+		clr_global_flag = delete_south_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = fangaula_superregion
+						region = horashesh_region
+						region = fahvanosy_region
+						superregion = taneyas_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_south_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+
+	#East Sarhal
+	option = {
+		name = anb_settings.3.i
+		trigger = { NOT = { has_global_flag = delete_east_sarhal_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_east_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = east_sarhal_superregion
+						superregion = djinnakah_superregion
+						region = gazraak_region
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_east_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.ix
+		trigger = { has_global_flag = delete_east_sarhal_region }
+		clr_global_flag = delete_east_sarhal_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = east_sarhal_superregion
+						superregion = djinnakah_superregion
+						region = gazraak_region
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_east_sarhal = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#West Spine
+	option = {
+		name = anb_settings.3.j
+		trigger = { NOT = { has_global_flag = delete_west_serpentspine_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_west_serpentspine_region
+		if = { limit = { capital_scope = { superregion = west_serpentspine_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_west_serpentspine = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.jx
+		trigger = { has_global_flag = delete_west_serpentspine_region }
+		clr_global_flag = delete_west_serpentspine_region
+		if = { limit = { capital_scope = { superregion = west_serpentspine_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_west_serpentspine = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#East Spine
+	option = {
+		name = anb_settings.3.k
+		trigger = { NOT = { has_global_flag = delete_east_serpentspine_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_east_serpentspine_region
+		if = { limit = { capital_scope = { superregion = east_serpentspine_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_east_serpentspine = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.kx
+		trigger = { has_global_flag = delete_east_serpentspine_region }
+		clr_global_flag = delete_east_serpentspine_region
+		if = { limit = { capital_scope = { superregion = east_serpentspine_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_east_serpentspine = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#FP
+	option = {
+		name = anb_settings.3.l
+		trigger = { NOT = { has_global_flag = delete_forbidden_plains_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_forbidden_plains_region
+		if = { limit = { capital_scope = { superregion = forbidden_lands_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_forbidden_plains = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.lx
+		trigger = { has_global_flag = delete_forbidden_plains_region }
+		clr_global_flag = delete_forbidden_plains_region
+		if = { limit = { capital_scope = { superregion = forbidden_lands_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_forbidden_plains = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Rahen
+	option = {
+		name = anb_settings.3.m
+		trigger = { NOT = { has_global_flag = delete_rahen_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_rahen_region
+		if = { limit = { capital_scope = { superregion = rahen_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_rahen = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.mx
+		trigger = { has_global_flag = delete_rahen_region }
+		clr_global_flag = delete_rahen_region
+		if = { limit = { capital_scope = { superregion = rahen_superregion } }
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_rahen = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Haless
+	option = {
+		name = anb_settings.3.n
+		trigger = { NOT = { has_global_flag = delete_haless_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_haless_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = yanshen_superregion
+						superregion = vimdatrong_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_haless = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.nx
+		trigger = { has_global_flag = delete_haless_region }
+		clr_global_flag = delete_haless_region
+		if = {
+			limit = {
+				capital_scope = { 
+					OR = {
+						superregion = yanshen_superregion
+						superregion = vimdatrong_superregion
+					}
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_haless = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+
+	#Gozenguun, todo
+	option = {
+		name = anb_settings.3.o
+		trigger = { NOT = { has_global_flag = delete_gozenguun_region } }
+		custom_tooltip = disable_region_tt
+		set_global_flag = delete_gozenguun_region
+		if = {
+			limit = {
+				capital_scope = { 
+					superregion = gozengun_superregion
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_gozenguun = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	option = {
+		name = anb_settings.3.ox
+		trigger = { has_global_flag = delete_gozenguun_region }
+		clr_global_flag = delete_gozenguun_region
+		if = {
+			limit = {
+				capital_scope = { 
+					superregion = gozengun_superregion
+				}
+			}
+			custom_tooltip = tag_in_this_region_tt
+		}
+		if = { limit = { tag_needs_gozenguun = yes }
+			custom_tooltip = tag_need_this_region_tt
+		}
+		hidden_effect = { country_event = { id = anb_settings.100 } }
+	}
+	
+	#Insyaa - uncomment when ready
+	# option = {
+		# name = anb_settings.3.p
+		# trigger = { NOT = { has_global_flag = delete_insyaa_region } }
+		# custom_tooltip = disable_region_tt
+		# set_global_flag = delete_insyaa_region
+		# if = { limit = { capital_scope = { continent = oceania } }
+			# custom_tooltip = tag_in_this_region_tt
+		# }
+		# if = { limit = { tag_needs_insyaa = yes }
+			# custom_tooltip = tag_need_this_region_tt
+		# }
+		# hidden_effect = { country_event = { id = anb_settings.100 } }
+	# }
+	# option = {
+		# name = anb_settings.3.px
+		# trigger = { has_global_flag = delete_insyaa_region }
+		# clr_global_flag = delete_insyaa_region
+		# if = { limit = { capital_scope = { continent = oceania } }
+			# custom_tooltip = tag_in_this_region_tt
+		# }
+		# if = { limit = { tag_needs_insyaa = yes }
+			# custom_tooltip = tag_need_this_region_tt
+		# }
+		# hidden_effect = { country_event = { id = anb_settings.100 } }
+	# }
+	
+	#Go back
+	option = {
+		name = anb_settings.3.x
+		clr_global_flag = settings_opened
+		hidden_effect = { country_event = { id = anb_settings.1 } }
+	}
+}
+
+country_event = {
+	id = anb_settings.98
+	title = anb_settings.98.t
+	desc = anb_settings.98.d
+	picture = EMPTY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = anb_settings.98.a
+		country_event = { id = anb_settings.1 }
+	}	
+}
+country_event = {
+	id = anb_settings.99
+	title = anb_settings.99.t
+	desc = anb_settings.99.d
+	picture = EMPTY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = anb_settings.99.a
+		country_event = { id = anb_settings.2 }
+	}	
+}
+country_event = {
+	id = anb_settings.100
+	title = anb_settings.100.t
+	desc = anb_settings.100.d
+	picture = EMPTY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = anb_settings.100.a
+		country_event = { id = anb_settings.3 }
+	}	
+}

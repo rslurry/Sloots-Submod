@@ -207,3 +207,106 @@ country_event = {
 		#     and trigger the event to loot the relics
 	}
 }
+
+country_event = {
+	id = sloots.100
+	title = sloots.100.t
+	desc = sloots.100.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+		
+	immediate = {
+		
+	}
+	
+	option = {	
+		name = sloots.100.a
+		if = {
+			limit = {
+				current_age = age_of_discovery
+				NOT = { has_country_modifier = sloots_condo_disc }
+			}
+			add_country_modifier = {
+				name = sloots_condo_disc
+				duration = -1
+				desc = sloots_condo_disc_desc
+				#hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_reformation
+				NOT = { has_country_modifier = sloots_condo_ref }
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_disc
+				}
+				remove_country_modifier = sloots_condo_disc
+			}
+			add_country_modifier = {
+				name = sloots_condo_ref
+				duration = -1
+				desc = sloots_condo_ref_desc
+				#hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_absolutism
+				NOT = { has_country_modifier = sloots_condo_abs }
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_disc
+				}
+				remove_country_modifier = sloots_condo_disc
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_ref
+				}
+				remove_country_modifier = sloots_condo_ref
+			}
+			add_country_modifier = {
+				name = sloots_condo_abs
+				duration = -1
+				desc = sloots_condo_abs_desc
+				#hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				current_age = age_of_revolutions
+				NOT = { has_country_modifier = sloots_condo_rev }
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_disc
+				}
+				remove_country_modifier = sloots_condo_disc
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_ref
+				}
+				remove_country_modifier = sloots_condo_ref
+			}
+			if = {
+				limit = {
+					has_country_modifier = sloots_condo_abs
+				}
+				remove_country_modifier = sloots_condo_abs
+			}
+			add_country_modifier = {
+				name = sloots_condo_rev
+				duration = -1
+				desc = sloots_condo_rev_desc
+				#hidden = yes
+			}
+		}
+	}
+}
