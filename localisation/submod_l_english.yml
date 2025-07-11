@@ -1,4 +1,7 @@
 ﻿l_english:
+ anb_settings.3.s:0 "£settings_button_submod££settings_alert_none£"
+ anb_settings.3.sx:0 "£settings_button_submod_x££settings_alert_none£"
+ 
  estate_cave_adaptation:0 "Cave Adaptation"
  estate_cave_adaptation_gt:0 "Reduce the Development Cost caused by Terrain type of every owned §YCavern§! province by §G50.0%§!."
  estate_cave_adaptation_rt:0 "Remove the Development Cost Reduction of every owned §YCavern§! province."
@@ -115,8 +118,8 @@
  desc_frontiers_of_thought:0 "Exploration is in our nature. We began as wanderers, and we are wanderers still. We have lingered long enough on the shores of the cosmic ocean. We are ready at last to set sail for the stars."
  progressive_culture:0 "Progressive Culture"
  desc_progressive_culture:0 ""
- proto_factories:0 "Proto Factories"
- desc_proto_factories:0 ""
+ freezing_stones:0 "Freezing Stones"
+ desc_freezing_stones:0 "Hey, that water is cold, I swear it's not always like this!"
  embracing_new_thought:0 "Embracing New Thought"
  desc_embracing_new_thought:0 "Science is more than a body of knowledge.  It is a way of thinking, a way of skeptically interrogating the universe."
  revelianist_thought:0 "Ravelianist Thought"
