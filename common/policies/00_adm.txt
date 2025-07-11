@@ -2530,26 +2530,6 @@ economy_of_goods = {
 	}
 }
 
-proto_factories = {
-	monarch_power = ADM
-	
-	potential = {
-		has_idea_group = artificer_ideas
-		has_idea_group = infrastructure_ideas
-	}
-	
-	allow = {
-		full_idea_group = artificer_ideas
-		full_idea_group = infrastructure_ideas
-	}
-	
-	global_trade_goods_size_modifier = 0.15
-
-	ai_will_do = {
-		factor = 1.0
-	}
-}
-
 embracing_new_thought = {
 	monarch_power = ADM
 	

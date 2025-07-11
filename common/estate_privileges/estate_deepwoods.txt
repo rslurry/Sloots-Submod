@@ -5,25 +5,10 @@ estate_fey_development1 = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		any_owned_province = { 
-			OR = {
-				has_terrain = gladeway 
-				has_terrain = fey_gladeway
-				has_terrain = ancient_forest
-			}
+		has_unlocked_estate_privilege = { estate_privilege = estate_fey_development1 }
+		NOT = {
+		    has_unlocked_estate_privilege = { estate_privilege = estate_fey_development2 }
 		}
-		OR = {
-			primary_culture = wood_elf
-			primary_culture = forest_goblin
-			primary_culture = emerald_orc
-			primary_culture = green_orc
-			primary_culture = karakhanbari_orc
-		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 1
-        	#}
-        	has_country_flag = fey_development1
 	}
 	can_select = {
 		any_owned_province = {
@@ -39,11 +24,6 @@ estate_fey_development1 = {
 			primary_culture = green_orc
 			primary_culture = karakhanbari_orc
 		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 1
-        	#}
-        	has_country_flag = fey_development1
 	}
 	on_granted = {
 		custom_tooltip = estate_fey_development_gt
@@ -119,25 +99,10 @@ estate_fey_development2 = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		any_owned_province = { 
-			OR = {
-				has_terrain = gladeway 
-				has_terrain = fey_gladeway
-				has_terrain = ancient_forest
-			}
+		has_unlocked_estate_privilege = { estate_privilege = estate_fey_development2 }
+		NOT = {
+		    has_unlocked_estate_privilege = { estate_privilege = estate_fey_development3 }
 		}
-		OR = {
-			primary_culture = wood_elf
-			primary_culture = forest_goblin
-			primary_culture = emerald_orc
-			primary_culture = green_orc
-			primary_culture = karakhanbari_orc
-		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 2
-        	#}
-        	has_country_flag = fey_development2
 	}
 	can_select = {
 		any_owned_province = {
@@ -153,11 +118,6 @@ estate_fey_development2 = {
 			primary_culture = green_orc
 			primary_culture = karakhanbari_orc
 		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 2
-        	#}
-        	has_country_flag = fey_development2
 	}
 	on_granted = {
 		custom_tooltip = estate_fey_development_gt
@@ -233,25 +193,7 @@ estate_fey_development3 = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		any_owned_province = { 
-			OR = {
-				has_terrain = gladeway 
-				has_terrain = fey_gladeway
-				has_terrain = ancient_forest
-			}
-		}
-		OR = {
-			primary_culture = wood_elf
-			primary_culture = forest_goblin
-			primary_culture = emerald_orc
-			primary_culture = green_orc
-			primary_culture = karakhanbari_orc
-		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 3
-        	#}
-        	has_country_flag = fey_development3
+		has_unlocked_estate_privilege = { estate_privilege = estate_fey_development3 }
 	}
 	can_select = {
 		any_owned_province = {
@@ -268,11 +210,6 @@ estate_fey_development3 = {
 			primary_culture = green_orc
 			primary_culture = karakhanbari_orc
 		}
-		#has_great_project = {
-        	#	type = garden_of_thorns
-        	#	tier = 3
-        	#}
-        	has_country_flag = fey_development3
 	}
 	on_granted = {
 		custom_tooltip = estate_fey_development_gt
