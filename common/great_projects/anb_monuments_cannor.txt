@@ -4503,9 +4503,9 @@ lorenans_rest = {
 					OR = {
 						dynasty = "Siloriel"
 						dynasty = "Silmuna"
-						dynasty = "síl Rubenaire"
-						dynasty = "síl Eilísin"
-						dynasty = "síl Kyliande"
+						dynasty = "sï¿½l Rubenaire"
+						dynasty = "sï¿½l Eilï¿½sin"
+						dynasty = "sï¿½l Kyliande"
 					}
 				}
 			}
@@ -4524,9 +4524,9 @@ lorenans_rest = {
 					OR = {
 						dynasty = "Siloriel"
 						dynasty = "Silmuna"
-						dynasty = "síl Rubenaire"
-						dynasty = "síl Eilísin"
-						dynasty = "síl Kyliande"
+						dynasty = "sï¿½l Rubenaire"
+						dynasty = "sï¿½l Eilï¿½sin"
+						dynasty = "sï¿½l Kyliande"
 					}
 				}
 			}
@@ -5656,7 +5656,7 @@ toncodden_lighthouse = {
 
 		country_modifiers = {
 			naval_attrition = -0.10
-			artificers_research_time = -0.05
+			# artificers_research_time = -0.05
 		}
 
 		on_upgraded = {
@@ -5684,7 +5684,7 @@ toncodden_lighthouse = {
 		country_modifiers = {
 			naval_attrition = -0.15
 			naval_morale = 0.05
-			artificers_research_time = -0.10
+			# artificers_research_time = -0.10
 		}
 
 		on_upgraded = {
@@ -5713,8 +5713,8 @@ toncodden_lighthouse = {
 		country_modifiers = {
 			naval_attrition = -0.20
 			naval_morale = 0.10
-			artificers_research_time = -0.20
-			artificers_capacity = 20
+			# artificers_research_time = -0.20
+			# artificers_capacity = 20
 		}
 
 		on_upgraded = {
