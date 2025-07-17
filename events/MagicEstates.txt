@@ -1844,6 +1844,10 @@ country_event = {
 					consort_has_personality = infertile_personality
 				}
 			}
+			modifier = {
+				factor = 1.5
+				has_idea = council_of_mages
+			}
 		}
 		country_event = { id = magic_estate.10 days = 240 random = 60 }
 	}
@@ -1898,6 +1902,10 @@ country_event = {
 					consort_has_personality = infertile_personality
 				}
 			}
+			modifier = {
+				factor = 0.75
+				has_idea = council_of_mages
+			}
 		}
 		country_event = { id = magic_estate.11 days = 240 random = 60 }
 	}
@@ -1945,6 +1953,10 @@ country_event = {
 					ruler_has_personality = infertile_personality
 					consort_has_personality = infertile_personality
 				}
+			}
+			modifier = {
+				factor = 0.75
+				has_idea = council_of_mages
 			}
 		}
 		country_event = { id = magic_estate.12 days = 240 random = 60 }
@@ -2029,6 +2041,10 @@ country_event = {
 					ruler_has_personality = infertile_personality
 					consort_has_personality = infertile_personality
 				}
+			}
+			modifier = {
+				factor = 0.75
+				has_idea = council_of_mages
 			}
 		}
 		random_list = {

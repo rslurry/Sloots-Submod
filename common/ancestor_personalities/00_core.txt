@@ -1511,6 +1511,11 @@ ancestor_mage_personality = {	#Powerful Mage
 					has_reform = eternal_council
 				}
 			}
+
+			modifier = {
+				factor = 2
+				has_idea = council_of_mages
+			}
 			
 			modifier = {
 				factor = 1.75
@@ -1666,6 +1671,11 @@ ancestor_mage_personality = {	#Powerful Mage
 					has_reform = magical_elite_reform
 					has_reform = eternal_council
 				}
+			}
+
+			modifier = {
+				factor = 2
+				has_idea = council_of_mages
 			}
 			
 			modifier = {
@@ -1861,6 +1871,11 @@ ancestor_mage_personality = {	#Powerful Mage
 					has_reform = magical_elite_reform
 					has_reform = eternal_council
 				}
+			}
+
+			modifier = {
+				factor = 2
+				has_idea = council_of_mages 
 			}
 			
 			modifier = {
