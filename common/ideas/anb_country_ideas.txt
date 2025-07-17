@@ -1911,9 +1911,13 @@ A79_ideas = {
 	free = yes
 
 	A79_reconstitute_reconstruct_repatriate = {
+		# Submod: nerf from dev cost to build cost from Nimscodd ideas
+		#development_cost = -0.15
 		build_cost = -0.10
 	}
 	A79_all_small_artillerists = {
+		# Submod: nerf from backrow arty dmg to land attrition and defensiveness like in Nimscodd ideas
+		#backrow_artillery_damage = 0.15
 		land_attrition = -0.10
 		defensiveness = 0.10
 
