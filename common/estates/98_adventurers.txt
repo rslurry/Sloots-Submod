@@ -39,14 +39,14 @@ estate_adventurers = {
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		mercenary_cost = -0.2
-		mercenary_discipline = 0.1
+		#mercenary_discipline = 0.1 # Submod: remove this broken shit
 	}
 	country_modifier_neutral = {
-		mercenary_cost = -0.2
+		mercenary_cost = -0.1 # Submod: reduce from -0.2 to -0.1
 	}	
 	country_modifier_angry = {
 		mercenary_cost = 0.2
-		mercenary_discipline = -0.1
+		#mercenary_discipline = -0.1 # Submod: to balance out removing it when happy
 
 		#Celmaldor
 		whitespear_clan_influence = -0.1
