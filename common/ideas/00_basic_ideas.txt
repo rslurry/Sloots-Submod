@@ -1539,7 +1539,6 @@ expansion_ideas = {
 	}
 	faster_colonists = {
 		global_colonial_growth = 20
-		colony_development_boost = 1 #Submod
 	}
 	vice_roys  = {
 		global_tariffs = 0.10 #1.35
