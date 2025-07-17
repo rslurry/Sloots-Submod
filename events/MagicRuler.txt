@@ -14445,6 +14445,28 @@ country_event = {
 			factor = 0.5
 			has_reform = magical_elite_reform
 		}
+
+		modifier = {
+			factor = 0.5
+			AND = {
+				has_idea = council_of_mages
+				# avoid stacking the MTTH reduction too high with other sources
+				NOT = {
+					AND = {
+						has_global_flag = crimson_deluge
+						is_year = 1560
+						capital_scope = { superregion = escann_superregion }
+					}
+				}
+				NOT = {
+					AND = {
+						ruler_has_mage_personality = yes
+						consort_has_mage_personality = yes
+					}
+				}
+			}
+		}
+
 		modifier = {
 			factor = 0.2
 			AND = {
@@ -14499,6 +14521,7 @@ country_event = {
 		OR = {
 			ruler_has_mage_personality = yes
 			has_reform = magical_elite_reform
+			has_idea = council_of_mages
 		}
 		has_heir = yes
 		has_regency = no
@@ -14539,6 +14562,10 @@ country_event = {
 		modifier = {
 			factor = 0.25
 			ruler_has_mage_personality = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_idea = council_of_mages
 		}
 		modifier = {
 			factor = 0.75

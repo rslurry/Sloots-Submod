@@ -76,7 +76,7 @@
  scrying_revenue_service:0 "Scrying Revenue Service"
  scrying_revenue_service_desc:0 "We won't tell you how much you owe, but if you don't pay the correct amount, we'll break your kneecaps."
  council_of_mages:0 "Council of Mages"
- council_of_mages_desc:0 "You are on this council, but we do not grant you the rank of master."
+ council_of_mages_desc:0 "You are on this council, but we do not grant you the rank of master. Also, this increases the chance of getting powerful mage heirs for some reason."
  
  mages_in_the_court:0 "Mages in the Court"
  desc_mages_in_the_court:0 ""
