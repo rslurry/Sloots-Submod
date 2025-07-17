@@ -1894,6 +1894,7 @@ A72_ideas = {
 }
 
 #Gnomish Hierarchy ideas
+# SEASON 10 - nerfed
 A79_ideas = {
 	start = {
 		infantry_power = 0.1
@@ -1910,10 +1911,12 @@ A79_ideas = {
 	free = yes
 
 	A79_reconstitute_reconstruct_repatriate = {
-		development_cost = -0.15
+		build_cost = -0.10
 	}
 	A79_all_small_artillerists = {
-		backrow_artillery_damage = 0.15
+		land_attrition = -0.10
+		defensiveness = 0.10
+
 	}
 	A79_damestear_born_damestear_developed = {
 		idea_cost = -0.1
