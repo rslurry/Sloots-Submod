@@ -13,6 +13,8 @@ country_decisions = {
 				mission_completed = pasiragha_unity_of_spirit_land
 			}
 			NOT = { exists = R70 }
+			# Submod: prevent Vanrahar from forming Harimraj
+			NOT = { tag = R77 }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			hidden_trigger = {
