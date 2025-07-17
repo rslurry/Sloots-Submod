@@ -58,8 +58,8 @@
  growing_artificer_influence_desc:0 "Maybe we shouldn't be giving our entire country over to these people?"
  invention_grants:0 "Invention Grants"
  invention_grants_desc:0 "Please allow up to 9 months for Reviewer 3 to sufficiently shit on your ideas."
- submod_artificers_invention_grants_tooltip:0 "Artificer Capacity: §G+10.0%§!\nBonus: Unlocks artificers after 1550. Note that it can take up to a year after adopting the idea for the cogs to begin turning."
- submod_artificers_early_tooltip:0 "Bonus: Unlocks artificers after 1550. Note that it can take up to a year after adopting the idea for the cogs to begin turning."
+ submod_artificers_invention_grants_tooltip:0 "Artificer Capacity: §G+10.0%§!"
+ submod_artificers_early_tooltip:0 "Bonus: Do you really need more?"
  
  magocracy_ideas:0 "Magocracy Ideas"
  magocracy_ideas_bonus:0 "Full Magocracy"
