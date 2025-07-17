@@ -2,6 +2,7 @@
 #Middle Dwarovar
 ####################
 #The Golden Delve (Verkal Gulan)
+# season 10 nerf
 verkal_gulan_golden_delve = {
 	start = 2914
 	date = 01.01.01
@@ -72,12 +73,13 @@ verkal_gulan_golden_delve = {
 		}
 		province_modifiers = {
 			local_development_cost = -0.10
-			trade_goods_size_modifier = 0.25
+			# trade_goods_size_modifier = 0.25
 		}
 		area_modifier = {			
 		}
 		country_modifiers = {
-			yearly_corruption = 0.05
+			inflation_reduction = 0.05
+			# yearly_corruption = 0.05
 		}
 		on_upgraded = {
 		}
@@ -90,13 +92,14 @@ verkal_gulan_golden_delve = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_development_cost = -0.20
-			trade_goods_size_modifier = 0.5
+			local_development_cost = -0.15
+			# trade_goods_size_modifier = 0.5
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			yearly_corruption = 0.10
+			inflation_reduction = 0.10
+			# yearly_corruption = 0.10
 		}
 		on_upgraded = {
 		}
@@ -109,13 +112,13 @@ verkal_gulan_golden_delve = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.30
-			trade_goods_size_modifier = 1
+			local_development_cost = -0.20
+			# trade_goods_size_modifier = 1
 		}
 		area_modifier = {		
 		}
 		country_modifiers = {
-			yearly_corruption = 0.20
+			# yearly_corruption = 0.20
 		}
 		on_upgraded = {
 		}
