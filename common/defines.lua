@@ -671,7 +671,7 @@ NCountry = {
 	GRANT_ADMINISTRATIVE_AUTONOMY_REFORM_PROGRESS_COST = 20,
 
 	MIN_FEDERAL_AUTHORITY = -100,					-- federal authority cannot go lower than -100
-	MAX_WAR_EXHAUSTION = 20,
+	MAX_WAR_EXHAUSTION = 40,
 	VICTORY_CARD_DECAY_MONTHS = 120,		-- months to lose all score.
 	VICTORY_CARD_INCREASE_MONTHS = 120,		-- months to gain all score.
 	VICTORY_CARD_START_YEAR = 1450,			-- first year for victory card.
