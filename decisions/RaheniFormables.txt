@@ -208,6 +208,15 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_dhugajir_flag }
+			# Submod: limit formation to only tags that start as Ghavaanaj culture
+			OR = {
+				tag = R13
+				tag = R14
+				tag = R16
+				tag = R17
+				tag = R18
+				tag = R35
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
