@@ -434,7 +434,7 @@ shipyard = {
 		has_port = yes
 	}
 	modifier = {
-		naval_forcelimit = 2
+		naval_ = 2
 		ship_recruit_speed = -0.25
 		local_ship_repair = 0.25
 		local_has_man_of_war = yes #1.35
@@ -967,7 +967,7 @@ regimental_camp = {
 	cost = 200
 	time = 12
 	modifier = {
-		land_forcelimit = 1
+		land_forcelimit = 0.66
 	}
 
 	on_built = {
@@ -2302,7 +2302,7 @@ conscription_center = {
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 
 	modifier = {
-		land_forcelimit = 2
+		land_forcelimit = 1.33
 	}
 	on_built = {
 		add_development_from_upgrading_or_building = {
