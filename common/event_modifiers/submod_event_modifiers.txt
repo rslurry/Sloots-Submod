@@ -76,4 +76,5 @@ sloots_over_naval_fl_10 = {
 
 sloots_colonizer = {
 	colonists = 1
+	may_explore = yes
 }
