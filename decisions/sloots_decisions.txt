@@ -27,7 +27,7 @@ country_decisions = {
 			add_mil_power = -100
 			add_treasury = -500
 			add_country_modifier = {
-				name = kvaszbennar_colonize
+				name = sloots_colonizer
 				duration = 10950
 			}
  		}
