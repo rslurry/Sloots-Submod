@@ -2,7 +2,7 @@
 #Middle Dwarovar
 ####################
 #The Golden Delve (Verkal Gulan)
-# season 10 nerf
+# Submod: season 10 nerf
 verkal_gulan_golden_delve = {
 	start = 2914
 	date = 01.01.01
@@ -78,7 +78,6 @@ verkal_gulan_golden_delve = {
 		area_modifier = {			
 		}
 		country_modifiers = {
-			inflation_reduction = 0.05
 			# yearly_corruption = 0.05
 		}
 		on_upgraded = {
@@ -98,7 +97,7 @@ verkal_gulan_golden_delve = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			inflation_reduction = 0.10
+			inflation_reduction = 0.05
 			# yearly_corruption = 0.10
 		}
 		on_upgraded = {
@@ -118,6 +117,7 @@ verkal_gulan_golden_delve = {
 		area_modifier = {		
 		}
 		country_modifiers = {
+			inflation_reduction = 0.10
 			# yearly_corruption = 0.20
 		}
 		on_upgraded = {
