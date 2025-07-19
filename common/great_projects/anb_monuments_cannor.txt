@@ -4278,193 +4278,194 @@ baths_of_verinus = {
 	}
 }
 
-derilde_s_gateway = {
-	start = 112		#Westport
-
-	date = 1.1.1
-
-	time = {
-		months = 120
-	}
-
-	build_cost = 0
-
-	can_be_moved = no
-
-	starting_tier = 1
-
-	#project type
-	type = monument
-
-	build_trigger = {
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_upgrade_trigger = {
-		owner = {
-			OR = {
-				culture_group = lencori
-				culture_group = gerudian
-				tag = A19 #Portnamm
-				tag = A80 #Iochand
-				capital_scope = { region = lencenor_region }
-				capital_scope = { region = small_country_region }
-			}
-		}
-		is_institution_enabled = new_world_i
-		province_has_center_of_trade_of_level = 2
-	}
-
-	can_use_modifiers_trigger = {
-		owner = {
-			OR = {
-				culture_group = lencori
-				culture_group = gerudian
-				tag = A19 #Portnamm
-				tag = A80 #Iochand
-				capital_scope = { region = lencenor_region }
-				capital_scope = { region = small_country_region }
-			}
-		}
-		is_institution_enabled = new_world_i
-		province_has_center_of_trade_of_level = 2
-	}
-
-	keep_trigger = {
-	}
-
-	#tier data
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-
-		cost_to_upgrade = {
-			factor = 0
-		}
-
-		province_modifiers = {
-		}
-
-		area_modifier = {
-		}
-
-		country_modifiers = {
-
-		}
-
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-
-		cost_to_upgrade = {
-			factor = 1000
-		}
-
-		province_modifiers = {
-		}
-
-		area_modifier = {
-		}
-
-		region_modifier = {
-		}
-
-		country_modifiers = {
-			global_foreign_trade_power = 0.10
-		}
-
-		on_upgraded = {
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 120
-		}
-
-		cost_to_upgrade = {
-			factor = 2500
-		}
-
-		province_modifiers = {
-		}
-
-		area_modifier = {
-		}
-
-		region_modifier = {
-		}
-
-		country_modifiers = {
-			global_foreign_trade_power = 0.15
-			global_tariffs = 0.10
-			reduced_liberty_desire_on_other_continent = 5
-		}
-
-		on_upgraded = {
-			if = {
-				limit = { has_trade_building_trigger = yes }
-				add_base_production = 2
-			}
-			else = {
-				add_building = trade_depot
-			}
-		}
-	}
-
-	tier_3 = {
-		
-		upgrade_time = {
-			months = 120
-		}
-
-		cost_to_upgrade = {
-			factor = 5000
-		}
-
-		province_modifiers = {
-		}
-
-		area_modifier = {
-		}
-
-		region_modifier = {
-		}
-
-		country_modifiers = {
-			global_foreign_trade_power = 0.20
-			global_tariffs = 0.20
-			reduced_liberty_desire_on_other_continent = 10
-			treasure_fleet_income = 0.15
-		}
-
-		on_upgraded = {
-			if = {
-				limit = { has_trade_building_trigger = yes NOT = { has_building = trade_depot } }
-				add_base_production = 2
-			}
-			else_if = {
-				limit = { has_building = trade_depot }
-				add_building = stock_exchange
-				remove_building = trade_depot
-			}
-			else = {
-				add_building = trade_depot
-			}
-		}
-	}
-}
+# Submod: remove this, we have our own monument in Westport that is more balanced
+#derilde_s_gateway = {
+#	start = 112		#Westport
+#
+#	date = 1.1.1
+#
+#	time = {
+#		months = 120
+#	}
+#
+#	build_cost = 0
+#
+#	can_be_moved = no
+#
+#	starting_tier = 1
+#
+#	#project type
+#	type = monument
+#
+#	build_trigger = {
+#	}
+#
+#	on_built = {
+#	}
+#
+#	on_destroyed = {
+#	}
+#
+#	can_upgrade_trigger = {
+#		owner = {
+#			OR = {
+#				culture_group = lencori
+#				culture_group = gerudian
+#				tag = A19 #Portnamm
+#				tag = A80 #Iochand
+#				capital_scope = { region = lencenor_region }
+#				capital_scope = { region = small_country_region }
+#			}
+#		}
+#		is_institution_enabled = new_world_i
+#		province_has_center_of_trade_of_level = 2
+#	}
+#
+#	can_use_modifiers_trigger = {
+#		owner = {
+#			OR = {
+#				culture_group = lencori
+#				culture_group = gerudian
+#				tag = A19 #Portnamm
+#				tag = A80 #Iochand
+#				capital_scope = { region = lencenor_region }
+#				capital_scope = { region = small_country_region }
+#			}
+#		}
+#		is_institution_enabled = new_world_i
+#		province_has_center_of_trade_of_level = 2
+#	}
+#
+#	keep_trigger = {
+#	}
+#
+#	#tier data
+#	tier_0 = {
+#		upgrade_time = {
+#			months = 0
+#		}
+#
+#		cost_to_upgrade = {
+#			factor = 0
+#		}
+#
+#		province_modifiers = {
+#		}
+#
+#		area_modifier = {
+#		}
+#
+#		country_modifiers = {
+#
+#		}
+#
+#		on_upgraded = {
+#		}
+#	}
+#
+#	tier_1 = {
+#		upgrade_time = {
+#			months = 120
+#		}
+#
+#		cost_to_upgrade = {
+#			factor = 1000
+#		}
+#
+#		province_modifiers = {
+#		}
+#
+#		area_modifier = {
+#		}
+#
+#		region_modifier = {
+#		}
+#
+#		country_modifiers = {
+#			global_foreign_trade_power = 0.10
+#		}
+#
+#		on_upgraded = {
+#		}
+#	}
+#
+#	tier_2 = {
+#		upgrade_time = {
+#			months = 120
+#		}
+#
+#		cost_to_upgrade = {
+#			factor = 2500
+#		}
+#
+#		province_modifiers = {
+#		}
+#
+#		area_modifier = {
+#		}
+#
+#		region_modifier = {
+#		}
+#
+#		country_modifiers = {
+#			global_foreign_trade_power = 0.15
+#			global_tariffs = 0.10
+#			reduced_liberty_desire_on_other_continent = 5
+#		}
+#
+#		on_upgraded = {
+#			if = {
+#				limit = { has_trade_building_trigger = yes }
+#				add_base_production = 2
+#			}
+#			else = {
+#				add_building = trade_depot
+#			}
+#		}
+#	}
+#
+#	tier_3 = {
+#		
+#		upgrade_time = {
+#			months = 120
+#		}
+#
+#		cost_to_upgrade = {
+#			factor = 5000
+#		}
+#
+#		province_modifiers = {
+#		}
+#
+#		area_modifier = {
+#		}
+#
+#		region_modifier = {
+#		}
+#
+#		country_modifiers = {
+#			global_foreign_trade_power = 0.20
+#			global_tariffs = 0.20
+#			reduced_liberty_desire_on_other_continent = 10
+#			treasure_fleet_income = 0.15
+#		}
+#
+#		on_upgraded = {
+#			if = {
+#				limit = { has_trade_building_trigger = yes NOT = { has_building = trade_depot } }
+#				add_base_production = 2
+#			}
+#			else_if = {
+#				limit = { has_building = trade_depot }
+#				add_building = stock_exchange
+#				remove_building = trade_depot
+#			}
+#			else = {
+#				add_building = trade_depot
+#			}
+#		}
+#	}
+#}
 
 lorenans_rest = {
 	start = 70		#Ionnidar
