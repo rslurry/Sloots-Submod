@@ -2589,21 +2589,7 @@ bladeskeep_monument = {
 					tooltip = bladeskeep_monument_worthy.tt
 					has_country_flag = bladeskeep_monument_is_worthy
 				}
-				calc_true_if = {
-					amount = 2
-					desc = bladeskeep_monument_mil_ideas.tt
-					full_idea_group = aristocracy_ideas
-					full_idea_group = plutocracy_ideas
-					full_idea_group = horde_gov_ideas
-					full_idea_group = theocracy_gov_ideas
-					full_idea_group = indigenous_ideas
-					full_idea_group = offensive_ideas
-					full_idea_group = defensive_ideas
-					full_idea_group = quality_ideas
-					full_idea_group = quantity_ideas
-					full_idea_group = naval_ideas
-					full_idea_group = mercenary_ideas
-				}
+				is_year = 1550
 			}
 		}
 	}
@@ -2651,7 +2637,7 @@ bladeskeep_monument = {
 		}
 
 		country_modifiers = {
-			army_tradition_decay = -0.005
+			army_tradition_decay = -0.0033
 			mil_advisor_cost = -0.1
 		}
 
@@ -2675,7 +2661,7 @@ bladeskeep_monument = {
 		}
 
 		country_modifiers = {
-			army_tradition_decay = -0.01
+			army_tradition_decay = -0.0067
 			prestige_from_land = 0.25
 			mil_advisor_cost = -0.15
 		}
@@ -2712,7 +2698,7 @@ bladeskeep_monument = {
 		}
 
 		country_modifiers = {
-			army_tradition_decay = -0.015
+			army_tradition_decay = -0.01
 			prestige_from_land = 0.5
 			mil_advisor_cost = -0.20
 		}
