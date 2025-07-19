@@ -74,4 +74,6 @@ sloots_over_naval_fl_10 = {
 	sailors_recovery_speed = -1.0
 }
 
-
+sloots_colonizer = {
+	colonists = 1
+}
