@@ -657,7 +657,7 @@ halfling_majority_primary = {
 	picture = "pop_icon_halfling_mp"
 }
 
-
+# season 10 submod nerfs
 #Humans - when oppressed they're just cannon fodder, then integrated they help develop provinces
 #Human Minority
 human_minority_oppressed_small = {
@@ -678,8 +678,9 @@ human_minority_coexisting_small = {
 	local_unrest = 1
 	local_state_maintenance_modifier = 0.1
 	
-	local_manpower_modifier = 0.05			
-	local_development_cost = -0.05
+	local_manpower_modifier = 0.075
+	local_production_efficiency = 0.075			
+	# local_development_cost = -0.05
 	picture = "pop_icon_human_sa"
 }
 
@@ -687,8 +688,9 @@ human_minority_coexisting_large = {
 	local_unrest = 1
 	local_state_maintenance_modifier = 0.25
 	
-	local_manpower_modifier = 0.1			
-	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_manpower_modifier = 0.15
+	local_production_efficiency = 0.15
+	# local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
 	picture = "pop_icon_human_la"
 }
 
@@ -696,8 +698,9 @@ human_minority_integrated_small = {
 	local_state_maintenance_modifier = 0.3
 	local_autonomy = 0.0125
 	
-	local_manpower_modifier = 0.05			
-	local_development_cost = -0.05
+	local_manpower_modifier = 0.075
+	local_production_efficiency = 0.075			
+	#local_development_cost = -0.05
 	local_sailors_modifier = 0.1
 	picture = "pop_icon_human_si"
 }
@@ -706,8 +709,9 @@ human_minority_integrated_large = {
 	local_state_maintenance_modifier = 0.5
 	local_autonomy = 0.025
 	
-	local_manpower_modifier = 0.1			
-	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_manpower_modifier = 0.15	
+	local_production_efficiency = 0.15		
+	# local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
 	local_sailors_modifier = 0.2
 	picture = "pop_icon_human_li"
 }
@@ -724,8 +728,9 @@ human_majority_oppressed = {
 
 human_majority_coexisting = {
 
-	local_manpower_modifier = 0.1			
-	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_manpower_modifier = 0.15
+	local_production_efficiency = 0.15			
+	#local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
 	
 	local_culture_conversion_cost = 0.25
 	picture = "pop_icon_human_ma"
@@ -733,8 +738,9 @@ human_majority_coexisting = {
 
 human_majority_integrated = {
 	
-	local_manpower_modifier = 0.1			
-	local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
+	local_manpower_modifier = 0.15
+	local_production_efficiency = 0.15		
+	# local_development_cost = -0.1				#There's a reason why humans have huge cities and are the most powerful
 	local_sailors_modifier = 0.2
 	
 	local_missionary_strength = 0.01
@@ -744,8 +750,9 @@ human_majority_integrated = {
 
 human_majority_primary = {
 	
-	local_manpower_modifier = 0.1			
-	local_development_cost = -0.1
+	local_manpower_modifier = 0.15
+	local_production_efficiency = 0.15			
+	#local_development_cost = -0.1
 	local_sailors_modifier = 0.2
 	local_missionary_strength = 0.01
 	
