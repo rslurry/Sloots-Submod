@@ -15,7 +15,7 @@ edict_encourage_development = {
 		# Instead, we will do monthly devastation
 		#local_development_cost = -0.1
 		#local_prosperity_growth = 1.0
-		local_monthly_devastation = -0.4
+		local_monthly_devastation = -0.3
 	}
 	
 	color = {  244 184 12  }
