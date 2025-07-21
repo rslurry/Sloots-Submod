@@ -415,16 +415,19 @@ age_of_discovery = {
 			allow = {
 				custom_trigger_tooltip = {
 					tooltip = age_ability_monstrous_rule_tt
-					OR ={
-						culture = exodus_goblin
-						culture = firanyan_harpy
-						culture = siadunan_harpy
-						culture = stonewing_harpy
-						culture = naleni_harpy
-						culture = swamp_troll
-						culture_group = gnollish
-						culture_group = centaur
-					}
+					# Submod: allow any monstrous tag to take this
+					has_country_modifier = monstrous_nation
+					#OR ={
+					#	culture = exodus_goblin
+					#	culture = firanyan_harpy
+					#	culture = siadunan_harpy
+					#	culture = stonewing_harpy
+					#	culture = naleni_harpy
+					#	culture = swamp_troll
+					#	culture_group = gnollish
+					#	culture_group = centaur
+					#}
+					
 				}
 				num_of_provinces_owned_or_owned_by_subjects_with = {
 					value = 10
