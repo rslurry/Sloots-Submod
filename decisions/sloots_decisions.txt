@@ -14,8 +14,13 @@ country_decisions = {
  		}
  		
  		allow = {
- 			num_of_ports = 1
-			dip_tech = 10
+			OR = {
+ 				AND = {
+					num_of_ports = 1
+					dip_tech = 9
+				}
+				dip_tech = 11
+			}
 			NOT = {
 				num_of_colonists = 1
 			}
@@ -28,7 +33,7 @@ country_decisions = {
 			add_treasury = -500
 			add_country_modifier = {
 				name = sloots_colonizer
-				duration = 10950
+				duration = 14600
 			}
  		}
  		ai_will_do = {
