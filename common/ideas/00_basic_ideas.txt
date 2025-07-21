@@ -2140,7 +2140,7 @@ infrastructure_ideas = { #1.35
 
 # Submod: new idea groups
 artificer_ideas = {
-	category = DIP 
+	category = ADM 
 
 	bonus = {
 		
@@ -2186,7 +2186,7 @@ artificer_ideas = {
 }
 
 magocracy_ideas = {
-	category = ADM
+	category = DIP
 
 	bonus = {
 		mages_loyalty_modifier = 0.1
