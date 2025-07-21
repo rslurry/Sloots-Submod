@@ -75,6 +75,8 @@ sloots_over_naval_fl_10 = {
 }
 
 sloots_colonizer = {
-	colonists = 1
 	may_explore = yes
+	colonists = 1
+	global_colonial_growth = 25
+	range = 1.0
 }
