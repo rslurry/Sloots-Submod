@@ -9119,42 +9119,58 @@ on_bi_yearly_pulse_4 = {
 }
 
 on_bi_yearly_pulse_5 = {
-	# Submod: refresh privileges that reduce dev cost for certain terrain
+	# Submod checks: only apply to players for efficiency
 	if = {
 		limit = {
-			has_estate_privilege = estate_cave_adaptation
+			NOT = {
+				ai = yes
+ 			}
 		}
-		remove_estate_privilege = estate_cave_adaptation
-		set_estate_privilege = estate_cave_adaptation
-	}
-	if = {
-		limit = {
-			has_estate_privilege = estate_fey_development1
+		# Submod: refresh privileges that reduce dev cost for certain terrain
+		if = {
+			limit = {
+				has_estate_privilege = estate_cave_adaptation
+			}
+			remove_estate_privilege = estate_cave_adaptation
+			set_estate_privilege = estate_cave_adaptation
 		}
-		remove_estate_privilege = estate_fey_development1
-		set_estate_privilege = estate_fey_development1
-	}
-	if = {
-		limit = {
-			has_estate_privilege = estate_fey_development2
+		if = {
+			limit = {
+				has_estate_privilege = estate_fey_development1
+			}
+			remove_estate_privilege = estate_fey_development1
+			set_estate_privilege = estate_fey_development1
 		}
-		remove_estate_privilege = estate_fey_development2
-		set_estate_privilege = estate_fey_development2
-	}
-	if = {
-		limit = {
-			has_estate_privilege = estate_fey_development3
+		if = {
+			limit = {
+				has_estate_privilege = estate_fey_development2
+			}
+			remove_estate_privilege = estate_fey_development2
+			set_estate_privilege = estate_fey_development2
 		}
-		remove_estate_privilege = estate_fey_development3
-		set_estate_privilege = estate_fey_development3
-	}
-	if = {
-		limit = {
-			has_estate_privilege = estate_cave_adaptation
+		if = {
+			limit = {
+				has_estate_privilege = estate_fey_development3
+			}
+			remove_estate_privilege = estate_fey_development3
+			set_estate_privilege = estate_fey_development3
 		}
-		remove_estate_privilege = estate_cave_adaptation
-		set_estate_privilege = estate_cave_adaptation
-	}
+		if = {
+			limit = {
+				has_estate_privilege = estate_cave_adaptation
+			}
+			remove_estate_privilege = estate_cave_adaptation
+			set_estate_privilege = estate_cave_adaptation
+		}
+		# Submod: pulse check to remove colonizer modifier if player has other sources of colonists
+		if = {
+			limit = {
+				has_country_modifier = sloots_colonizer
+				num_of_colonists = 2
+			}
+			remove_country_modifier = sloots_colonizer
+		}
+		
 	random_events = { #all these were shifted from on_bi_yearly_pulse_1
 		# # Anglican Events
 		# 100 = anglican_events.1
