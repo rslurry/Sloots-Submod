@@ -45,6 +45,9 @@ country_decisions = {
 				estate_action = GRANT_DRAFT_ARTIFICERS_ARTIFICE
 			}
 			has_estate = estate_artificers
+			NOT = {
+				has_country_flag = drafted_artificers
+			}
 		}
 		allow = {
 			has_not_any_estate_disaster_active = yes
@@ -63,6 +66,9 @@ country_decisions = {
 				estate_action = GRANT_DRAFT_ARTIFICERS_ARTIFICE
 				days = 3650
 			}
+			NOT = {
+				has_country_flag = drafted_artificers
+			}
 		}
 		effect = {
 			set_estate_action_cooldown = {
@@ -71,6 +77,7 @@ country_decisions = {
 			estate_action = {
 				estate_action = GRANT_DRAFT_ARTIFICERS_ARTIFICE
 			}
+			set_country_flag = drafted_artificers
 		}
 		ai_will_do = {
 			factor = 400
