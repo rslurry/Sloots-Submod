@@ -2053,7 +2053,7 @@ on_war_won = {
 	}
 
 	if = { #Tiboktsamo war win
-		limit = { tag = L53 }
+		limit = { is_or_was_tag = { tag = L53 } }
 		country_event = { id = flavour_tiboktsamo.9 }
 	}
 	
@@ -4090,7 +4090,6 @@ on_monarch_death = {
 		naleni.35 # Death of Riva
 		flavor_averilibet.3 #New husband for new ruler
 		spirits.604				#Clearing all the Devouring Path aspects
-		flavour_corinsfield.90 #corinsfield peasants theocracy election
 		larankar_events.112 #Sibling War Ends - No One Won
 		hisost.34 #Seble death hisost yamok
 		hisost.35 #regency end hisost yamok
@@ -4099,6 +4098,7 @@ on_monarch_death = {
 		istralore.39 #aucanna death
 		#high_philosophy_events.51 #HP good ruler death
 		flavor_konolkhatep.309 #Resurrect Horutep if he somehow died
+		flavour_corinsfield.90 #corinsfield
 	}
 	if = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
@@ -5043,6 +5043,7 @@ on_emperor_elected = {
 			ROOT = {
 				country_event = {
 					id = istralore.38
+					days = 1
 				}
 			}
 		}
@@ -9122,9 +9123,7 @@ on_bi_yearly_pulse_5 = {
 	# Submod checks: only apply to players for efficiency
 	if = {
 		limit = {
-			NOT = {
-				ai = yes
- 			}
+			ai = no
 		}
 		# Submod: refresh privileges that reduce dev cost for certain terrain
 		if = {
@@ -9170,7 +9169,8 @@ on_bi_yearly_pulse_5 = {
 			}
 			remove_country_modifier = sloots_colonizer
 		}
-		
+	}
+
 	random_events = { #all these were shifted from on_bi_yearly_pulse_1
 		# # Anglican Events
 		# 100 = anglican_events.1
@@ -16168,7 +16168,6 @@ on_leader_recruited = {
 	}
 }
 
-
 # country
 on_general_recruited = {
 	on_general_recruited_effect = yes #1.35
@@ -21803,7 +21802,9 @@ on_adm_exploited = {
 	if = {
 		limit = {
 			owner = {
-				tag = A45
+				is_or_was_tag = {
+					tag = A45
+				}
 			}
 		}
 		set_province_flag = A45_exploited_dev
@@ -21917,7 +21918,9 @@ on_dip_exploited = {
 	if = {
 		limit = {
 			owner = {
-				tag = A45
+				is_or_was_tag = {
+					tag = A45
+				}
 			}
 		}
 		set_province_flag = A45_exploited_dev
@@ -22023,7 +22026,9 @@ on_mil_exploited = {
 	if = {
 		limit = {
 			owner = {
-				tag = A45
+				is_or_was_tag = {
+					tag = A45
+				}
 			}
 		}
 		set_province_flag = A45_exploited_dev
