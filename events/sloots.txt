@@ -16,11 +16,9 @@ country_event = {
 	
 	option = {	
 		name = sloots.0.a
-		effect = {
-		    change_adm = -6
-		    change_dip = -6
-		    change_mil = -6
-		}
+		change_adm = -6
+		change_dip = -6
+		change_mil = -6
 	}
 }
 
