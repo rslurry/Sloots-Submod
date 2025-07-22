@@ -1,8 +1,10 @@
 
 #484 - Havana
 
-owner = U09
-controller = U09
+# Submod: make Rakkaz start with this, but Gnollakaz keeps their core on it
+owner = F71
+controller = F71
+add_core = F71
 add_core = U09
 culture = pyreclaw_gnoll
 religion = xhazobkult
