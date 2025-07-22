@@ -8,6 +8,10 @@
  estate_cave_adaptation_desc:0 "I was born in it; molded by it.  I didn't see the light until I was already a man; by then it was nothing to me but blinding!"
  estate_cave_adaptation_cavern:0 "Cave Adaptation"
  desc_estate_cave_adaptation_cavern:0 "The administration's inherent adaptation to caverns enables efficient development of the local infrastructure."
+
+ sloots.0.t:0 "How can you have any pudding if you don't post your stou?"
+ sloots.0.d:0 "Some people think they can eat their desserts before finishing their stou.  Those people are wrong, and they will suffer for it."
+ sloots.0.a:0 "Sharpen the screwdrivers!  They'll never make this mistake again."
  
  sloots.100.t:0 "Condo"
  sloots.100.d:0 "It's not like you'd actually read this if it said anything.  Just click the button."
