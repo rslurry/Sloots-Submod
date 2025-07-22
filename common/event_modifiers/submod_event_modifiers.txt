@@ -35,43 +35,43 @@ sloots_condo_rev = {
 }
 
 sloots_over_naval_fl_1 = {
-	naval_maintenance_modifier = 0.2
+	global_ship_cost = 0.2
 }
 
 sloots_over_naval_fl_2 = {
-	naval_maintenance_modifier = 0.4
+	global_ship_cost = 0.4
 }
 
 sloots_over_naval_fl_3 = {
-	naval_maintenance_modifier = 0.6
+	global_ship_cost = 0.6
 }
 
 sloots_over_naval_fl_4 = {
-	naval_maintenance_modifier = 0.8
+	global_ship_cost = 0.8
 }
 
 sloots_over_naval_fl_5 = {
-	naval_maintenance_modifier = 1.0
+	global_ship_cost = 1.0
 }
 
 sloots_over_naval_fl_6 = {
-	naval_maintenance_modifier = 1.2
+	global_ship_cost = 1.2
 }
 
 sloots_over_naval_fl_7 = {
-	naval_maintenance_modifier = 1.4
+	global_ship_cost = 1.4
 }
 
 sloots_over_naval_fl_8 = {
-	naval_maintenance_modifier = 1.6
+	global_ship_cost = 1.6
 }
 
 sloots_over_naval_fl_9 = {
-	naval_maintenance_modifier = 1.8
+	global_ship_cost = 1.8
 }
 
 sloots_over_naval_fl_10 = {
-	naval_maintenance_modifier = 2.0
+	global_ship_cost = 2.0
 }
 
 sloots_colonizer = {
