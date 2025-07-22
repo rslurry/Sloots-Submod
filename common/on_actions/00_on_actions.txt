@@ -15742,14 +15742,16 @@ on_leader_recruited = {
 			desc = EST_VAL_NOBLE_LEADER
 		}
 	}
-	#Submod: apply increased naval maintenance for being over naval FL
+	#Submod: apply increased ship cost for being over naval FL
 	if = {
+		# Most tags will fail this check, avoiding all other checks
 		limit = {
 			ai = no
 		}
+		# Landlocked players will fail this check, avoiding all other checks
 		if = {
 			limit = {
-				naval_forcelimit = 1
+				has_port = yes
 			}
 			# Remove existing modifier, if applicable
 			if = {
@@ -15812,10 +15814,244 @@ on_leader_recruited = {
 				}
 				remove_country_modifier = sloots_over_naval_fl_10
 			}
-			
+
 			if = {
 				limit = { 
+					naval_forcelimit = 400
+				}
+				
+				# Apply new modifier
+				if = {
+					limit = {
+						navy_size_percentage = 2.5
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_10
+						duration = -1
+						desc = sloots_over_naval_fl_10_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.25
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_9
+						duration = -1
+						desc = sloots_over_naval_fl_9_desc
+					}
+					
+				}	
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.0
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_8
+						duration = -1
+						desc = sloots_over_naval_fl_8_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.8
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_7
+						duration = -1
+						desc = sloots_over_naval_fl_7_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.65
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_6
+						duration = -1
+						desc = sloots_over_naval_fl_6_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.5
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_5
+						duration = -1
+						desc = sloots_over_naval_fl_5_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.4
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_4
+						duration = -1
+						desc = sloots_over_naval_fl_4_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.3
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_3
+						duration = -1
+						desc = sloots_over_naval_fl_3_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.2
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_2
+						duration = -1
+						desc = sloots_over_naval_fl_2_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.1
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_1
+						duration = -1
+						desc = sloots_over_naval_fl_1_desc
+					}
+					
+				}
+			}
+			else_if = {
+				limit = { 
 					naval_forcelimit = 100
+				}
+				
+				# Apply new modifier
+				if = {
+					limit = {
+						navy_size_percentage = 3.0
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_10
+						duration = -1
+						desc = sloots_over_naval_fl_10_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.8
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_9
+						duration = -1
+						desc = sloots_over_naval_fl_9_desc
+					}
+					
+				}	
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.6
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_8
+						duration = -1
+						desc = sloots_over_naval_fl_8_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.4
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_7
+						duration = -1
+						desc = sloots_over_naval_fl_7_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.2
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_6
+						duration = -1
+						desc = sloots_over_naval_fl_6_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.0
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_5
+						duration = -1
+						desc = sloots_over_naval_fl_5_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.8
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_4
+						duration = -1
+						desc = sloots_over_naval_fl_4_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.6
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_3
+						duration = -1
+						desc = sloots_over_naval_fl_3_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.4
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_2
+						duration = -1
+						desc = sloots_over_naval_fl_2_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 1.2
+					}
+					add_country_modifier = {
+						name = sloots_over_naval_fl_1
+						duration = -1
+						desc = sloots_over_naval_fl_1_desc
+					}
+					
+				}
+			}
+			else_if = {
+				limit = { 
+					naval_forcelimit = 70
 				}
 				
 				# Apply new modifier
@@ -15932,130 +16168,13 @@ on_leader_recruited = {
 			}
 			else_if = {
 				limit = { 
-					naval_forcelimit = 70
-				}
-				
-				# Apply new modifier
-				if = {
-					limit = {
-						navy_size_percentage = 4.125
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_10
-						duration = -1
-						desc = sloots_over_naval_fl_10_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 3.8125
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_9
-						duration = -1
-						desc = sloots_over_naval_fl_9_desc
-					}
-					
-				}	
-				else_if = {
-					limit = {
-						navy_size_percentage = 3.5
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_8
-						duration = -1
-						desc = sloots_over_naval_fl_8_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 3.1875
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_7
-						duration = -1
-						desc = sloots_over_naval_fl_7_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 2.875
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_6
-						duration = -1
-						desc = sloots_over_naval_fl_6_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 2.5625
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_5
-						duration = -1
-						desc = sloots_over_naval_fl_5_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 2.25
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_4
-						duration = -1
-						desc = sloots_over_naval_fl_4_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 1.9375
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_3
-						duration = -1
-						desc = sloots_over_naval_fl_3_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 1.625
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_2
-						duration = -1
-						desc = sloots_over_naval_fl_2_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 1.3125
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_1
-						duration = -1
-						desc = sloots_over_naval_fl_1_desc
-					}
-					
-				}
-			}
-			else_if = {
-				limit = { 
 					naval_forcelimit = 40
 				}
 				
 				# Apply new modifier
 				if = {
 					limit = {
-						navy_size_percentage = 4.75
+						navy_size_percentage = 4.0
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_10
@@ -16066,7 +16185,7 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 4.375
+						navy_size_percentage = 3.7
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_9
@@ -16077,7 +16196,7 @@ on_leader_recruited = {
 				}	
 				else_if = {
 					limit = {
-						navy_size_percentage = 4.0
+						navy_size_percentage = 3.4
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_8
@@ -16088,7 +16207,7 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 3.625
+						navy_size_percentage = 3.1
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_7
@@ -16099,23 +16218,12 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 3.25
+						navy_size_percentage = 2.8
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_6
 						duration = -1
 						desc = sloots_over_naval_fl_6_desc
-					}
-					
-				}
-				else_if = {
-					limit = {
-						navy_size_percentage = 2.875
-					}
-					add_country_modifier = {
-						name = sloots_over_naval_fl_5
-						duration = -1
-						desc = sloots_over_naval_fl_5_desc
 					}
 					
 				}
@@ -16124,6 +16232,17 @@ on_leader_recruited = {
 						navy_size_percentage = 2.5
 					}
 					add_country_modifier = {
+						name = sloots_over_naval_fl_5
+						duration = -1
+						desc = sloots_over_naval_fl_5_desc
+					}
+					
+				}
+				else_if = {
+					limit = {
+						navy_size_percentage = 2.2
+					}
+					add_country_modifier = {
 						name = sloots_over_naval_fl_4
 						duration = -1
 						desc = sloots_over_naval_fl_4_desc
@@ -16132,7 +16251,7 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 2.125
+						navy_size_percentage = 1.9
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_3
@@ -16143,7 +16262,7 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 1.75
+						navy_size_percentage = 1.6
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_2
@@ -16154,7 +16273,7 @@ on_leader_recruited = {
 				}
 				else_if = {
 					limit = {
-						navy_size_percentage = 1.375
+						navy_size_percentage = 1.3
 					}
 					add_country_modifier = {
 						name = sloots_over_naval_fl_1
