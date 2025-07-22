@@ -35,43 +35,43 @@ sloots_condo_rev = {
 }
 
 sloots_over_naval_fl_1 = {
-	sailors_recovery_speed = -0.1
+	naval_maintenance_modifier = 0.1
 }
 
 sloots_over_naval_fl_2 = {
-	sailors_recovery_speed = -0.2
+	naval_maintenance_modifier = 0.2
 }
 
 sloots_over_naval_fl_3 = {
-	sailors_recovery_speed = -0.3
+	naval_maintenance_modifier = 0.3
 }
 
 sloots_over_naval_fl_4 = {
-	sailors_recovery_speed = -0.4
+	naval_maintenance_modifier = 0.4
 }
 
 sloots_over_naval_fl_5 = {
-	sailors_recovery_speed = -0.5
+	naval_maintenance_modifier = 0.5
 }
 
 sloots_over_naval_fl_6 = {
-	sailors_recovery_speed = -0.6
+	naval_maintenance_modifier = 0.6
 }
 
 sloots_over_naval_fl_7 = {
-	sailors_recovery_speed = -0.7
+	naval_maintenance_modifier = 0.7
 }
 
 sloots_over_naval_fl_8 = {
-	sailors_recovery_speed = -0.8
+	naval_maintenance_modifier = 0.8
 }
 
 sloots_over_naval_fl_9 = {
-	sailors_recovery_speed = -0.9
+	naval_maintenance_modifier = 0.9
 }
 
 sloots_over_naval_fl_10 = {
-	sailors_recovery_speed = -1.0
+	naval_maintenance_modifier = 1.0
 }
 
 sloots_colonizer = {
