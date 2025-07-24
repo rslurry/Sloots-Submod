@@ -146,6 +146,9 @@
  desc_damestear_armor:0 ""
  expanded_training_programs:0 "Expanded Training Programs"
  desc_expanded_training_programs:0 "Oh, it's the deep burn.  Oh it's so deep.  Oh, I can barely lift my right arm 'cause I did so many.  I don't know if you heard me counting, I did over a thousand."
+ mage_crusade:0 "Mage's Crusade"
+ desc_mage_crusade:0 "Magus vult!"
+ 
  sloots_colonizer:0 "Colonial Investments"
  desc_sloots_colonizer:0 "Go forth and prosper."
  extra_colonial_title:0 "Funds for Colonial Efforts"
