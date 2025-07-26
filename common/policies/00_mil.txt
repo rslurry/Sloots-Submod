@@ -1845,7 +1845,7 @@ mages_crusade = {
 	
 	allow = {
 		full_idea_group = magocracy_ideas
-		full_idea_group = defensive_ideas
+		full_idea_group = theocracy_gov_ideas
 	}
 	
 	war_exhaustion = -0.03
