@@ -96,7 +96,10 @@ country_event = {
 	option = {
 		name = magic_ruler.5.c	#available
 		trigger = {
-			has_ruler_flag = evocation_1
+			OR = {
+				has_ruler_flag = evocation_1
+				has_ruler_flag = zokka_phoenix_flag
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -1182,7 +1185,7 @@ country_event = {
 					garrison = 15000
 				}
 			}
-			add_adm_power = -250
+			add_adm_power = -250 # Submod: more expensive
 			add_dip_power = -250
 
 			set_country_flag = spell_1
@@ -1211,7 +1214,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -250
+			add_adm_power = -250 # Submod: more expensive
 			add_dip_power = -250
 
 			set_country_flag = spell_2
@@ -1240,8 +1243,8 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
-			add_dip_power = -200
+			add_adm_power = -250 # Submod: more expensive
+			add_dip_power = -250
 
 			set_country_flag = spell_3
 			tooltip = {
@@ -1269,7 +1272,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_4
@@ -1298,7 +1301,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_5
@@ -1327,7 +1330,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_6
@@ -1356,7 +1359,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_7
@@ -1385,7 +1388,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_8
@@ -1414,7 +1417,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_9
@@ -1443,7 +1446,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_10
@@ -1472,7 +1475,7 @@ country_event = {
 					}
 				}
 			}
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_10
@@ -1488,7 +1491,7 @@ country_event = {
 			}
 		}
 		else = {
-			add_adm_power = -200
+			add_adm_power = -200 # Submod: more expensive
 			add_dip_power = -200
 
 			set_country_flag = spell_10
@@ -1717,6 +1720,7 @@ country_event = {
 						}
 						OR = {
 							has_ruler_flag = evocation_2
+							has_ruler_flag = zokka_phoenix_flag
 							AND = {
 								has_ruler_flag = evocation_1
 								OR = {
@@ -1768,6 +1772,7 @@ country_event = {
 						}
 						OR = {
 							has_ruler_flag = evocation_2
+							has_ruler_flag = zokka_phoenix_flag
 							AND = {
 								has_ruler_flag = evocation_1
 								OR = {
@@ -1826,6 +1831,7 @@ country_event = {
 						}
 						OR = {
 							has_ruler_flag = evocation_2
+							has_ruler_flag = zokka_phoenix_flag
 							AND = {
 								has_ruler_flag = evocation_1
 								OR = {
@@ -1867,6 +1873,7 @@ country_event = {
 						}
 						OR = {
 							has_ruler_flag = evocation_2
+							has_ruler_flag = zokka_phoenix_flag
 							AND = {
 								has_ruler_flag = evocation_1
 								OR = {

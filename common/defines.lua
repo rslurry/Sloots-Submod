@@ -133,7 +133,7 @@ NDiplomacy = {
 	LACK_OF_ELECTORS_HIT = -0.1,					-- Also applied to vassalized electors
 	JOIN_HRE_DEVELOPMENT_CAP_VASSAL = 200,			-- Max cap of development of vassals to join the empire
 	IMPERIAL_REFORM_COST = 50,						-- Minium Cost of enacting a new reform.
-	IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 1,		-- How much acceptance for each authority above IMPERIAL_REFORM_COST
+	IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 2,		-- How much acceptance for each authority above IMPERIAL_REFORM_COST
 	CELESTIAL_EMPIRE_REFORM_COST = 70,				-- Mandate cost of enacting a new reform for the Emperor of China.
 	CELESTIAL_EMPIRE_REFORM_STABILITY_COST = 1,		-- Stability cost of enacting a new reform for the Emperor of China
 	CELESTIAL_EMPIRE_REFORM_MIN_VALUE = 80,		-- Minimum value of Mandate above which new reforms can be enacted.
@@ -493,7 +493,7 @@ NCountry = {
 	MONTHS_FOR_MAX_MP_ALERT = 3,
 
 	CHANGE_COLONIAL_TYPE_COOLDOWN_DURATION = 10,
-	CONCENTRATE_DEVELOPMENT_COOLDOWN_DURATION = 400, -- (Anbennar) pdx: 50
+	CONCENTRATE_DEVELOPMENT_COOLDOWN_DURATION = 50,
 	SIBERIAN_FRONTIER_DAILY_BASE = 5,
 	SIBERIAN_FRONTIER_DAILY_RANGE = 11,
 	CONTRIBUTE_TO_CAPITAL_MIN_DEV_RATIO = 0.5,		-- Overlord's development times this value must be smaller than Subject's development.
@@ -646,7 +646,7 @@ NCountry = {
 
 
 	EXPLORE_COAST_EVENT_CHANCE = 2,			-- Chance (in %) of getting an event when exploring coasts
-	MIN_TECH_FOR_CIRCUMNAVIGATE = 9,			-- Must have this level of dip tech to circumnavigate the globe
+	MIN_TECH_FOR_CIRCUMNAVIGATE = 20,			-- (Anbennar) - vanilla was 9 - Must have this level of dip tech to circumnavigate the globe
 	CIRCUMNAVIGATION_PROVINCE_1 = 1502,			-- (Anbennar) pdx: 1468. Provinces for circumnavigation (coast of gambia)
 	CIRCUMNAVIGATION_PROVINCE_2 = 1684,			-- (Anbennar) pdx: 1539. Provinces for circumnavigation (magellan strait)
 	CIRCUMNAVIGATION_PROVINCE_3 = 1358,			-- (Anbennar) pdx: 1697. Provinces for circumnavigation (hawaii sea)
@@ -671,7 +671,7 @@ NCountry = {
 	GRANT_ADMINISTRATIVE_AUTONOMY_REFORM_PROGRESS_COST = 20,
 
 	MIN_FEDERAL_AUTHORITY = -100,					-- federal authority cannot go lower than -100
-	MAX_WAR_EXHAUSTION = 20,
+	MAX_WAR_EXHAUSTION = 40,
 	VICTORY_CARD_DECAY_MONTHS = 120,		-- months to lose all score.
 	VICTORY_CARD_INCREASE_MONTHS = 120,		-- months to gain all score.
 	VICTORY_CARD_START_YEAR = 1450,			-- first year for victory card.
@@ -979,7 +979,7 @@ NCountry = {
 	SCUTAGE_TAX_FRACTION = 0.5,
 	PERCENTAGE_OF_DEV_FOR_CONVERT_TRIBUTARY_TO_VASSAL = 0.4,
 	MAX_LIBERTY_DESIRE_FOR_CONVERT_TRIBUTARY_TO_VASSAL = 50,
-	CONCENTRATE_DEVELOPMENT_DEVELOPMENT_DECREASE = 0,	-- (Anbennar) pdx: 0.2 (disabled concentrate development)
+	CONCENTRATE_DEVELOPMENT_DEVELOPMENT_DECREASE = 0.2,
 	PILLAGE_CAPITAL_DEVELOPMENT_DECREASE = 0.2,
 	RAZE_UNREST_DURATION = 10,						-- Years of unrest. Also used for duration of neg. opinion modifier for previous owner.
 	RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.33,
@@ -1443,7 +1443,7 @@ NMilitary = {
 	BATTLE_DAILY_MORALE_DAMAGE = 0.01,				-- Deployed troops take this fraction of their maximum morale as damage
 	RESERVE_DAILY_MORALE_DAMAGE = 0.02,				-- Reserve troops take this fraction of their maximum morale as damage (modified by reserves_organisation)
 	CREATE_JANISSARIES_MIL_COST = 5,				-- (Anbennar) pdx: 3 Cost to create janissaries (per unit)
-	CREATE_CAWA_MIL_COST = 2,						-- Cost to create Cawa (per unit)
+	CREATE_CAWA_MIL_COST = 5,						-- Cost to create Cawa (per unit)
 	CREATE_HUSSARS_MIL_COST = 10;					-- (Anbennar) pdx: 0 (Mythical Riders) Cost to create Hussars (per unit)
 	COSSACKS_MAXIMUM_RATIO = 1.0,					-- Maximum number of Cossacks regiments, relative to force limit
 	REVOLUTIONARY_GUARD_MAXIMUM_RATIO = 1.0,			-- Maximum number of Revolutionary Guard regiments, relative to force limit
@@ -1575,7 +1575,7 @@ NMilitary = {
 	MERCENARY_COMPANY_STARTING_MORALE = 0.5,		-- Starting morale
 	MERCENARY_COMPANY_MIN_REGIMENTS = 4,			-- Minimum regiments
 	MERCENARY_COMPANY_MAX_REGIMENTS = 60,			-- Maximum regiments
-	MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 2.0,	-- Manpower reserve factor (multiplied by 1000 per regiment)
+	MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.333,	-- Manpower reserve factor (multiplied by 1000 per regiment) -- Submod: reduce reserves to 2/3 vanilla
 	MERCENARY_COMPANY_MANPOWER_RECOVERY = 120,				-- How many months to recover mercenary manpower fully
 	MERCENARY_COMPANY_HIRED_MANPOWER_RECOVERY_MOD = 3.0,		-- How much to modify the length for manpower recovery if they are hired -- Submod: reduce recovery while hired to 2/3 the vanilla value
 	MERCENARY_COMPANY_LOW_MANPOWER_THRESHOLD = 0.1,	-- Percentage of remaining manpower under which we warn the player
@@ -2099,7 +2099,7 @@ NAI = {
 	MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.10,					-- AI will only assign armies larger that this to a region
 	MAX_ARMIES_NEW_REGION_ASSIGN_ALGORITHM = 12,				-- Max. amount of armies to use in new region assignment algorithm (fall back to old one)
 	MAX_TASKS_NEW_REGION_ASSIGN_ALGORITHM = 100,				-- Max. amount of tasks to use in new region assignment algorithm (fall back to old one)
-	ELECTORAL_REFORMATION_CONVERT_TRESHOLD = 0.1,				-- How much of an electors development needs to be a reformed religion for it to try and reform
+	ELECTORAL_REFORMATION_CONVERT_TRESHOLD = 0.5,				-- How much of an electors development needs to be a reformed religion for it to try and reform
 	TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.0,				-- How many times the cost of the investment must be in the treasury to consider buying it
 	ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10,					-- Influence on assimilation interest from number of provinces left to conquer
 	INVASION_ARMY_LOOKUP_INTERVAL_ON_FAILURE = 15,				-- If AI fails to find an army for an invasion it will try again in this number of days
@@ -2149,7 +2149,7 @@ NAI = {
 	ESTATE_MAX_WANTED_INFLUENCE = 73.0,
 	ESTATE_MIN_WANTED_CROWNLAND = 33.0,
 	ESTATE_MAX_PRIVILEGES = 7, 									-- (Anbennar) pdx: 6. Also see ESTATE_PRIVILEGES_MAX_CONCURRENT in NCountry
-	MIN_SCORE_TO_CONCENTRATE_DEVELOPMENT = 100,					-- (Anbennar) pdx: 1.5 (disabled in Anbennar)
+	MIN_SCORE_TO_CONCENTRATE_DEVELOPMENT = 1.5,
 
 	-- # AI unit strength evaluation
 
@@ -2561,7 +2561,7 @@ NReligion = {
 
 	CONSECRATE_PATRIACH_AUTHORITY_BOOST = 0.05, --5% or so
 	CONSECRATE_PATRIARCH_THRESHOLD = 10, -- (Anbennar) pdx: 30, (gnolls) in development
-	ORTHODOX_ICON_DURATION_MONTHS = 240,
+	ORTHODOX_ICON_DURATION_MONTHS = 120, -- (Anbennar) pdx: 240, (gnolls)
 	ORTHODOX_ICON_AUTHORITY_COST = 0.1,
 
 	MAYA_COLLAPSE_PROVINCES = 15,	-- Maya collapses to this size on reform
@@ -2735,7 +2735,7 @@ NGovernment = {
 	LEGACY_NATIVES_REFORM_THEOCRACY_SPONSOR = "theocratic_government",
 	LEADER_AS_MONARCH_TRADITION = 30, -- How much tradition leaders will get when generated for
 	
-	CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 0.8,
+	CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 0.75,
 	DEVASTATION_PER_DEV_STOLEN = 5,
 	FREE_CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 1,
 	FREE_CONCENTRATE_DEVELOPMENT_OTHER_STATE_PROVINCES_PROPORTION = 0,

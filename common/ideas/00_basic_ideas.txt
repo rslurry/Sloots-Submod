@@ -263,6 +263,8 @@ theocracy_gov_ideas = {
 	servants_of_god = {
 		devotion = 1
 		legitimacy = 0.5
+		horde_unity = 0.5
+		republican_tradition = 0.15
 		development_cost = -0.05
 	}
 	by_the_grace_of_god = {
@@ -499,6 +501,10 @@ religious_ideas = {
 		modifier = {
 			factor = 1.25
 			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 0
+			tag = R62
 		}
 		modifier = {
 			factor = 0.75
@@ -1533,7 +1539,6 @@ expansion_ideas = {
 	}
 	faster_colonists = {
 		global_colonial_growth = 20
-		colony_development_boost = 1 #Submod
 	}
 	vice_roys  = {
 		global_tariffs = 0.10 #1.35
@@ -2020,6 +2025,14 @@ court_ideas = { #1.35
 			factor = 0.75
 			NOT = { monthly_dip = 8 } 
 		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_emperor_of_china = yes
+				is_emperor = yes
+				has_reform = raja_reform
+			}
+		}
 	}
 }
 
@@ -2127,7 +2140,7 @@ infrastructure_ideas = { #1.35
 
 # Submod: new idea groups
 artificer_ideas = {
-	category = DIP 
+	category = ADM 
 
 	bonus = {
 		
@@ -2173,7 +2186,7 @@ artificer_ideas = {
 }
 
 magocracy_ideas = {
-	category = ADM
+	category = DIP
 
 	bonus = {
 		mages_loyalty_modifier = 0.1

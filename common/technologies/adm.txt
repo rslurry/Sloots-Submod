@@ -4,7 +4,8 @@ monarch_power = ADM
 ahead_of_time = {
 	production_efficiency = 0.2
 	yearly_corruption = -0.05
-	monthly_russian_modernization = 0.05
+	yearly_harmony = 0.1
+	# monthly_russian_modernization = 0.05
 	ahead_of_time_benefit_adm = 1
 }
 
@@ -28,6 +29,22 @@ technology = { #Tribal Government
 	native_ceremonial_fire_pit = yes
 
 	#effect = { } # When a country researches the technology
+
+	warcamp = yes
+	guild_hall = yes
+	quest_board = yes
+	foragers_camp = yes
+	pioneer_office = yes
+	mustering_field = yes
+	local_exchange = yes
+
+	#world_tree_lvl_1 = yes
+	#world_tree_lvl_2 = yes
+	#world_tree_lvl_3 = yes
+	#world_tree_root = yes
+	#world_tree_dead_root = yes
+	#destroyed_world_tree = yes
+	#destroying_root = yes
 }
 
 technology = { #Advanced Tribes
@@ -65,6 +82,8 @@ technology = { #Medieval Administration
 
 	production_efficiency	=	0.02
 	may_support_rebels = yes
+	
+	mage_tower = yes
 }
  
 technology = { #Temples
@@ -142,7 +161,7 @@ technology = { #The Scythe
 	#The Scythe
 	production_efficiency 	=	0.02
 	
-	allowed_idea_groups = 3 #Submod: different idea group unlocking schedule
+
 }
 
 technology = { #Modern Theocracy
@@ -154,7 +173,7 @@ technology = { #Modern Theocracy
 		new_world_i = 0.3
 	}
 	
-	
+	allowed_idea_groups = 3
 	theocratic_government = yes
 }
 
@@ -170,7 +189,6 @@ technology = { #Textile Manufactory
 	#Textile Manufactory
 	textile = yes  
 
-	allowed_idea_groups = 4 #Submod: different idea group unlocking schedule
 }
 
 technology = { #Early Modern Administration
@@ -200,8 +218,6 @@ technology = { #Improved Drainage
 	
 	#Improved Drainage
 	production_efficiency 	=	0.02
-	
-	allowed_idea_groups = 5 #Submod: different idea group unlocking schedule
 }
 
 technology = { #Scientific Experimentation
@@ -215,6 +231,7 @@ technology = { #Scientific Experimentation
 	}
 	
 	plantations = yes
+	allowed_idea_groups	= 4
 }
 
 technology = { #Military Administration
@@ -227,10 +244,8 @@ technology = { #Military Administration
 		printing_press = 0.5
 	}
 	
-	#may_force_march = yes #Submod: removed from tech, moved to professionalism
+	#may_force_march = yes # Submod: remove here, add to prof levels
 	soldier_households = yes
-	
-	allowed_idea_groups = 6 #Submod: different idea group unlocking schedule
 }
 
 technology = { #Metallurgy
@@ -278,7 +293,7 @@ technology = { #National Sovereignty
 		global_trade = 0.3
 	}
 	
-	allowed_idea_groups	= 7
+	allowed_idea_groups	= 5
 }
 
 technology = { #Cathedral
@@ -326,8 +341,6 @@ technology = { #Land Clearance
 	#Land Clearance
 	production_efficiency 	=	0.02
 	furnace = yes
-	
-	allowed_idea_groups = 8
 }
 
 technology = { #The Constitution
@@ -342,7 +355,7 @@ technology = { #The Constitution
 		manufactories = 0.3
 	}
 	
-	
+	allowed_idea_groups = 6
 	constitutional_monarchy = yes
 	constitutional_republic = yes  
 
@@ -412,7 +425,7 @@ technology = { #Separation of Powers
 		enlightenment = 0.5
 	}
 	
-	allowed_idea_groups 	= 	9
+	allowed_idea_groups 	= 	7
 }
 
 technology = { #Modern Bureaucracy
@@ -465,7 +478,7 @@ technology = { #Rights of Man
 		industrialization = 0.5
 	}
 
-	allowed_idea_groups = 10
+	allowed_idea_groups = 8
 	enlightened_despotism = yes
 	bureaucratic_despotism = yes
 }

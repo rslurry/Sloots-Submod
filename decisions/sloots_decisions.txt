@@ -1,0 +1,43 @@
+country_decisions = {
+ 	extra_colonial = {
+ 		major = yes
+		color = { 235 102 255 }
+		
+ 		potential = {
+ 			NOT = {
+				ai = yes
+ 			}
+ 		}
+ 		
+ 		provinces_to_highlight = {
+ 			
+ 		}
+ 		
+ 		allow = {
+			OR = {
+ 				AND = {
+					num_of_ports = 1
+					dip_tech = 9
+				}
+				dip_tech = 11
+			}
+			NOT = {
+				num_of_colonists = 1
+			}
+ 		}
+ 		
+ 		effect = {
+ 			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_treasury = -500
+			add_country_modifier = {
+				name = sloots_colonizer
+				duration = 14600
+			}
+ 		}
+ 		ai_will_do = {
+ 			factor = 0
+ 		}
+ 	}
+}

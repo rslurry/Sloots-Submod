@@ -1845,7 +1845,7 @@ mages_crusade = {
 	
 	allow = {
 		full_idea_group = magocracy_ideas
-		full_idea_group = defensive_ideas
+		full_idea_group = theocracy_gov_ideas
 	}
 	
 	war_exhaustion = -0.03
@@ -1938,6 +1938,26 @@ conjurer_logistics = {
 	}
 }
 
+freezing_stones = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = magocracy_ideas
+		has_idea_group = infrastructure_ideas
+	}
+	
+	allow = {
+		full_idea_group = magocracy_ideas
+		full_idea_group = infrastructure_ideas
+	}
+	
+	build_time = -0.10
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
 artificed_defenses = {
 	monarch_power = MIL
 	
@@ -1972,7 +1992,29 @@ divine_artificery = {
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	land_morale = 0.125
+	land_morale = 0.05
+	naval_morale = 0.05
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+mage_crusade = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = magocracy_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = magocracy_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	war_exhaustion = -0.03
+	shock_damage = 0.05
 
 	ai_will_do = {
 		factor = 1.0
@@ -2032,7 +2074,8 @@ damestear_mortars = {
 		full_idea_group = offensive_ideas
 	}
 	
-	siege_ability = 0.2
+	siege_ability = 0.1
+	assault_fort_ability = 0.25
 
 	ai_will_do = {
 		factor = 1.0

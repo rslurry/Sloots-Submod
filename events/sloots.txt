@@ -1,212 +1,234 @@
 
 namespace = sloots
 
-# Building a tomb for castellos
+# Lobotomize ruler
 country_event = {
 	id = sloots.0
 	title = sloots.0.t
 	desc = sloots.0.d
-	picture = RELIGION_eventPicture
+	picture = SYNTHETICS_eventPicture
 	
-	major = yes
-	
-	major_trigger = {
-		religion = regent_court
-	}
-	
-	is_triggered_only = yes #  Temporary. Why have the game constatly checking if the event is disabled
-	
-	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
-		is_year = 1820 # so that it doesn't fire
-		NOT = { has_global_flag = castellars_tomb }
-		has_global_flag = castellars_scepter
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+	    # Only fired manually via console
 	}
 	
 	option = {	
 		name = sloots.0.a
-		# Fire donation event for all RC nations
-	}
-	
-	option = {
-		name = sloots.0.b
-		# They don't have to know about this... (melt it down)
-		# Gain 500 gold
-		# 5% chance a regent court nation finds out
-		# 95% chance -0.5 unrest for 5 years
-	}
-	
-	option = {
-		name = sloots.0.c
-		# I'll keep it for my private collection
-		# +5 prestige
-	}
-	
-	after = {
-		set_global_flag = castellars_tomb
-		# Set a 91 day timer to trigger build a temple event
+		change_adm = -6
+		change_dip = -6
+		change_mil = -6
 	}
 }
 
-# Donations for Castellos's tomb, please?
-country_event = {
-	id = sloots.1
-	title = sloots.1.t
-	desc = sloots.1.d
-	picture = RELIGION_eventPicture
-	
-	major = yes
-	
-	major_trigger = {
-		religion = regent_court
-	}
-	
-	is_triggered_only = yes
-	
-	option = {	
-		name = sloots.1.a
-		# Donate 500 gold
-		# Gain 20 opinion
-		# Gain 2% trade efficiency for 5 years
-		# 25% chance to form historical friend
-	}
-	
-	option = {
-		name = sloots.1.b
-		# Donate 200 gold
-		# Gain 20 opinion
-		# Gain 2% trade efficiency for 5 years
-	}
-	
-	option = {
-		name = sloots.1.c
-		# Donate 100 gold
-		# Gain 10 opinion
-		# Gain 1% trade efficiency for 5 years
-	}
-	
-	option = {
-		name = sloots.1.d
-		# Donate 50 gold
-		# Gain 5 opinion
-		# Gain 0.5% trade efficiency for 5 years
-	}
-	
-	option = {
-		name = sloots.1.e
-		# Donate no gold
-	}
-}
-
-# Let's build a temple
-country_event = {
-	id = sloots.2
-	title = sloots.2.t
-	desc = sloots.2.d
-	picture = RELIGION_eventPicture
-	
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	option = {	
-		name = sloots.2.a
-		# The finest building in Halann
-		# Cost 3k gold
-		# In 1825 days:
-		#   Add cathedral to capital province
-		#   Add province modifier equal to Darkrash
-		#   +25 opinion with all who donated
-		#   All who donated get +1% trade efficiency for 5 years
-		# Set flag related to this, to check when the province is sieged 
-		#     and trigger the event to loot the relics
-	}
-	
-	option = {
-		name = sloots.2.b
-		# An impressive cathedral
-		# Cost 1.5k gold
-		# Add cathedral in 1825 days
-		#   Add 1/2 province modifier of Darkrash
-		#   +25 opinion with all who donated
-		#   All who donated get +0.5% trade efficiency for 5 years
-		# Set flag related to this, to check when the province is sieged 
-		#     and trigger the event to loot the relics
-	}
-	
-	option = {
-		name = sloots.2.c
-		# A visitor's temple
-		# Cost 500 gold
-		# If don't have temple, gain temple in 365 days
-		# Gain only minor trade modifier
-		#   -5 opinion with all who donated
-		#   Builder gets +1% tax modifier for 5 years
-		# Set flag related to this, to check when the province is sieged 
-		#     and trigger the event to loot the relics
-	}
-	
-	option = {
-		name = sloots.2.d
-		# Don't build the temple, keep the donations
-		# -1 diplo rep for 2 years, if requested donations
-		# All who donated -50 opinion
-		# All who donated gain CB
-	}	
-}
-
-# Castellos tomb looted
-country_event = {
-	id = sloots.3
-	title = sloots.3.t
-	desc = sloots.3.d
-	picture = RELIGION_eventPicture
-	
-	is_triggered_only = yes
-		
-	immediate = {
-		# Remove previous holder's modifier
-	}
-	
-	option = {	
-		name = sloots.3.a
-		# Display it in your own capital
-		# Gain 10 prestige
-		# Gain province modifier
-		# Set flag related to this, to check when the province is sieged 
-		#     and trigger the event to loot the relics
-	}
-	
-	option = {
-		name = sloots.3.b
-		# Reduce them to their basic materials
-		# Gain 500 gold
-		# -25 opinion with all RC nations
-	}
-	
-	option = {
-		name = sloots.3.c
-		# Permanently destroy them
-		# Gain 25 prestige
-		# Gain 50 PP
-		# RC nations gain insult CB
-	}
-	
-	option = {
-		name = sloots.3.d
-		# Keep it in a private collection
-		# Gain 50 prestige
-		# Gain 25 legitimacy
-		# Set flag related to this, to check when the province is sieged 
-		#     and trigger the event to loot the relics
-	}
-}
+# Commented out until fully implemented
+## Building a tomb for castellos
+#country_event = {
+#	id = sloots.10
+#	title = sloots.10.t
+#	desc = sloots.10.d
+#	picture = RELIGION_eventPicture
+#	
+#	major = yes
+#	
+#	major_trigger = {
+#		religion = regent_court
+#	}
+#	
+#	is_triggered_only = yes #  Temporary. Why have the game constatly checking if the event is disabled
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		is_year = 1820 # so that it doesn't fire
+#		NOT = { has_global_flag = castellars_tomb }
+#		has_global_flag = castellars_scepter
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#	
+#	option = {	
+#		name = sloots.10.a
+#		# Fire donation event for all RC nations
+#	}
+#	
+#	option = {
+#		name = sloots.10.b
+#		# They don't have to know about this... (melt it down)
+#		# Gain 500 gold
+#		# 5% chance a regent court nation finds out
+#		# 95% chance -0.5 unrest for 5 years
+#	}
+#	
+#	option = {
+#		name = sloots.10.c
+#		# I'll keep it for my private collection
+#		# +5 prestige
+#	}
+#	
+#	after = {
+#		set_global_flag = castellars_tomb
+#		# Set a 91 day timer to trigger build a temple event
+#	}
+#}
+#
+## Donations for Castellos's tomb, please?
+#country_event = {
+#	id = sloots.11
+#	title = sloots.11t
+#	desc = sloots.11d
+#	picture = RELIGION_eventPicture
+#	
+#	major = yes
+#	
+#	major_trigger = {
+#		religion = regent_court
+#	}
+#	
+#	is_triggered_only = yes
+#	
+#	option = {	
+#		name = sloots.11a
+#		# Donate 500 gold
+#		# Gain 20 opinion
+#		# Gain 2% trade efficiency for 5 years
+#		# 25% chance to form historical friend
+#	}
+#	
+#	option = {
+#		name = sloots.11b
+#		# Donate 200 gold
+#		# Gain 20 opinion
+#		# Gain 2% trade efficiency for 5 years
+#	}
+#	
+#	option = {
+#		name = sloots.11c
+#		# Donate 100 gold
+#		# Gain 10 opinion
+#		# Gain 1% trade efficiency for 5 years
+#	}
+#	
+#	option = {
+#		name = sloots.11d
+#		# Donate 50 gold
+#		# Gain 5 opinion
+#		# Gain 0.5% trade efficiency for 5 years
+#	}
+#	
+#	option = {
+#		name = sloots.11e
+#		# Donate no gold
+#	}
+#}
+#
+## Let's build a temple
+#country_event = {
+#	id = sloots.12
+#	title = sloots.12.t
+#	desc = sloots.12.d
+#	picture = RELIGION_eventPicture
+#	
+#	
+#	is_triggered_only = yes
+#	
+#	fire_only_once = yes
+#	
+#	option = {	
+#		name = sloots.12.a
+#		# The finest building in Halann
+#		# Cost 3k gold
+#		# In 1825 days:
+#		#   Add cathedral to capital province
+#		#   Add province modifier equal to Darkrash
+#		#   +25 opinion with all who donated
+#		#   All who donated get +1% trade efficiency for 5 years
+#		# Set flag related to this, to check when the province is sieged 
+#		#     and trigger the event to loot the relics
+#	}
+#	
+#	option = {
+#		name = sloots.12.b
+#		# An impressive cathedral
+#		# Cost 1.5k gold
+#		# Add cathedral in 1825 days
+#		#   Add 1/2 province modifier of Darkrash
+#		#   +25 opinion with all who donated
+#		#   All who donated get +0.5% trade efficiency for 5 years
+#		# Set flag related to this, to check when the province is sieged 
+#		#     and trigger the event to loot the relics
+#	}
+#	
+#	option = {
+#		name = sloots.12.c
+#		# A visitor's temple
+#		# Cost 500 gold
+#		# If don't have temple, gain temple in 365 days
+#		# Gain only minor trade modifier
+#		#   -5 opinion with all who donated
+#		#   Builder gets +1% tax modifier for 5 years
+#		# Set flag related to this, to check when the province is sieged 
+#		#     and trigger the event to loot the relics
+#	}
+#	
+#	option = {
+#		name = sloots.12.d
+#		# Don't build the temple, keep the donations
+#		# -1 diplo rep for 2 years, if requested donations
+#		# All who donated -50 opinion
+#		# All who donated gain CB
+#	}	
+#}
+#
+## Castellos tomb looted
+#country_event = {
+#	id = sloots.13
+#	title = sloots.13.t
+#	desc = sloots.13.d
+#	picture = RELIGION_eventPicture
+#	
+#	is_triggered_only = yes
+#		
+#	immediate = {
+#		# Remove previous holder's modifier
+#	}
+#	
+#	option = {	
+#		name = sloots.13.a
+#		# Display it in your own capital
+#		# Gain 10 prestige
+#		# Gain province modifier
+#		# Set flag related to this, to check when the province is sieged 
+#		#     and trigger the event to loot the relics
+#	}
+#	
+#	option = {
+#		name = sloots.13.b
+#		# Reduce them to their basic materials
+#		# Gain 500 gold
+#		# -25 opinion with all RC nations
+#	}
+#	
+#	option = {
+#		name = sloots.13.c
+#		# Permanently destroy them
+#		# Gain 25 prestige
+#		# Gain 50 PP
+#		# RC nations gain insult CB
+#	}
+#	
+#	option = {
+#		name = sloots.13.d
+#		# Keep it in a private collection
+#		# Gain 50 prestige
+#		# Gain 25 legitimacy
+#		# Set flag related to this, to check when the province is sieged 
+#		#     and trigger the event to loot the relics
+#	}
+#}
 
 country_event = {
 	id = sloots.100

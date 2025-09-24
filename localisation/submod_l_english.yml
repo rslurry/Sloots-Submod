@@ -1,10 +1,17 @@
 ﻿l_english:
+ anb_settings.3.s:0 "£settings_button_submod££settings_alert_none£"
+ anb_settings.3.sx:0 "£settings_button_submod_x££settings_alert_none£"
+ 
  estate_cave_adaptation:0 "Cave Adaptation"
  estate_cave_adaptation_gt:0 "Reduce the Development Cost caused by Terrain type of every owned §YCavern§! province by §G50.0%§!."
  estate_cave_adaptation_rt:0 "Remove the Development Cost Reduction of every owned §YCavern§! province."
  estate_cave_adaptation_desc:0 "I was born in it; molded by it.  I didn't see the light until I was already a man; by then it was nothing to me but blinding!"
  estate_cave_adaptation_cavern:0 "Cave Adaptation"
  desc_estate_cave_adaptation_cavern:0 "The administration's inherent adaptation to caverns enables efficient development of the local infrastructure."
+
+ sloots.0.t:0 "How can you have any pudding if you don't post your stou?"
+ sloots.0.d:0 "Some people think they can eat their desserts before finishing their stou.  Those people are wrong, and they will suffer for it."
+ sloots.0.a:0 "Sharpen the screwdrivers!  They'll never make this mistake again."
  
  sloots.100.t:0 "Condo"
  sloots.100.d:0 "It's not like you'd actually read this if it said anything.  Just click the button."
@@ -55,8 +62,8 @@
  growing_artificer_influence_desc:0 "Maybe we shouldn't be giving our entire country over to these people?"
  invention_grants:0 "Invention Grants"
  invention_grants_desc:0 "Please allow up to 9 months for Reviewer 3 to sufficiently shit on your ideas."
- submod_artificers_invention_grants_tooltip:0 "Artificer Capacity: §G+10.0%§!\nBonus: Unlocks artificers after 1550. Note that it can take up to a year after adopting the idea for the cogs to begin turning."
- submod_artificers_early_tooltip:0 "Bonus: Unlocks artificers after 1550. Note that it can take up to a year after adopting the idea for the cogs to begin turning."
+ submod_artificers_invention_grants_tooltip:0 "Artificer Capacity: §G+10.0%§!"
+ submod_artificers_early_tooltip:0 "Bonus: Do you really need more?"
  
  magocracy_ideas:0 "Magocracy Ideas"
  magocracy_ideas_bonus:0 "Full Magocracy"
@@ -73,7 +80,7 @@
  scrying_revenue_service:0 "Scrying Revenue Service"
  scrying_revenue_service_desc:0 "We won't tell you how much you owe, but if you don't pay the correct amount, we'll break your kneecaps."
  council_of_mages:0 "Council of Mages"
- council_of_mages_desc:0 "You are on this council, but we do not grant you the rank of master."
+ council_of_mages_desc:0 "You are on this council, but we do not grant you the rank of master. Also, this increases the chance of getting powerful mage heirs for some reason."
  
  mages_in_the_court:0 "Mages in the Court"
  desc_mages_in_the_court:0 ""
@@ -115,8 +122,8 @@
  desc_frontiers_of_thought:0 "Exploration is in our nature. We began as wanderers, and we are wanderers still. We have lingered long enough on the shores of the cosmic ocean. We are ready at last to set sail for the stars."
  progressive_culture:0 "Progressive Culture"
  desc_progressive_culture:0 ""
- proto_factories:0 "Proto Factories"
- desc_proto_factories:0 ""
+ freezing_stones:0 "Freezing Stones"
+ desc_freezing_stones:0 "Hey, that water is cold, I swear it's not always like this!"
  embracing_new_thought:0 "Embracing New Thought"
  desc_embracing_new_thought:0 "Science is more than a body of knowledge.  It is a way of thinking, a way of skeptically interrogating the universe."
  revelianist_thought:0 "Ravelianist Thought"
@@ -139,5 +146,11 @@
  desc_damestear_armor:0 ""
  expanded_training_programs:0 "Expanded Training Programs"
  desc_expanded_training_programs:0 "Oh, it's the deep burn.  Oh it's so deep.  Oh, I can barely lift my right arm 'cause I did so many.  I don't know if you heard me counting, I did over a thousand."
+ mage_crusade:0 "Mage's Crusade"
+ desc_mage_crusade:0 "Magus vult!"
  
+ sloots_colonizer:0 "Colonial Investments"
+ desc_sloots_colonizer:0 "Go forth and prosper."
+ extra_colonial_title:0 "Funds for Colonial Efforts"
+ extra_colonial_desc:0 "Go forth and prosper."
  

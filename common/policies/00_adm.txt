@@ -2368,12 +2368,12 @@ central_scrying_agency = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = magocracy_ideas
+		has_idea_group = artificer_ideas
 		has_idea_group = spy_ideas
 	}
 	
 	allow = {
-		full_idea_group = magocracy_ideas
+		full_idea_group = artificer_ideas
 		full_idea_group = spy_ideas
 	}
 	
@@ -2389,16 +2389,17 @@ mage_expeditions = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = magocracy_ideas
+		has_idea_group = artificer_ideas
 		has_idea_group = exploration_ideas
 	}
 	
 	allow = {
-		full_idea_group = magocracy_ideas
+		full_idea_group = artificer_ideas
 		full_idea_group = exploration_ideas
 	}
 	
-	colony_cost_modifier = -0.2
+	transport_attrition = -0.5
+        
 
 	ai_will_do = {
 		factor = 1.0
@@ -2409,12 +2410,12 @@ damestear_acquisition = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = magocracy_ideas
+		has_idea_group = artificer_ideas
 		has_idea_group = trade_ideas
 	}
 	
 	allow = {
-		full_idea_group = magocracy_ideas
+		full_idea_group = artificer_ideas
 		full_idea_group = trade_ideas
 	}
 	
@@ -2493,16 +2494,16 @@ technocratic_influence = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = artificer_ideas
+		has_idea_group = magocracy_ideas
 		has_idea_group = administrative_ideas
 	}
 	
 	allow = {
-		full_idea_group = artificer_ideas
+		full_idea_group = magocracy_ideas
 		full_idea_group = administrative_ideas
 	}
 	
-	technology_cost = -0.1
+	administrative_efficiency = 0.05
 
 	ai_will_do = {
 		factor = 1.0
@@ -2513,36 +2514,16 @@ economy_of_goods = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = artificer_ideas
+		has_idea_group = magocracy_ideas
 		has_idea_group = economic_ideas
 	}
 	
 	allow = {
-		full_idea_group = artificer_ideas
+		full_idea_group = magocracy_ideas
 		full_idea_group = economic_ideas
 	}
 	
-	inflation_reduction = 0.05
-	global_trade_goods_size_modifier = 0.1
 
-	ai_will_do = {
-		factor = 1.0
-	}
-}
-
-proto_factories = {
-	monarch_power = ADM
-	
-	potential = {
-		has_idea_group = artificer_ideas
-		has_idea_group = infrastructure_ideas
-	}
-	
-	allow = {
-		full_idea_group = artificer_ideas
-		full_idea_group = infrastructure_ideas
-	}
-	
 	global_trade_goods_size_modifier = 0.15
 
 	ai_will_do = {
@@ -2554,17 +2535,16 @@ embracing_new_thought = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = artificer_ideas
+		has_idea_group = magocracy_ideas
 		has_idea_group = innovativeness_ideas
 	}
 	
 	allow = {
-		full_idea_group = artificer_ideas
+		full_idea_group = magocracy_ideas
 		full_idea_group = innovativeness_ideas
 	}
 	
-	embracement_cost = -0.25
-	global_institution_spread = 0.25
+        yearly_innovativeness = 0.25
 
 	ai_will_do = {
 		factor = 1.0
