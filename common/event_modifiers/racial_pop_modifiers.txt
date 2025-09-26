@@ -1,4 +1,4 @@
-
+# season 11 submod - no changes
 
 orcish_slave_boom = {
 	local_unrest = 1

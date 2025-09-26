@@ -1,4 +1,5 @@
 #This file is for the temporary effects granted by some monuments.
+# submod only
 kozenad_brothel_new_ladies_of_the_opal_calling {
 	global_unrest = -2
 	local_tax_modifier = 0.33
@@ -93,7 +94,7 @@ ovdal_kanzad_cannon_foundry_experimental_artillery {
 	siege_ability = 0.15
 }
 
-arg_ordstun_great_clast_shafts_development (
+arg_ordstun_great_clast_shafts_development {
 	development_cost = -0.1
 }
 

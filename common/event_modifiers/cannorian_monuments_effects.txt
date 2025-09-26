@@ -1,5 +1,5 @@
 #This file is for the temporary effects granted by some monuments.
-
+# submod only? 
 lorentaine_mage_academy_loyalty {
 	mages_loyalty_modifier = 0.1
 	all_power_cost = -0.025
