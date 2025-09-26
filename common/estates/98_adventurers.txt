@@ -1,4 +1,4 @@
-estate_adventurers = {
+estate_adventurers = { # season 11 - marked no change
 	icon = 10
 
 	# If true, country will get estate

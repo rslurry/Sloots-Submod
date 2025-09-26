@@ -1,5 +1,5 @@
 
-hoardcurse = {
+hoardcurse = { # season 11 - marked as no change needed
 	potential = {
 		ai = no
 		culture_group = dwarven

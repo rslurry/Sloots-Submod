@@ -2,6 +2,8 @@
 
 namespace = flavor_grombar
 
+# submod TODO - is this necessary?
+
 # Half-orc King of Vrorenmarch
 country_event = {
 	id = flavor_grombar.1
@@ -1319,6 +1321,10 @@ country_event = {
 
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { is_year = 1500 }
+	}
+	
 	# Human realm once again
 	option = {
 		name = flavor_grombar.28.a	
@@ -1449,23 +1455,7 @@ country_event = {
 		Z45 = {
 			AND = {
 				owns = 740
-				OR = {
-					owns = 737
-					num_of_owned_provinces_with = {
-						value = 2
-						OR = {
-							province_id = 711
-							province_id = 716
-							province_id = 719
-							province_id = 720
-							province_id = 735
-							province_id = 736
-							province_id = 738
-							province_id = 739
-							province_id = 990
-						}
-					}
-				}
+				owns = 737
 			}
 		}	
 		OR = {
@@ -1617,23 +1607,7 @@ country_event = {
 				NOT = { exists = Z45 }
 				AND = {
 					owns = 740
-					OR = {
-						owns = 737
-						num_of_owned_provinces_with = {
-							value = 2
-							OR = {
-								province_id = 711
-								province_id = 716
-								province_id = 719
-								province_id = 720
-								province_id = 735
-								province_id = 736
-								province_id = 738
-								province_id = 739
-								province_id = 990
-							}
-						}
-				    }
+					owns = 737
 				}
 			}
 			AND = {			
@@ -3752,8 +3726,7 @@ country_event = {
 	# End of violence
 	option = {
 		name = flavor_grombar.104.a
-		add_stability_or_adm_power = yes
-		add_stability_or_adm_power = yes
+		add_2_stability_or_adm_power = yes
 		add_prestige = 25
 		add_adm_power = 200
 		add_dip_power = 200
